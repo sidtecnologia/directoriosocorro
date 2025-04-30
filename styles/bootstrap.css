@@ -244,13 +244,18 @@ header p {
     padding: 10px;
 }
 
+.card-body {
+    text-align: center;
+
+}
+
 /* Estilo para cada imagen de categoría */
 .category-item {
     border-radius: 10px;
     position: relative;
     text-align: center;
     overflow: hidden;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .category-img {
