@@ -59,7 +59,7 @@ header p {
 }
 
 .background img {
-    margin-top: 30px;
+    margin: 20px;
     display: block; /* Evita espacios en blanco alrededor de la imagen */
     width: 90%; /* Asegura que la imagen ocupe todo el ancho */
     height: auto; /* Mantiene la proporción de la imagen */
