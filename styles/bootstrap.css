@@ -676,6 +676,7 @@ body {
 
 /* Floating Panel */
 .floating-panel {
+    height: 90px;
     position: fixed;
     left: 50%; /* Centrado horizontalmente */
     transform: translateX(-50%);
@@ -695,11 +696,11 @@ body {
     display: flex; /* Para centrar el ícono */
     justify-content: center;
     align-items: center;
-    width: 50px; /* Tamaño del botón */
-    height: 50px;
+    width: 30px; /* Tamaño del botón */
+    height: 30px;
     background-color: #3849ff; /* Color de fondo */
     color: white; /* Color del ícono */
-    font-size: 1.2rem; /* Tamaño del ícono */
+    font-size: 0.8rem; /* Tamaño del ícono */
     border-radius: 50%; /* Botones circulares */
     text-decoration: none; /* Elimina subrayado */
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -713,9 +714,9 @@ body {
 
 /* Central Button */
 .floating-panel .btn-center {
-    width: 80px; /* Botón central más grande */
-    height: 80px;
-    font-size: 1.5rem;
+    width: 50px; /* Botón central más grande */
+    height: 50px;
+    font-size: 1rem;
 }
 
 /* Texto debajo del botón */
