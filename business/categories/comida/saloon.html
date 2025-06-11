@@ -55,26 +55,25 @@
 
     <!-- Cards Section -->
         <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 fade-in">
-                    <div class="card mb-4 shadow-sm">
-                        <img src="../../../assets/images/categories/comida/saloon/saloon.webp" class="card-img-top" alt="Saloon1822" >
+  <div class="container">
+    <div class="row">
+      <!-- Columna izquierda: tarjeta + carrusel -->
+      <div class="col-lg-4 mb-4 fade-in">
+        <!-- Tarjeta -->
+        <div class="card mb-4 shadow-sm">
+          <img src="../../../assets/images/categories/comida/saloon/saloon.webp" class="card-img-top" alt="Saloon1822" >
                         <div class="card-body">
                             <h3 class="card-title">Dirección: Cra. 12 # 13 - 14</h3>
                             <p><b>Horario de Atención:</b> Lunes a Domingo: 5:00pm - 11:00pm</p>
                             <p class="card-text">Un lugar donde la rapidez no compromete el sabor ni la creatividad. Ofrecemos comida rápida exquisita, con ingredientes frescos y presentaciones originales, para una experiencia culinaria única y memorable. En esencia, elevamos la comida rápida a un nuevo nivel, fusionando la comodidad con la innovación </p>
                             <a class="btn btn-call" href="tel:+3186789977">📞 Llamar</a>
                             <a href="https://wa.me/3186789977" class="btn btn-whatsapp">Whatsapp</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
 
-    <!-- Carousel -->
-<section id="carousel-section">
-    <div class="carousel">
+        <!-- Carrusel debajo de la tarjeta -->
+        <section id="carousel-section" class="mt-4">
+          <div class="carousel">
     <button id="carousel-prev" class="carousel-nav">&lt;</button> <!-- Botón anterior -->  
         <div class="carousel-item" onclick="window.location.href='#'">
             <img src="../../../assets/images/categories/comida/saloon/slide1.webp" alt="Saloon1822">
@@ -113,23 +112,32 @@
             <img src="../../../assets/images/categories/comida/saloon/slide12.webp" alt="Saloon1822">
         </div>
     <button id="carousel-next" class="carousel-nav">&gt;</button> <!-- Botón siguiente -->
-    </div>
-</section>
+          </div>
+        </section>
+      </div>
 
-        <div class="map-container">            
-            <!-- Google Maps -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4161465224!2d-73.26002059999999!3d6.4688517999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c39329e5fd21%3A0xfd754bc554b36f99!2sSaloon%201822%20Hamburgueser%C3%ADa!5e0!3m2!1ses!2sco!4v1746244884926!5m2!1ses!2sco" width="300" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- Columna derecha: mapa + iframe de Facebook -->
+      <div class="col-lg-8">
+        <!-- Mapa -->
+        <div class="mb-4">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4161465224!2d-73.26002059999999!3d6.4688517999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c39329e5fd21%3A0xfd754bc554b36f99!2sSaloon%201822%20Hamburgueser%C3%ADa!5e0!3m2!1ses!2sco!4v1746244884926!5m2!1ses!2sco" width="100%" height="300" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     
             <!-- Botón de Cómo Llegar -->
             <a class="btn-map" href="https://www.google.com.ar/maps/dir//Saloon+1822+Hamburgueser%C3%ADa,+Cra.+12+%2313+14,+Socorro,+Santander/@6.4688518,-73.2600206,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e69c39329e5fd21:0xfd754bc554b36f99!2m2!1d-73.2600206!2d6.4688518?hl=es&entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank" rel="noopener">
                 📍 Cómo llegar
             </a>
+          </div>
         </div>
 
-    <div class="map-container">
+        <!-- Facebook Iframe -->
+        <div class="map-container">
     <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsaloon1822&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="500" style="border:none;border-radius: 10px; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    
-    </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     
 
         <!-- Footer -->

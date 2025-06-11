@@ -54,46 +54,57 @@
 <div id="overlay" class="overlay" onclick="closeNavbar()"></div>
 
     <!-- Cards Section -->
-        <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 fade-in">
-                    <div class="card mb-4 shadow-sm">
-                        <img src="../../../assets/images/categories/comida/guadalupe/guadalupe.webp" class="card-img-top" alt="Restaurante Guadalupe" >
-                        <div class="card-body">
-                            <h5 class="card-title">Cra. 12 #16 - 18</h5>
-                            <p>Horario de Atención: Lunes a Sábado 7:00 am - 6:00 pm / Domingo: 7:00 am - 2:00 pm</p>
-                            <p class="card-text">Venta de deliciosos desayunos y almuerzos platos a la carta y comida rápida 😋😋😋</p>
-                            <div class="card-body">
-                            <h5 class="card-title">Servicios</h5>
-                            <ul><li id="Desayunos, Almuerzos">Desayunos y Almuerzos.</li>
-                            <li id="Platos Especiales">Platos Especiales.</li>
-                            <li id="Comidas Rapidas">Comidas Rápidas.</li>
-                            <li id="Jugos">Jugos.</li>
-                            <li id="Alquiler Salon Eventos">Alquiler de Salón de Eventos.</li></ul>
-                            </div>
-                            <a class="btn btn-call" href="tel:+573158795175">📞 Llamar</a>
-                            <a href="https://wa.me/573158795175" class="btn btn-whatsapp">Whatsapp</a>
-                            <a href="https://www.restaurantlogin.com/api/fb/y_pb_w_x" target="_blank" class="btn btn-menu">Menú</a>
-                        </div>
-                    </div>
-                </div>
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Columna izquierda: tarjeta -->
+      <div class="col-lg-4 mb-4 fade-in">
+        <div class="card mb-4 shadow-sm">
+          <img src="../../../assets/images/categories/comida/guadalupe/guadalupe.webp" class="card-img-top" alt="Restaurante Guadalupe">
+          <div class="card-body">
+            <h5 class="card-title">Cra. 12 #16 - 18</h5>
+            <p>Horario de Atención: Lunes a Sábado 7:00 am - 6:00 pm / Domingo: 7:00 am - 2:00 pm</p>
+            <p class="card-text">Venta de deliciosos desayunos y almuerzos platos a la carta y comida rápida 😋😋😋</p>
+            <div class="card-body">
+              <h5 class="card-title">Servicios</h5>
+              <ul>
+                <li id="Desayunos, Almuerzos">Desayunos y Almuerzos.</li>
+                <li id="Platos Especiales">Platos Especiales.</li>
+                <li id="Comidas Rapidas">Comidas Rápidas.</li>
+                <li id="Jugos">Jugos.</li>
+                <li id="Alquiler Salon Eventos">Alquiler de Salón de Eventos.</li>
+              </ul>
             </div>
+            <a class="btn btn-call" href="tel:+573158795175">📞 Llamar</a>
+            <a href="https://wa.me/573158795175" class="btn btn-whatsapp">Whatsapp</a>
+            <a href="https://www.restaurantlogin.com/api/fb/y_pb_w_x" target="_blank" class="btn btn-menu">Menú</a>
+          </div>
         </div>
-        <div class="map-container">            
-            <!-- Google Maps -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7913.315585927535!2d-73.49911831607!3d7.392188613834851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e42abbbeec6384f%3A0xd266dd99081afb6c!2sRestaurante%20Guadalupe!5e0!3m2!1ses-419!2sco!4v1737435492333!5m2!1ses-419!2sco" width="300" height="300" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
-            <!-- Botón de Cómo Llegar -->
-            <a class="btn-map" href="https://www.google.com/maps/dir//Restaurante+Guadalupe,+Cra.+12+%2316+-+18,+Sabana+de+Torres,+Santander/@7.3921886,-73.4991183,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e42abbbeec6384f:0xd266dd99081afb6c!2m2!1d-73.4936891!2d7.3925614?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
-                📍 Cómo llegar
+      </div>
+
+      <!-- Columna derecha: mapa + iframe de Facebook -->
+      <div class="col-lg-8">
+        <!-- Mapa -->
+        <div class="mb-4">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7913.315585927535!2d-73.49911831607!3d7.392188613834851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e42abbbeec6384f%3A0xd266dd99081afb6c!2sRestaurante%20Guadalupe!5e0!3m2!1ses-419!2sco!4v1737435492333!5m2!1ses-419!2sco" width="100%" height="300" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a class="btn-map mt-2" href="https://www.google.com/maps/dir//Restaurante+Guadalupe,+Cra.+12+%2316+-+18,+Sabana+de+Torres,+Santander/@7.3921886,-73.4991183,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e42abbbeec6384f:0xd266dd99081afb6c!2m2!1d-73.4936891!2d7.3925614?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+              📍 Cómo llegar
             </a>
+          </div>
         </div>
 
-    <div class="map-container">
-    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100063186281077&tabs=timeline&width=300&height=470&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="470" style="border:none;border-radius: 10px;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    
-    </section>
+        <!-- Facebook -->
+        <div>
+          <div class="map-container">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100063186281077&tabs=timeline&width=300&height=470&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="470" style="border:none;border-radius: 10px;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     
 
         <!-- Footer -->

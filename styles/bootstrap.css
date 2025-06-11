@@ -769,6 +769,35 @@ body {
     color: #555;
 }
 
+.product-card img {
+  width: 100%;
+  height: 200px; /* Puedes ajustar este valor según lo que mejor se vea */
+  object-fit: cover;
+  border-top-left-radius: 0.375rem; /* Para coincidir con .card-img-top */
+  border-top-right-radius: 0.375rem;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #333;
+}
+
+.card-body.p-2 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
 .btn-primary {
     background: #3849ff;
     border: none;

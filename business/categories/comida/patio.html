@@ -55,11 +55,13 @@
 
     <!-- Cards Section -->
         <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 fade-in">
-                    <div class="card mb-4 shadow-sm">
-                        <img src="../../../assets/images/categories/comida/patio/patio.webp" class="card-img-top" alt="Patio Restaurante Parrilla" >
+  <div class="container">
+    <div class="row">
+      <!-- Columna izquierda: tarjeta + carrusel -->
+      <div class="col-lg-4 mb-4 fade-in">
+        <!-- Tarjeta -->
+        <div class="card mb-4 shadow-sm">
+          <img src="../../../assets/images/categories/comida/patio/patio.webp" class="card-img-top" alt="Patio Restaurante Parrilla" >
                         <div class="card-body">
                             <h3 class="card-title">Dirección: Cll. 12 #12 - 25</h3>
                             <p><b>Horario de Atención:</b> Viernes Y Sábado: 12:00mm - 3:30pm</p>
@@ -72,15 +74,12 @@
                             </div>
                             <a class="btn btn-call" href="tel:+573163307677">📞 Llamar</a>
                             <a href="https://wa.me/573163307677" class="btn btn-whatsapp">Whatsapp</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
 
-    <!-- Carousel -->
-<section id="carousel-section">
-    <div class="carousel">
+        <!-- Carrusel debajo de la tarjeta -->
+        <section id="carousel-section" class="mt-4">
+          <div class="carousel">
     <button id="carousel-prev" class="carousel-nav">&lt;</button> <!-- Botón anterior -->  
         <div class="carousel-item" onclick="window.location.href='#'">
             <img src="../../../assets/images/categories/comida/patio/slide1.webp" alt="Patio Restaurante">
@@ -131,23 +130,32 @@
             <img src="../../../assets/images/categories/comida/patio/slide16.webp" alt="Patio Restaurante">
         </div>
     <button id="carousel-next" class="carousel-nav">&gt;</button> <!-- Botón siguiente -->
-    </div>
-</section>
+          </div>
+        </section>
+      </div>
 
-        <div class="map-container">            
-            <!-- Google Maps -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4249623576657!2d-73.260756!3d6.467728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a00afdb1c5%3A0xddc5cf3f50892f6a!2sEL%20PATIO%20RESTAURANTE%20PARRILLA!5e0!3m2!1ses!2sco!4v1746029099489!5m2!1ses!2sco" width="300" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- Columna derecha: mapa + iframe de Facebook -->
+      <div class="col-lg-8">
+        <!-- Mapa -->
+        <div class="mb-4">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4249623576657!2d-73.260756!3d6.467728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a00afdb1c5%3A0xddc5cf3f50892f6a!2sEL%20PATIO%20RESTAURANTE%20PARRILLA!5e0!3m2!1ses!2sco!4v1746029099489!5m2!1ses!2sco" width="100%" height="300" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     
             <!-- Botón de Cómo Llegar -->
             <a class="btn-map" href="https://www.google.com.ar/maps/dir//EL+PATIO+RESTAURANTE+PARRILLA,+Calle+12,+Pan-American+Highway+%2312+-+25,+Socorro,+Santander/@6.467728,-73.260756,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e69c2a00afdb1c5:0xddc5cf3f50892f6a!2m2!1d-73.260756!2d6.467728?hl=es&entry=ttu&g_ep=EgoyMDI1MDQyNy4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank" rel="noopener">
                 📍 Cómo llegar
             </a>
+          </div>
         </div>
 
-    <div class="map-container">
+        <!-- Facebook Iframe -->
+        <div class="map-container">
     <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Felpatiorestauranteparrilla&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="500" style="border:none;border-radius: 10px; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    
-    </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     
 
         <!-- Footer -->

@@ -151,6 +151,19 @@ if (startSearchBtn && searchInput) {
     });
 }
 
+  function mostrarBoton() {
+    const select = document.getElementById('selector-cuadrantes');
+    const boton = document.getElementById('boton-llamar');
+    const contenedor = document.getElementById('btn-cuadrante');
+
+    if (select.value) {
+      boton.href = 'tel:' + select.value;
+      boton.innerText = '📞 Llamar al ' + select.options[select.selectedIndex].text;
+      contenedor.style.display = 'block';
+    } else {
+      contenedor.style.display = 'none';
+    }
+  }
 
 
 // 1Carousel
