@@ -54,31 +54,30 @@
 <div id="overlay" class="overlay" onclick="closeNavbar()"></div>
 
     <!-- Cards Section -->
-        <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 fade-in">
-                    <div class="card mb-4 shadow-sm">
-                        <img src="../../../assets/images/categories/vestuario/adn/adn.webp" class="card-img-top" alt="Lilipink" >
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Columna izquierda: tarjeta + carrusel -->
+      <div class="col-lg-4 mb-4 fade-in">
+        <!-- Tarjeta -->
+        <div class="card mb-4 shadow-sm">
+          <img src="../../../assets/images/categories/vestuario/adn/adn.webp" class="card-img-top" alt="Lilipink" >
                         <div class="card-body">
                             <h3 class="card-title">Dirección: Cll. 9 #15-25</h3>
                             <p><b>Horario de Atención:</b> Lunes a Domingo 9:00 am - 7:45 pm</p>
                             <p class="card-text">Nos inspiramos en su estilo icónico para traerte una colección juvenil de ropa interior llena de encanto y diversión. ¡Descúbrela! ❤️🖤</p>
                             <a class="btn btn-call" href="tel:+573134666736">📞 Llamar</a>
                             <a href="https://wa.me/573134666736" class="btn btn-whatsapp" target="_blank">Whatsapp</a>
-
-                         </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
 
-        <!-- Carousel -->
-<section id="carousel-section">
-    <div class="carousel">
-    <button id="carousel-prev" class="carousel-nav">&lt;</button> <!-- Botón anterior -->  
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../assets/images/categories/vestuario/adn/slide1.webp" alt="ADN Couture">
+        <!-- Carrusel debajo de la tarjeta -->
+        <section id="carousel-section" class="mt-4">
+          <div class="carousel">
+            <button id="carousel-prev" class="carousel-nav">&lt;</button>
+            <div class="carousel-item" onclick="window.location.href='#'">
+              <img src="../../../assets/images/categories/vestuario/adn/slide1.webp" alt="ADN Couture">
         </div>    
         <div class="carousel-item" onclick="window.location.href='#'">
             <img src="../../../assets/images/categories/vestuario/adn/slide2.webp" alt="ADN Couture">
@@ -123,25 +122,34 @@
             <img src="../../../assets/images/categories/vestuario/adn/slide15.webp" alt="ADN Couture">
         </div>
     <button id="carousel-next" class="carousel-nav">&gt;</button> <!-- Botón siguiente -->
-    </div>
-</section>
+          </div>
+        </section>
+      </div>
 
-        <div class="map-container">            
-            <!-- Google Maps -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4388952951103!2d-73.26325389999998!3d6.465951500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81d601cfae5%3A0x3491d50d38001f03!2sCl.%209%20%23%2015-25%2C%20Socorro%2C%20Santander!5e0!3m2!1ses!2sco!4v1745852169814!5m2!1ses!2sco" width="300" height="300" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- Columna derecha: mapa + iframe de Facebook -->
+      <div class="col-lg-8">
+        <!-- Mapa -->
+        <div class="mb-4">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4388952951103!2d-73.26325389999998!3d6.465951500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81d601cfae5%3A0x3491d50d38001f03!2sCl.%209%20%23%2015-25%2C%20Socorro%2C%20Santander!5e0!3m2!1ses!2sco!4v1745852169814!5m2!1ses!2sco" width="100%" height="300" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     
             <!-- Botón de Cómo Llegar -->
             <a class="btn-map" href="https://www.google.com.ar/maps/dir//Cl.+9+%23+15-25,+Socorro,+Santander/@6.4659515,-73.2632539,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e69e81d601cfae5:0x3491d50d38001f03!2m2!1d-73.2632539!2d6.4659515?hl=es&entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank" rel="noopener">
                 📍 Cómo llegar
             </a>
+          </div>
         </div>
 
-    <div class="map-container">
+        <!-- Facebook Iframe -->
+        <div class="map-container">
+          <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0UnBddJW8rGCwQA4GfAKdXC6z7ar6nrshTw2FRcYGT8ARupgdcLqhpd4bSFaQ8DqJl%26id%3D61573167486976&width=300&show_text=true&height=408&appId" width="300" height="408" style="border:none;border-radius: 10px; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+      </div>
 
-    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0UnBddJW8rGCwQA4GfAKdXC6z7ar6nrshTw2FRcYGT8ARupgdcLqhpd4bSFaQ8DqJl%26id%3D61573167486976&width=300&show_text=true&height=408&appId" width="300" height="408" style="border:none;border-radius: 10px; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
     </div>
-    
-    </section>
+  </div>
+</section>
+
     
 
         <!-- Footer -->
