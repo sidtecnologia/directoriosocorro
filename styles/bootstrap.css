@@ -1,7 +1,7 @@
 /* General Styles */
 body {
-    font-family: 'Verdana', Lato, sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', Condensed, sans-serif;
+    line-height: 1.2;
     background-color: white;
     color: #333;
     margin: 0;
@@ -36,7 +36,7 @@ header {
 
 header h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
 }
@@ -475,7 +475,7 @@ body {
 
 .text-recomended {
     font-weight: bold;
-    font-size: xx-large;
+    font-size: 1.5rem;
     text-shadow: 1px 1px black;
     margin-top: 0.5rem;
     padding: 20px;
