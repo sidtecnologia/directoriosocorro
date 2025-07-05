@@ -25,91 +25,12 @@ const searchResults = document.getElementById('searchResults');
 
 // Asegurar que el modal esté oculto al cargar la página
 if (searchModal) {
-    searchModal.style.display = 'none';
+  searchModal.style.display = 'none';
 }
 
 // ✅ Lista de páginas organizada por categorías (carpetas con index)
 const pagesToSearch = [
-    // 🗂️ Categoría: Vestuario
-    '../../../business/categories/vestuario/',
-    '../../../../business/categories/vestuario/adn/',
-    '../../../../business/categories/vestuario/angels/',
-    '../../../../business/categories/vestuario/antoine/',
-    '../../../../business/categories/vestuario/lilipink/',
-    '../../../../business/categories/vestuario/manitos/',
-    '../../../../business/categories/vestuario/rich/',
-    '../../../../business/categories/vestuario/veinte/',
-    
-    // 🗂️ Categoría: Comida
-    '../../../business/categories/comida/',
-    '../../../../business/categories/comida/baldoria/',
-    '../../../../business/categories/comida/chicbone/',
-    '../../../../business/categories/comida/empanada/',
-    '../../../../business/categories/comida/fogon/',
-    '../../../../business/categories/comida/masterpizza/',
-    '../../../../business/categories/comida/orale/',
-    '../../../../business/categories/comida/patio/',
-    '../../../../business/categories/comida/saloon/',
-    
-    // 🗂️ Categoría: Belleza
-    '../../../business/categories/belleza/',
-    '../../../../business/categories/belleza/cami/',
-    '../../../../business/categories/belleza/july/',
-    '../../../../business/categories/belleza/lexus/',
-    '../../../../business/categories/belleza/luna/',
-    '../../../../business/categories/belleza/mara/',
-    '../../../../business/categories/belleza/reina/',
-    '../../../../business/categories/belleza/susy/',
-    '../../../../business/categories/belleza/yeye/',
-    
-    // 🗂️ Categoría: Bebidas
-    '../../../business/categories/bebida/',
-    '../../../../business/categories/bebida/alcala/',
-    '../../../../business/categories/bebida/blas/',
-    '../../../../business/categories/bebida/coco/',
-    
-    // 🗂️ Categoría: Gimnasio
-    '../../../business/categories/gimnasio/',
-    
-    // 🗂️ Categoría: Droguería
-    '../../../business/categories/drogueria/',
-    '../../../../business/categories/drogueria/cruz-verde/',
-    
-    // 🗂️ Categoría: Entretenimiento
-    '../../../business/categories/entretenimiento/',
-    
-    // 🗂️ Categoría: Mascotas
-    '../../../business/categories/mascotas/',
-    
-    // 🗂️ Categoría: Mecánica
-    '../../../business/categories/mecanica/',
-    
-    // 🗂️ Categoría: Inmobiliaria
-    '../../../business/categories/inmobiliaria/',
-    
-    // 🗂️ Categoría: Hotel
-    '../../../business/categories/hotel/',
-    
-    // 🗂️ Categoría: Tecnología
-    '../../../business/categories/tecnologia/',
-    
-    // 🗂️ Categoría: Transporte
-    '../../../business/categories/transporte/',
-    
-    // 🗂️ Categoría: Deportes
-    '../../../business/categories/deportes/',
-    
-    // 🗂️ Categoría: Ferretería
-    '../../../business/categories/ferreteria/',
-    
-    // 🗂️ Categoría: Profesionales
-    '../../../business/categories/profesionales/',
-    
-    // 🗂️ Categoría: Públicos
-    '../../../business/categories/publicos/',
-    
-    // 🗂️ Categoría General
-    '../../business/categories/',
+  // ... (Tu lista igualita)
 ];
 
 // Agregar la página actual al array
@@ -117,98 +38,102 @@ pagesToSearch.push(window.location.pathname);
 
 // Verificar si los elementos existen antes de añadir eventos
 if (searchButton && searchModal) {
-    searchButton.addEventListener('click', () => {
-        searchModal.style.display = 'flex';
-    });
+  searchButton.addEventListener('click', () => {
+    searchModal.style.display = 'flex';
+  });
 
-    closeSearchModal.addEventListener('click', () => {
-        searchModal.style.display = 'none';
-    });
+  closeSearchModal.addEventListener('click', () => {
+    searchModal.style.display = 'none';
+  });
 
-    window.addEventListener('click', (e) => {
-        if (e.target === searchModal) {
-            searchModal.style.display = 'none';
-        }
-    });
-}
-
-// Normalizar IDs
-function normalizeId(id) {
-    return id ? id.toLowerCase().replace(/\s+/g, '') : '';
-}
-
-// Buscar ID en páginas
-async function searchIdInPages(query) {
-    if (!searchResults) return;
-
-    searchResults.innerHTML = "<p>🔍 Buscando...</p>";
-    const normalizedQuery = normalizeId(query);
-    let results = [];
-
-    console.log("🔎 Iniciando búsqueda de:", normalizedQuery);
-
-    for (const page of pagesToSearch) {
-        try {
-            console.log(`📄 Buscando en: ${page}...`);
-            const response = await fetch(page);
-            if (!response.ok) {
-                console.warn(`⚠️ No se pudo cargar ${page}`);
-                continue;
-            }
-
-            const htmlText = await response.text();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(htmlText, 'text/html');
-
-            const allElements = doc.querySelectorAll('[id]');
-            console.log(`🔍 Encontrados ${allElements.length} elementos`);
-
-            allElements.forEach(el => {
-                if (normalizeId(el.id).includes(normalizedQuery)) {
-                    console.log(`✅ Coincidencia encontrada`);
-
-                    // 📂 Obtener nombre de carpeta como fileName
-                    const parts = page.split('/');
-                    let fileName = parts[parts.length - 2] || 'Inicio';
-
-                    results.push(`
-                        <div class="result-item">
-                            <a href="${page}#${el.id}" class="result-link" onclick="closeSearchModalFunction()">
-                                <strong>${el.id.toUpperCase()}</strong> en ${fileName.toUpperCase()}
-                            </a>
-                        </div>
-                    `);
-                }
-            });
-
-        } catch (error) {
-            console.error(`❌ Error al cargar ${page}:`, error);
-        }
+  window.addEventListener('click', (e) => {
+    if (e.target === searchModal) {
+      searchModal.style.display = 'none';
     }
+  });
+}
 
-    searchResults.innerHTML = results.length > 0
-        ? results.join('')
-        : "<p>❌ No se encontró ningún resultado.</p>";
+// Normalizar para comparar sin espacios ni mayúsculas
+function normalizeText(text) {
+  return text ? text.toLowerCase().replace(/\s+/g, '') : '';
+}
+
+// Buscar CLASES en páginas
+async function searchClassInPages(query) {
+  if (!searchResults) return;
+
+  searchResults.innerHTML = "<p>🔍 Buscando...</p>";
+  const normalizedQuery = normalizeText(query);
+  let results = [];
+
+  console.log("🔎 Iniciando búsqueda de:", normalizedQuery);
+
+  for (const page of pagesToSearch) {
+    try {
+      console.log(`📄 Buscando en: ${page}...`);
+      const response = await fetch(page);
+      if (!response.ok) {
+        console.warn(`⚠️ No se pudo cargar ${page}`);
+        continue;
+      }
+
+      const htmlText = await response.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlText, 'text/html');
+
+      const allElements = doc.querySelectorAll('[class]');
+      console.log(`🔍 Encontrados ${allElements.length} elementos con clases`);
+
+      allElements.forEach(el => {
+        const classList = el.className.split(/\s+/);
+        classList.forEach(cl => {
+          if (normalizeText(cl).includes(normalizedQuery)) {
+            console.log(`✅ Coincidencia encontrada: ${cl}`);
+
+            // 📂 Obtener nombre de carpeta como fileName
+            const parts = page.split('/');
+            let fileName = parts[parts.length - 2] || 'Inicio';
+
+            results.push(`
+              <div class="result-item">
+                <a href="${page}" class="result-link" onclick="closeSearchModalFunction()">
+                  <strong>${cl.toUpperCase()}</strong> en ${fileName.toUpperCase()}
+                </a>
+              </div>
+            `);
+          }
+        });
+      });
+
+    } catch (error) {
+      console.error(`❌ Error al cargar ${page}:`, error);
+    }
+  }
+
+  searchResults.innerHTML = results.length > 0
+    ? results.join('')
+    : "<p>❌ No se encontró ningún resultado.</p>";
 }
 
 // Función para cerrar el modal
 function closeSearchModalFunction() {
-    if (searchModal) {
-        searchModal.style.display = 'none';
-    }
+  if (searchModal) {
+    searchModal.style.display = 'none';
+  }
 }
 
 // Evento para iniciar búsqueda
 if (startSearchBtn && searchInput) {
-    startSearchBtn.addEventListener('click', () => {
-        const query = searchInput.value.trim();
-        if (query) {
-            searchIdInPages(query);
-        } else {
-            alert('Por favor, ingresa un término de búsqueda.');
-        }
-    });
+  startSearchBtn.addEventListener('click', () => {
+    const query = searchInput.value.trim();
+    if (query) {
+      searchClassInPages(query);
+    } else {
+      alert('Por favor, ingresa un término de búsqueda.');
+    }
+  });
 }
+
 
 
   function mostrarBoton() {
