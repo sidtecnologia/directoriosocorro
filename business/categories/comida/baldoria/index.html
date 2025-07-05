@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directorio empresarial de Socorro, con un diseño moderno y dinámico.">
+    <title>Directorio Empresarial Socorro | Baldoria Pizzería</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../../../assets/images/favicon.png" type="image/x-icon">
+
+    <!-- CSS Frameworks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../../assets/css/bootstrap.css">
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "39676bba-2644-4e38-bed5-43d9f629a0ab",
+    });
+  });
+</script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Baldoria Pizzería</h1>
+        <h2>Comida</h2>
+    </header>
+
+<!-- Horizontal Panel -->
+<div class="horizontal-panel"></div>
+
+
+<!-- Navigation Bar 
+<nav class="navbar" id="sidebar">
+    <div class="navbar-brand">
+        <img src="../../../../assets/images/logo.webp" class="menu-img" alt="Directorio Barrancabermeja">
+    </div>
+    <div class="nav-links">
+        <a class="nav-buttons btn" href="https://www.facebook.com/share/153XVs5rya/" target="_blank">Facebook</a>
+        <a class="nav-buttons btn" href="../../../nosotros.html">Nosotros</a>
+        <a class="nav-buttons btn" href="../../../contacto.html">Contacto</a>
+    </div>
+</nav>-->
+
+<!-- Overlay Background -->
+<div id="overlay" class="overlay" onclick="closeNavbar()"></div>
+
+    <!-- Cards Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Columna izquierda: tarjeta + carrusel -->
+      <div class="col-lg-4 mb-4 fade-in">
+        <!-- Tarjeta -->
+        <div class="card mb-4 shadow-sm">
+          <img src="../../../../assets/images/categories/comida/baldoria/baldoria.webp" class="card-img-top" alt="Baldoria">
+          <div class="card-body">
+            <h3 class="card-title">Dirección: Cra. 14 # 13-44</h3>
+            <p><b>Horario de Atención:</b> Lunes a Domingo: 5:00pm - 10:00pm</p>
+            <p class="card-text">Una pizzería que celebra la tradición italiana con una propuesta culinaria innovadora y de alta calidad. 😋😋😋</p>
+            <div class="card-body">
+              <h5 class="card-title">Servicios</h5>
+              <ul>
+                <li id="Desayunos, Almuerzos">Desayunos y Almuerzos.</li>
+                <li id="Platos Especiales">Platos Especiales.</li>
+                <li id="Jugos">Jugos.</li>
+              </ul>
+            </div>
+            <a class="btn btn-call" href="tel:+573143157157">📞 Llamar</a>
+            <a href="https://wa.me/573143157157" class="btn btn-whatsapp">Whatsapp</a>
+          </div>
+        </div>
+
+        <!-- Carrusel debajo de la tarjeta -->
+        <section id="carousel-section" class="mt-4">
+          <div class="carousel">
+            <button id="carousel-prev" class="carousel-nav">&lt;</button>
+            <div class="carousel-item" onclick="window.location.href='#'">
+              <img src="../../../../assets/images/categories/comida/baldoria/slide1.webp" alt="Baldoria Pizzería">
+            </div>
+            <div class="carousel-item" onclick="window.location.href='#'">
+              <img src="../../../../assets/images/categories/comida/baldoria/slide2.webp" alt="Baldoria Pizzería">
+            </div>
+            <div class="carousel-item" onclick="window.location.href='#'">
+              <img src="../../../../assets/images/categories/comida/baldoria/slide3.webp" alt="Baldoria Pizzería">
+            </div>
+            <div class="carousel-item" onclick="window.location.href='#'">
+              <img src="../../../../assets/images/categories/comida/baldoria/slide4.webp" alt="Baldoria Pizzería">
+            </div>
+            <div class="carousel-item" onclick="window.location.href='#'">
+              <img src="../../../../assets/images/categories/comida/baldoria/slide5.webp" alt="Baldoria Pizzería">
+            </div>
+            <div class="carousel-item" onclick="window.location.href='#'">
+              <img src="../../../../assets/images/categories/comida/baldoria/slide6.webp" alt="Baldoria Pizzería">
+            </div>
+            <div class="carousel-item" onclick="window.location.href='#'">
+              <img src="../../../../assets/images/categories/comida/baldoria/slide7.webp" alt="Baldoria Pizzería">
+            </div>
+            <div class="carousel-item" onclick="window.location.href='#'">
+              <img src="../../../../assets/images/categories/comida/baldoria/slide8.webp" alt="Baldoria Pizzería">
+            </div>
+            <div class="carousel-item" onclick="window.location.href='#'">
+              <img src="../../../../assets/images/categories/comida/baldoria/slide9.webp" alt="Baldoria Pizzería">
+            </div>
+            <button id="carousel-next" class="carousel-nav">&gt;</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- Columna derecha: mapa + iframe de Facebook -->
+      <div class="col-lg-8">
+        <!-- Mapa -->
+        <div class="mb-4">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.41130414593!2d-73.26122459999999!3d6.469468999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c369826848f3%3A0xd1cb62e60108c5d!2sCafe%20Baldoria%20pizzeria!5e0!3m2!1ses!2sco!4v1746221616197!5m2!1ses!2sco" width="100%" height="300" style="border:0;border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a class="btn-map" href="https://www.google.com.ar/maps/dir//Cafe+Baldoria+pizzeria,+Cra.+14+%2313-44,+Socorro,+Santander/@6.469469,-73.2612246,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e69c369826848f3:0xd1cb62e60108c5d!2m2!1d-73.2612246!2d6.469469?hl=es&entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank" rel="noopener">📍 Cómo llegar</a>
+          </div>
+        </div>
+
+        <!-- Facebook Iframe -->
+        <div class="map-container">
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61557079590244&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="500" style="border:none;border-radius: 10px; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    
+
+        <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <p>&copy; 2025 Directorio Empresarial. Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="floating-panel">
+    <div class="btn-container">
+        <a id="searchButton" class="btn-panel" title="Búsqueda">
+            <i class="fas fa-search"></i>
+        </a>
+        <span class="btn-text">Búsqueda</span>
+    </div>
+
+    <div class="btn-container">
+        <a class="btn-center" href="../../../../" title="Inicio">
+            <i class="fas fa-home"></i>
+        </a>
+        <span class="btn-text">Inicio</span>
+    </div>
+
+    <div class="btn-container">
+        <a class="btn-panel" href="../../../../business/categories/" title="Categorías">
+            <i class="fas fa-list"></i>
+        </a>
+        <span class="btn-text">Categorías</span>
+    </div>
+</div>
+
+<!-- Modal de Búsqueda -->
+<div id="searchModal" class="search-modal">
+    <div class="search-modal-content">
+        <button id="closeSearchModal" class="close-btn">&times;</button>
+        <h2>Buscar</h2>
+        <input type="text" id="searchInput" class="search-input" placeholder="Escribe aquí tu búsqueda...">
+        <button id="startSearchBtn" class="start-search-btn">Iniciar Búsqueda</button>
+        <div id="searchResults" class="search-results"></div> <!-- Sección para mostrar resultados -->
+    </div>
+</div>
+
+
+
+    <!-- JS Frameworks -->
+    <script src="../../../../assets/js/custom.js" defer></script>
+    <script src="../../../../assets/js/service-worker.js" defer></script>
+</body>
+</html>

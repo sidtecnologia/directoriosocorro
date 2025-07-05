@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directorio empresarial de Barrancabermeja, con un diseño moderno y dinámico.">
+    <title>Directorio Comercial Barrancabermeja | Categorías</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../assets/images/favicon.png" type="image/x-icon"/>
+
+    <!-- CSS Frameworks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "39676bba-2644-4e38-bed5-43d9f629a0ab",
+    });
+  });
+</script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h2>Elige una Categoría</h2>
+</header>
+
+<!-- Horizontal Panel -->
+<div class="horizontal-panel"></div>
+
+
+<!-- Navigation Bar 
+<nav class="navbar" id="sidebar">
+    <div class="navbar-brand">
+        <img src="../assets/images/logo.webp" class="menu-img" alt="Directorio Barrancabermeja">
+    </div>
+    <div class="nav-links">
+        <a class="nav-buttons btn" href="https://www.facebook.com/share/153XVs5rya/" target="_blank">Facebook</a>
+        <a class="nav-buttons btn" href="../nosotros/">Nosotros</a>
+        <a class="nav-buttons btn" href="../contacto/">Contacto</a>
+    </div>
+</nav>-->
+
+<!-- Overlay Background -->
+<div id="overlay" class="overlay" onclick="closeNavbar()"></div>
+
+
+<!-- categories Section -->
+<section class="categories-grid fade-in">
+    <div id="vestuario" class="category-item">
+        <img id="Ropa" src="../../assets/images/categories/vestuario.webp" alt="Vestuario" class="category-img" onclick="window.location.href='../../business/categories/vestuario/';">
+        <div class="category-title">Vestuario</div>
+    </div>
+    <div class="category-item">
+        <img id="Comida" src="../../assets/images/categories/comida.webp" alt="Comida" class="category-img" onclick="window.location.href='../../business/categories/comida/';">
+        <div class="category-title">Comida</div>
+    </div>
+    <div class="category-item">
+        <img id="Estetica - Belleza" src="../../assets/images/categories/belleza.webp" alt="Estética - Belleza" class="category-img" onclick="window.location.href='../../business/categories/belleza/';">
+        <div class="category-title">Estética - Belleza</div>
+    </div>
+    <div class="category-item">
+        <img id="Bebidas" src="../../assets/images/categories/bebidas.webp" alt="Bebidas" class="category-img" onclick="window.location.href='../../business/categories/bebida/';">
+        <div class="category-title">Bebidas</div>
+    </div>
+    <div class="category-item">
+        <img id="Gimnasio" src="../../assets/images/categories/gimnasio.webp" alt="Gimnasio" class="category-img" onclick="window.location.href='#';">
+        <div class="category-title">Gimnasio</div>
+    </div>
+    <div class="category-item">
+        <img id="Drogueria" src="../../assets/images/categories/drogueria.webp" alt="Droguería" class="category-img" onclick="window.location.href='../../business/categories/drogueria/';">
+        <div class="category-title">Droguería</div>
+    </div>
+    <div class="category-item">
+        <img id="Entretenimiento" src="../../assets/images/categories/entretenimiento.webp" alt="Entretenimiento" class="category-img" onclick="window.location.href='../../business/categories/entretenimiento/';">
+        <div class="category-title">Entretenimiento</div>
+    </div>
+    <div class="category-item">
+        <img id="Agro Mascotas" src="../../assets/images/categories/agro.webp" alt="Agro & Mascotas" class="category-img" onclick="window.location.href='#';">
+        <div class="category-title">Agro & Mascotas</div>
+    </div>
+    <div class="category-item">
+        <img id="Mecanica" src="../../assets/images/categories/mecanica.webp" alt="Mecánica" class="category-img" onclick="window.location.href='#';">
+        <div class="category-title">Mecánica</div>
+    </div>
+    <div class="category-item">
+        <img id="Inmobiliaria" src="../../assets/images/categories/inmobiliaria.webp" alt="Inmobiliaria" class="category-img" onclick="window.location.href='#';">
+        <div class="category-title">Inmobiliaria</div>
+    </div>
+    <div class="category-item">
+        <img id="Hoteles" src="../../assets/images/categories/hotel.webp" alt="Hoteles" class="category-img" onclick="window.location.href='#';">
+        <div class="category-title">Hoteles</div>
+    </div>
+    <div class="category-item">
+        <img id="Tecnologia" src="../../assets/images/categories/tecnologia.webp" alt="Tecnología" class="category-img" onclick="window.location.href='#';">
+        <div class="category-title">Tecnología</div>
+    </div>
+    <div class="category-item">
+        <img id="Transporte" src="../../assets/images/categories/transporte.webp" alt="Transporte" class="category-img" onclick="window.location.href='#';">
+        <div class="category-title">Transporte</div>
+    </div>
+    <div class="category-item">
+        <img id="Deportes" src="../../assets/images/categories/deportes.webp" alt="Deportes" class="category-img" onclick="window.location.href='#';">
+        <div class="category-title">Deportes</div>
+    </div>
+    <div class="category-item">
+        <img id="Ferreteria" src="../../assets/images/categories/ferreteria.webp" alt="Ferretería" class="category-img" onclick="window.location.href='#';">
+        <div class="category-title">Ferretería</div>
+    </div>
+    <div class="category-item">
+        <img id="Servicios Profesionales" src="../../assets/images/categories/profesionales.webp" alt="Servicios Profesionales" class="category-img" onclick="window.location.href='#';">
+        <div class="category-title">Servicios Profesionales</div>
+    </div>
+    <div class="category-item">
+        <img id="Entidades Publicas" src="../../assets/images/categories/publicos.webp" alt="Entidades Públicas" class="category-img" onclick="window.location.href='../../business/categories/publicos/';">
+        <div class="category-title">Entidades Públicas</div>
+    </div>
+</section>
+
+
+        <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <p>&copy; 2025 Directorio Empresarial. Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="floating-panel">
+    <div class="btn-container">
+        <a id="searchButton" class="btn-panel" title="Búsqueda">
+            <i class="fas fa-search"></i>
+        </a>
+        <span class="btn-text">Búsqueda</span>
+    </div>
+
+    <div class="btn-container">
+        <a class="btn-center" href="../../" title="Inicio">
+            <i class="fas fa-home"></i>
+        </a>
+        <span class="btn-text">Inicio</span>
+    </div>
+
+    <div class="btn-container">
+        <a class="btn-panel" href="../../../business/categories/" title="Categorías">
+            <i class="fas fa-list"></i>
+        </a>
+        <span class="btn-text">Categorías</span>
+    </div>
+</div>
+
+
+<!-- Modal de Búsqueda -->
+<div id="searchModal" class="search-modal">
+    <div class="search-modal-content">
+        <button id="closeSearchModal" class="close-btn">&times;</button>
+        <h2>Buscar</h2>
+        <input type="text" id="searchInput" class="search-input" placeholder="Escribe aquí tu búsqueda...">
+        <button id="startSearchBtn" class="start-search-btn">Iniciar Búsqueda</button>
+        <div id="searchResults" class="search-results"></div> <!-- Sección para mostrar resultados -->
+    </div>
+</div>
+
+
+
+    <!-- JS Frameworks -->
+    <script src="../../../assets/scripts/custom.js" defer></script>
+    <script src="../../../assets/scripts/service-worker.js" defer></script>
+</body>
+</html>
