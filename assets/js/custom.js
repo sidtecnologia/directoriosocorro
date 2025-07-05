@@ -30,8 +30,6 @@ if (searchModal) {
 
 // ✅ Lista de páginas organizada por categorías (carpetas con index)
 const pagesToSearch = [
-  // ✅ Lista de páginas organizada por categorías (carpetas con index)
-const pagesToSearch = [
     // 🗂️ Categoría: Vestuario
     '../../../business/categories/vestuario/',
     '../../../../business/categories/vestuario/adn/',
