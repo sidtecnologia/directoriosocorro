@@ -109,7 +109,7 @@ const pagesToSearch = [
     '../../../business/categories/publicos/',
     
     // 🗂️ Categoría General
-    '../../../business/categories/',
+    '../../business/categories/',
 ];
 
 // Agregar la página actual al array
