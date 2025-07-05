@@ -30,7 +30,88 @@ if (searchModal) {
 
 // ✅ Lista de páginas organizada por categorías (carpetas con index)
 const pagesToSearch = [
-  // ... (Tu lista igualita)
+  // ✅ Lista de páginas organizada por categorías (carpetas con index)
+const pagesToSearch = [
+    // 🗂️ Categoría: Vestuario
+    '../../../business/categories/vestuario/',
+    '../../../../business/categories/vestuario/adn/',
+    '../../../../business/categories/vestuario/angels/',
+    '../../../../business/categories/vestuario/antoine/',
+    '../../../../business/categories/vestuario/lilipink/',
+    '../../../../business/categories/vestuario/manitos/',
+    '../../../../business/categories/vestuario/rich/',
+    '../../../../business/categories/vestuario/veinte/',
+    
+    // 🗂️ Categoría: Comida
+    '../../../business/categories/comida/',
+    '../../../../business/categories/comida/baldoria/',
+    '../../../../business/categories/comida/chicbone/',
+    '../../../../business/categories/comida/empanada/',
+    '../../../../business/categories/comida/fogon/',
+    '../../../../business/categories/comida/masterpizza/',
+    '../../../../business/categories/comida/orale/',
+    '../../../../business/categories/comida/patio/',
+    '../../../../business/categories/comida/saloon/',
+    
+    // 🗂️ Categoría: Belleza
+    '../../../business/categories/belleza/',
+    '../../../../business/categories/belleza/cami/',
+    '../../../../business/categories/belleza/july/',
+    '../../../../business/categories/belleza/lexus/',
+    '../../../../business/categories/belleza/luna/',
+    '../../../../business/categories/belleza/mara/',
+    '../../../../business/categories/belleza/reina/',
+    '../../../../business/categories/belleza/susy/',
+    '../../../../business/categories/belleza/yeye/',
+    
+    // 🗂️ Categoría: Bebidas
+    '../../../business/categories/bebida/',
+    '../../../../business/categories/bebida/alcala/',
+    '../../../../business/categories/bebida/blas/',
+    '../../../../business/categories/bebida/coco/',
+    
+    // 🗂️ Categoría: Gimnasio
+    '../../../business/categories/gimnasio/',
+    
+    // 🗂️ Categoría: Droguería
+    '../../../business/categories/drogueria/',
+    '../../../../business/categories/drogueria/cruz-verde/',
+    
+    // 🗂️ Categoría: Entretenimiento
+    '../../../business/categories/entretenimiento/',
+    
+    // 🗂️ Categoría: Mascotas
+    '../../../business/categories/mascotas/',
+    
+    // 🗂️ Categoría: Mecánica
+    '../../../business/categories/mecanica/',
+    
+    // 🗂️ Categoría: Inmobiliaria
+    '../../../business/categories/inmobiliaria/',
+    
+    // 🗂️ Categoría: Hotel
+    '../../../business/categories/hotel/',
+    
+    // 🗂️ Categoría: Tecnología
+    '../../../business/categories/tecnologia/',
+    
+    // 🗂️ Categoría: Transporte
+    '../../../business/categories/transporte/',
+    
+    // 🗂️ Categoría: Deportes
+    '../../../business/categories/deportes/',
+    
+    // 🗂️ Categoría: Ferretería
+    '../../../business/categories/ferreteria/',
+    
+    // 🗂️ Categoría: Profesionales
+    '../../../business/categories/profesionales/',
+    
+    // 🗂️ Categoría: Públicos
+    '../../../business/categories/publicos/',
+    
+    // 🗂️ Categoría General
+    '../../business/categories/',
 ];
 
 // Agregar la página actual al array
