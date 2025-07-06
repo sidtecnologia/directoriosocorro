@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resultados de Búsqueda</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"/>
-  <style>
-    .result-card { border-radius: 10px; overflow: hidden; transition: transform 0.2s; }
-    .result-card:hover { transform: scale(1.02); }
-    .result-img { width: 100%; height: 200px; object-fit: cover; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directorio empresarial de Socorro, con un diseño moderno y dinámico.">
+    <title>Directorio Empresarial Socorro | Busqueda</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../../assets/images/favicon.png" type="image/x-icon">
+
+    <!-- CSS Frameworks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "39676bba-2644-4e38-bed5-43d9f629a0ab",
+    });
+  });
+</script>
 </head>
-<body class="bg-light">
+<body class="">
+    <!-- Header -->
+    <header>
+        <h1>Resultados de Busqueda</h1>
+        <b>Directorio Socorro</b>
+    </header>
 
-  <div class="container py-5">
-    <h1 class="mb-4">Resultados de Búsqueda</h1>
+<!-- Horizontal Panel -->
+<div class="horizontal-panel"></div>
 
-    <!-- Buscador -->
-    <div class="input-group mb-5">
+    
+<section class="py-5">
+  
+<!-- Buscador -->
+    <div class="input-group mb-4">
       <input type="text" id="newSearchInput" class="form-control" placeholder="Escribe tu búsqueda...">
       <button class="btn btn-primary" id="newSearchBtn">Buscar</button>
     </div>
 
+    <!-- Botón Volver al Inicio centrado -->
+    <div class="text-center mb-4">
+      <button class="btn btn-secondary" onclick="window.location.href='./'">🏠 Volver al Inicio</button>
+    </div>
+
+</section>
+    
+
+    <!-- Estado de búsqueda -->
+    <p id="searchStatus" class="mb-4 text-center">🔍 Buscando...</p>
+
     <!-- Contenedor de resultados -->
     <div id="resultsContainer" class="row g-4">
-      <!-- JS insertará aquí las tarjetas -->
+      <!-- Tarjetas dinámicas aquí -->
     </div>
   </div>
 
   <script>
-    // Leer query
     const params = new URLSearchParams(window.location.search);
     const query = params.get('q') || '';
-
     const resultsContainer = document.getElementById('resultsContainer');
+    const searchStatus = document.getElementById('searchStatus');
 
-    // Lista de páginas
     const pagesToSearch = [
     // 🗂️ Categoría: Vestuario
     '../../../business/categories/vestuario/',
@@ -126,6 +157,7 @@
     async function searchPages(query) {
       const normalizedQuery = normalizeText(query);
       let found = [];
+      searchStatus.textContent = "🔍 Buscando...";
 
       for (const page of pagesToSearch) {
         try {
@@ -151,31 +183,34 @@
             const img = doc.querySelector('img')?.src || 'https://via.placeholder.com/400x200?text=Sin+Imagen';
 
             found.push({ title, img, link: page });
+
+            resultsContainer.insertAdjacentHTML('beforeend', `
+              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card result-card h-100 shadow-sm">
+                  <img src="${img}" class="result-img" alt="${title}">
+                  <div class="card-body">
+                    <h5 class="card-title">${title}</h5>
+                    <a href="${page}" class="btn btn-primary">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            `);
+
+            searchStatus.textContent = `✅ ${found.length} resultado${found.length !== 1 ? 's' : ''} encontrado${found.length !== 1 ? 's' : ''}`;
           }
+
         } catch (err) {
           console.error('Error cargando', page, err);
         }
       }
 
-      resultsContainer.innerHTML = found.length
-        ? found.map(item => `
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card result-card h-100 shadow-sm">
-              <img src="${item.img}" class="result-img" alt="${item.title}">
-              <div class="card-body">
-                <h5 class="card-title">${item.title}</h5>
-                <a href="${item.link}" class="btn btn-primary">Ver más</a>
-              </div>
-            </div>
-          </div>
-        `).join('')
-        : `<p>No se encontraron resultados.</p>`;
+      if (found.length === 0) {
+        searchStatus.textContent = "❌ No se encontraron resultados.";
+      }
     }
 
-    // Buscar en carga inicial
     if (query) searchPages(query);
 
-    // Nueva búsqueda desde el input
     document.getElementById('newSearchBtn').addEventListener('click', () => {
       const newQuery = document.getElementById('newSearchInput').value.trim();
       if (newQuery) {
