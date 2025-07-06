@@ -51,17 +51,20 @@ function closeSearchModalFunction() {
   }
 }
 
-// ✅ Evento para iniciar búsqueda: redirige a resultados.html
 if (startSearchBtn && searchInput) {
   startSearchBtn.addEventListener('click', () => {
     const query = searchInput.value.trim();
     if (query) {
-      window.location.href = `resultados.html?q=${encodeURIComponent(query)}`;
+      // Calcula la carpeta base de tu proyecto
+      const base = window.location.origin + '/' + window.location.pathname.split('/')[1];
+      window.location.href = `/resultados.html?q=${encodeURIComponent(query)}`;
     } else {
       alert('Por favor, ingresa un término de búsqueda.');
     }
   });
 }
+
+
 
 
 
