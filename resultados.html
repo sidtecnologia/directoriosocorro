@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resultados de Búsqueda</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"/>
+  <style>
+    .result-card { border-radius: 10px; overflow: hidden; transition: transform 0.2s; }
+    .result-card:hover { transform: scale(1.02); }
+    .result-img { width: 100%; height: 200px; object-fit: cover; }
+  </style>
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h1 class="mb-4">Resultados de Búsqueda</h1>
+
+    <!-- Buscador -->
+    <div class="input-group mb-5">
+      <input type="text" id="newSearchInput" class="form-control" placeholder="Escribe tu búsqueda...">
+      <button class="btn btn-primary" id="newSearchBtn">Buscar</button>
+    </div>
+
+    <!-- Contenedor de resultados -->
+    <div id="resultsContainer" class="row g-4">
+      <!-- JS insertará aquí las tarjetas -->
+    </div>
+  </div>
+
+  <script>
+    // Leer query
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get('q') || '';
+
+    const resultsContainer = document.getElementById('resultsContainer');
+
+    // Lista de páginas
+    const pagesToSearch = [
+    // 🗂️ Categoría: Vestuario
+    '../../../business/categories/vestuario/',
+    '../../../../business/categories/vestuario/adn/',
+    '../../../../business/categories/vestuario/angels/',
+    '../../../../business/categories/vestuario/antoine/',
+    '../../../../business/categories/vestuario/lilipink/',
+    '../../../../business/categories/vestuario/manitos/',
+    '../../../../business/categories/vestuario/rich/',
+    '../../../../business/categories/vestuario/veinte/',
+    
+    // 🗂️ Categoría: Comida
+    '../../../business/categories/comida/',
+    '../../../../business/categories/comida/baldoria/',
+    '../../../../business/categories/comida/chicbone/',
+    '../../../../business/categories/comida/empanada/',
+    '../../../../business/categories/comida/fogon/',
+    '../../../../business/categories/comida/masterpizza/',
+    '../../../../business/categories/comida/orale/',
+    '../../../../business/categories/comida/patio/',
+    '../../../../business/categories/comida/saloon/',
+    
+    // 🗂️ Categoría: Belleza
+    '../../../business/categories/belleza/',
+    '../../../../business/categories/belleza/cami/',
+    '../../../../business/categories/belleza/july/',
+    '../../../../business/categories/belleza/lexus/',
+    '../../../../business/categories/belleza/luna/',
+    '../../../../business/categories/belleza/mara/',
+    '../../../../business/categories/belleza/reina/',
+    '../../../../business/categories/belleza/susy/',
+    '../../../../business/categories/belleza/yeye/',
+    
+    // 🗂️ Categoría: Bebidas
+    '../../../business/categories/bebida/',
+    '../../../../business/categories/bebida/alcala/',
+    '../../../../business/categories/bebida/blas/',
+    '../../../../business/categories/bebida/coco/',
+    
+    // 🗂️ Categoría: Gimnasio
+    '../../../business/categories/gimnasio/',
+    
+    // 🗂️ Categoría: Droguería
+    '../../../business/categories/drogueria/',
+    '../../../../business/categories/drogueria/cruz-verde/',
+    
+    // 🗂️ Categoría: Entretenimiento
+    '../../../business/categories/entretenimiento/',
+    
+    // 🗂️ Categoría: Mascotas
+    '../../../business/categories/mascotas/',
+    
+    // 🗂️ Categoría: Mecánica
+    '../../../business/categories/mecanica/',
+    
+    // 🗂️ Categoría: Inmobiliaria
+    '../../../business/categories/inmobiliaria/',
+    
+    // 🗂️ Categoría: Hotel
+    '../../../business/categories/hotel/',
+    
+    // 🗂️ Categoría: Tecnología
+    '../../../business/categories/tecnologia/',
+    
+    // 🗂️ Categoría: Transporte
+    '../../../business/categories/transporte/',
+    
+    // 🗂️ Categoría: Deportes
+    '../../../business/categories/deportes/',
+    
+    // 🗂️ Categoría: Ferretería
+    '../../../business/categories/ferreteria/',
+    
+    // 🗂️ Categoría: Profesionales
+    '../../../business/categories/profesionales/',
+    
+    // 🗂️ Categoría: Públicos
+    '../../../business/categories/publicos/',
+    
+    // 🗂️ Categoría General
+    '../../business/categories/',
+    ];
+
+    function normalizeText(text) {
+      return text ? text.toLowerCase().replace(/\s+/g, '') : '';
+    }
+
+    async function searchPages(query) {
+      const normalizedQuery = normalizeText(query);
+      let found = [];
+
+      for (const page of pagesToSearch) {
+        try {
+          const response = await fetch(page);
+          if (!response.ok) continue;
+          const html = await response.text();
+          const doc = new DOMParser().parseFromString(html, 'text/html');
+
+          const allElements = doc.querySelectorAll('[class]');
+          let match = false;
+
+          allElements.forEach(el => {
+            const classes = el.className.split(/\s+/);
+            classes.forEach(cl => {
+              if (normalizeText(cl).includes(normalizedQuery)) {
+                match = true;
+              }
+            });
+          });
+
+          if (match) {
+            const title = doc.querySelector('h1')?.innerText || 'Sin título';
+            const img = doc.querySelector('img')?.src || 'https://via.placeholder.com/400x200?text=Sin+Imagen';
+
+            found.push({ title, img, link: page });
+          }
+        } catch (err) {
+          console.error('Error cargando', page, err);
+        }
+      }
+
+      resultsContainer.innerHTML = found.length
+        ? found.map(item => `
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card result-card h-100 shadow-sm">
+              <img src="${item.img}" class="result-img" alt="${item.title}">
+              <div class="card-body">
+                <h5 class="card-title">${item.title}</h5>
+                <a href="${item.link}" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+        `).join('')
+        : `<p>No se encontraron resultados.</p>`;
+    }
+
+    // Buscar en carga inicial
+    if (query) searchPages(query);
+
+    // Nueva búsqueda desde el input
+    document.getElementById('newSearchBtn').addEventListener('click', () => {
+      const newQuery = document.getElementById('newSearchInput').value.trim();
+      if (newQuery) {
+        window.location.href = `resultados.html?q=${encodeURIComponent(newQuery)}`;
+      }
+    });
+  </script>
+
+</body>
+</html>
