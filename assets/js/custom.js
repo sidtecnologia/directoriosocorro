@@ -64,6 +64,38 @@ if (startSearchBtn && searchInput) {
   });
 }
 
+  const params = new URLSearchParams(window.location.search);
+  const searchTerm = params.get('q');
+
+  if (searchTerm) {
+    const normalized = searchTerm.toLowerCase().trim();
+
+    // Busca todos los elementos de texto del body
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+
+    let found = false;
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      if (node.nodeValue.toLowerCase().includes(normalized)) {
+        const span = document.createElement('span');
+        span.style.background = 'yellow';
+        span.textContent = node.nodeValue;
+
+        const highlight = span.textContent.replace(new RegExp(normalized, 'gi'), `<mark>$&</mark>`);
+        const wrapper = document.createElement('span');
+        wrapper.innerHTML = highlight;
+        node.parentNode.replaceChild(wrapper, node);
+
+        wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        found = true;
+        break;
+      }
+    }
+
+    if (!found) {
+      console.log('No se encontró la palabra:', searchTerm);
+    }
+  }
 
 
 

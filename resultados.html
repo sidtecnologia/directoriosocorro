@@ -199,7 +199,8 @@
                   <img src="${img}" class="result-img" alt="${title}">
                   <div class="card-body">
                     <h5 class="card-title">${title}</h5>
-                    <a href="${page}" class="btn btn-primary">Ver más</a>
+                    <a href="${page}?q=${encodeURIComponent(query)}" class="btn btn-primary">Ver más</a>
+
                   </div>
                 </div>
               </div>
