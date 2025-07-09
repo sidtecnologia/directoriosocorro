@@ -806,6 +806,7 @@ body {
 
 
 .btn-call {
+    margin: 0.3rem;
     color: white;
     background: #87859b;
     border: none;
