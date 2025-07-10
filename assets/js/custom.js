@@ -244,20 +244,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const negocioData = document.getElementById('negocio-data');
 
   if (btnPedir && negocioData) {
-    btnPedir.addEventListener('click', (e) => {
-      e.preventDefault();
+    btnPedir.addEventListener('click', () => {
       const nombreNegocio = negocioData.dataset.nombre;
       const direccionNegocio = negocioData.dataset.direccion;
 
       const mensaje = `¡Hola! Quiero pedir un domicilio.%0A%0A🛍️ Negocio: ${nombreNegocio}%0A📍 Dirección del negocio: ${direccionNegocio}%0A📦 Pedido: [Escribe aquí]%0A🏠 Entregar en: [Escribe aquí]%0A%0AGracias.`;
 
-      const numDomicilios = '573227671829'; // REEMPLAZA CON TU NÚMERO
-
+      const numDomicilios = '573001234567'; // Reemplaza con tu número real
       const url = `https://wa.me/${numDomicilios}?text=${mensaje}`;
+
       window.open(url, '_blank');
     });
+  } else {
+    console.log("No se encontró btn-pedir-domicilio o negocio-data");
   }
 });
+
+
 
 
 
