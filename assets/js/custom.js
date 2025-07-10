@@ -239,28 +239,6 @@ installBtn.addEventListener('click', async () => {
     }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const btnPedir = document.getElementById('btn-pedir-domicilio');
-  const negocioData = document.getElementById('negocio-data');
-
-  if (btnPedir && negocioData) {
-    btnPedir.addEventListener('click', () => {
-      const nombreNegocio = negocioData.dataset.nombre;
-      const direccionNegocio = negocioData.dataset.direccion;
-
-      const mensaje = `¡Hola! Quiero pedir un domicilio.%0A%0A🛍️ Negocio: ${nombreNegocio}%0A📍 Dirección del negocio: ${direccionNegocio}%0A📦 Pedido: [Escribe aquí]%0A🏠 Entregar en: [Escribe aquí]%0A%0AGracias.`;
-
-      const numDomicilios = '573001234567'; // Reemplaza con tu número real
-      const url = `https://wa.me/${numDomicilios}?text=${mensaje}`;
-
-      window.open(url, '_blank');
-    });
-  } else {
-    console.log("No se encontró btn-pedir-domicilio o negocio-data");
-  }
-});
-
-
 
 
 
@@ -271,3 +249,51 @@ function setupModals() {
 // Initialize all functions
 smoothScroll();
 setupModals();
+
+document.addEventListener("DOMContentLoaded", function() {
+  const btnOpen = document.getElementById("btnPedirDomicilio");
+  const modal = document.getElementById("modalDomicilio");
+  const closeModal = document.querySelector(".close");
+  const btnEnviar = document.getElementById("enviarPedido");
+
+  const module = document.getElementById("domicilio-module");
+  const direccion = module.dataset.direccion;
+  const negocio = module.dataset.negocio;
+
+  btnOpen.addEventListener("click", function() {
+    modal.style.display = "block";
+  });
+
+  closeModal.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function(e) {
+    if (e.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  btnEnviar.addEventListener("click", function() {
+    const pedido = document.getElementById("pedido").value.trim();
+    const direccionEntrega = document.getElementById("direccionEntrega").value.trim();
+
+    if (!pedido || !direccionEntrega) {
+      alert("Por favor completa todos los campos.");
+      return;
+    }
+
+    const mensaje = `Hola! 👋\nQuisiera pedir domicilio de:\n📍 *${negocio}*\nDirección del negocio: ${direccion}\n📝 Pedido: ${pedido}\n📫 Dirección de entrega: ${direccionEntrega}`;
+
+    const numeroWhatsApp = "573001112233"; // <-- Pon tu número aquí
+
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+
+    window.open(url, "_blank");
+
+    modal.style.display = "none";
+    // Opcional: Limpiar campos
+    document.getElementById("pedido").value = "";
+    document.getElementById("direccionEntrega").value = "";
+  });
+});
