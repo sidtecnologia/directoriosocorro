@@ -811,10 +811,6 @@ body {
   transition: background 0.3s ease;
 }
 
-.btn-domicilio:hover {
-  background: #2a34c8; /* Un tono más oscuro al pasar el mouse */
-}
-
 
 .btn-call {
     margin: 0.3rem;
@@ -931,7 +927,7 @@ body {
     transition: 0.3s;
 }
 .btn:hover {
-    background-color: #25d366a3;
+    background-color: #404259;
 }
 
 /* Footer */

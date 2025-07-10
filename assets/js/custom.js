@@ -239,13 +239,25 @@ installBtn.addEventListener('click', async () => {
     }
 });
 
-
-
-
-
 function setupModals() {
     console.log("Modales listos");
 }
 // Initialize all functions
 smoothScroll();
 setupModals();
+
+const whatsappNumber = "573001112233"; // Número de mensajería
+
+const btn = document.getElementById("order-btn");
+btn.addEventListener("click", () => {
+  const info = document.getElementById("business-info");
+  const name = info.dataset.businessName;
+  const address = info.dataset.businessAddress;
+
+  const message = `¡Hola! Quiero pedir un domicilio.\n\n🛍️ Negocio: ${name}\n🏠 Dirección: ${address}\n✅ Entregar En: (Escribe...)\n📦 Pedido: (Escribe...)\n\nGracias.`;
+
+  const encodedMessage = encodeURIComponent(message);
+  const url = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+  window.open(url, '_blank');
+});
