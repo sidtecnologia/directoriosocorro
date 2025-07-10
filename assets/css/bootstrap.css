@@ -935,3 +935,14 @@ footer {
 footer p {
     margin: 0;
 }
+
+.btn-primary {
+  color: white;
+  background: #3849ff; /* Color principal del directorio */
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #2a34c8; /* Un tono más oscuro al pasar el mouse */
+}
