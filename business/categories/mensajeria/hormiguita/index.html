@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directorio empresarial de Socorro, con un diseño moderno y dinámico.">
+    <title>Directorio Empresarial Socorro | La Hormiguita</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../../../assets/images/favicon.png" type="image/x-icon">
+
+    <!-- CSS Frameworks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../../assets/css/bootstrap.css">
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "39676bba-2644-4e38-bed5-43d9f629a0ab",
+    });
+  });
+</script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Domicilios La Hormiguita</h1>
+        <h2>Mensajería</h2>
+    </header>
+
+<!-- Horizontal Panel -->
+<div class="horizontal-panel"></div>
+
+
+<!-- Navigation Bar 
+<nav class="navbar" id="sidebar">
+    <div class="navbar-brand">
+        <img src="../../../../assets/images/logo.webp" class="menu-img" alt="Directorio Socorro">
+    </div>
+    <div class="nav-links">
+        <a class="nav-buttons btn" href="https://www.facebook.com/share/153XVs5rya/" target="_blank">Facebook</a>
+        <a class="nav-buttons btn" href="../../../nosotros.html">Nosotros</a>
+        <a class="nav-buttons btn" href="../../../contacto.html">Contacto</a>
+    </div>
+</nav>-->
+
+<!-- Overlay Background -->
+<div id="overlay" class="overlay" onclick="closeNavbar()"></div>
+
+    <!-- Cards Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Columna izquierda: tarjeta + carrusel -->
+      <div class="col-lg-4 mb-4 fade-in">
+        <!-- Tarjeta -->
+        <div class="card mb-4 shadow-sm">
+          <img src="../../../../assets/images/categories/mensajeria/hormiguita/hormiguita.webp" class="card-img-top" alt="july" >
+                        <div class="card-body">
+                            
+                            <p class="card-text">En La Hormiguita 🐜🚴‍♂️ hacemos que tus domicilios 📦 lleguen rápido, seguros y sin enredos. Nos movemos con disciplina y esfuerzo 💪 para entregar desde tu almuerzo 🥡 hasta tus compras 🛍️ o documentos 📑, directo a la puerta de tu casa 🏡. ¡Tu pedido, en buenas manos! 👌✨</p>
+            <div class="card-body">
+              <h5 class="card-title">Nuestros servicios incluyen</h5>
+              <ul>
+                <li>Mensajería de documentos</li>
+                <li>Envío de paquetes pequeños y medianos</li>
+                <li>Compras a domicilio</li>
+                <li>Pago de servicios y encargos personalizados</li>
+              </ul>
+            </div>
+                            <a class="btn btn-call" href="tel:+573182276222">📞 Llamar</a>
+                            <a href="https://wa.me/573182276222" class="btn btn-whatsapp" target="_blank">Whatsapp 1</a>
+                            <a href="https://wa.me/573023246445" class="btn btn-whatsapp" target="_blank">Whatsapp 2</a>
+          </div>
+        </div>
+
+
+        <!-- Facebook Iframe -->
+        <div class="map-container">
+          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fdomicilios.lahormiguita.14%2Fvideos%2F580955691740524%2F&width=300&show_text=false&height=533&appId" width="300" height="533" style="border:none;border-radius: 20px; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    
+
+        <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <p>&copy; 2025 Directorio Empresarial. Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="floating-panel">
+    <div class="btn-container">
+        <a id="searchButton" class="btn-panel" title="Búsqueda">
+            <i class="fas fa-search"></i>
+        </a>
+        <span class="btn-text">Búsqueda</span>
+    </div>
+
+    <div class="btn-container">
+        <a class="btn-center" href="../../../../" title="Inicio">
+            <i class="fas fa-home"></i>
+        </a>
+        <span class="btn-text">Inicio</span>
+    </div>
+
+    <div class="btn-container">
+        <a class="btn-panel" href="../../../../business/categories/" title="Categorías">
+            <i class="fas fa-list"></i>
+        </a>
+        <span class="btn-text">Categorías</span>
+    </div>
+</div>
+
+<!-- Modal de Búsqueda -->
+<div id="searchModal" class="search-modal">
+    <div class="search-modal-content">
+        <button id="closeSearchModal" class="close-btn">&times;</button>
+        <h2>Buscar</h2>
+        <input type="text" id="searchInput" class="search-input" placeholder="Escribe aquí tu búsqueda...">
+        <button id="startSearchBtn" class="start-search-btn">Iniciar Búsqueda</button>
+        <div id="searchResults" class="search-results"></div> <!-- Sección para mostrar resultados -->
+    </div>
+</div>
+
+
+
+    <!-- JS Frameworks -->
+    <script src="../../../../assets/js/custom.js" defer></script>
+    <script src="../../../../assets/js/service-worker.js" defer></script>
+</body>
+</html>
