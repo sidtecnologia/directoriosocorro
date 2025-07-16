@@ -118,12 +118,13 @@ if (startSearchBtn && searchInput) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const carouselItems = document.querySelectorAll(".carousel-item");
-  let currentIndex = 0;
-  let lightboxIndex = 0;
+  let currentIndex = 0;            // Índice solo para el carrusel
+  let lightboxIndex = 0;           // Índice solo para el Lightbox
   const totalItems = carouselItems.length;
   const animationDelay = 3000;
   let autoSlideInterval;
 
+  // === Carrusel base ===
   function updateCarousel() {
     carouselItems.forEach((item, index) => {
       const offset = (index - currentIndex + totalItems) % totalItems;
@@ -176,8 +177,9 @@ document.addEventListener("DOMContentLoaded", function () {
   updateCarousel();
   startAutoSlide();
 
+  // === Lightbox dinámico con ID único ===
   const lightboxOverlay = document.createElement("div");
-  lightboxOverlay.id = "debug-superlightbox";
+  lightboxOverlay.id = "custom-lightbox-overlay";
   lightboxOverlay.style.cssText = `
     display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.8); justify-content: center; align-items: center;
@@ -204,17 +206,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let openedManually = false;
 
-  console.log("👉 lightboxImage.src al inicio:", lightboxImage.src);
-
   carouselItems.forEach((item, index) => {
     const img = item.querySelector("img");
     item.addEventListener("click", function (e) {
-      console.log("✅ Click REAL en imagen index:", index);
       openedManually = true;
       e.preventDefault();
       e.stopImmediatePropagation();
       lightboxIndex = index;
-      console.log("👉 lightboxImage.src dentro del click:", img.src);
       lightboxImage.src = img.src;
       lightboxOverlay.style.display = "flex";
       document.body.style.overflow = "hidden";
@@ -235,15 +233,59 @@ document.addEventListener("DOMContentLoaded", function () {
     openedManually = false;
   }
 
+  // === Vigilancia para evitar apertura accidental ===
   const observer = new MutationObserver(() => {
-    console.warn("⚡ Lightbox display cambió a:", lightboxOverlay.style.display);
     if (lightboxOverlay.style.display === "flex" && !openedManually) {
       console.warn("🚫 Lightbox abierto sin clic real → cerrando forzado");
       closeLightbox();
     }
   });
   observer.observe(lightboxOverlay, { attributes: true, attributeFilter: ["style"] });
+
+  // === Swipe y drag con índice independiente ===
+  let startX = 0;
+  let isDragging = false;
+
+  lightboxImage.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+
+  lightboxImage.addEventListener("touchend", e => {
+    const endX = e.changedTouches[0].clientX;
+    handleSwipe(endX - startX);
+  });
+
+  lightboxImage.addEventListener("mousedown", e => {
+    isDragging = true;
+    startX = e.clientX;
+  });
+
+  lightboxImage.addEventListener("mouseup", e => {
+    if (!isDragging) return;
+    isDragging = false;
+    const endX = e.clientX;
+    handleSwipe(endX - startX);
+  });
+
+  function handleSwipe(deltaX) {
+    if (deltaX < -50) {
+      nextLightboxImage();
+    } else if (deltaX > 50) {
+      prevLightboxImage();
+    }
+  }
+
+  function nextLightboxImage() {
+    lightboxIndex = (lightboxIndex + 1) % totalItems;
+    lightboxImage.src = carouselItems[lightboxIndex].querySelector("img").src;
+  }
+
+  function prevLightboxImage() {
+    lightboxIndex = (lightboxIndex - 1 + totalItems) % totalItems;
+    lightboxImage.src = carouselItems[lightboxIndex].querySelector("img").src;
+  }
 });
+
 
 
 
