@@ -116,77 +116,166 @@ if (startSearchBtn && searchInput) {
   }
 
 
-// 1Carousel
 document.addEventListener("DOMContentLoaded", function () {
     const carouselItems = document.querySelectorAll(".carousel-item");
-    let currentIndex = 0; // Índice de la tarjeta central
+    let currentIndex = 0;
     const totalItems = carouselItems.length;
-    const animationDelay = 3000; // Tiempo entre movimientos automáticos (en milisegundos)
+    const animationDelay = 3000;
     let autoSlideInterval;
 
-    // Función para actualizar posiciones del carrusel
+    // ==== Carrusel base ====
     function updateCarousel() {
         carouselItems.forEach((item, index) => {
-            const offset = (index - currentIndex + totalItems) % totalItems; // Desplazamiento circular
-            item.style.transition = "transform 0.8s ease, z-index 0.8s ease"; // Animación
-            item.classList.remove("active"); // Quitar clase activa de todas las tarjetas
+            const offset = (index - currentIndex + totalItems) % totalItems;
+            item.style.transition = "transform 0.8s ease, z-index 0.8s ease";
+            item.classList.remove("active");
 
             if (offset === 0) {
-                // Tarjeta central
                 item.style.transform = "translate(-50%, -50%) scale(1)";
                 item.style.zIndex = "3";
-                item.classList.add("active"); // Agregar clase activa a la tarjeta central
+                item.classList.add("active");
             } else if (offset === 1 || offset === totalItems - 1) {
-                // Laterales visibles
                 const direction = offset === 1 ? 50 : -150;
                 item.style.transform = `translate(${direction}%, -50%) scale(0.8)`;
                 item.style.zIndex = "2";
             } else if (offset === 2 || offset === totalItems - 2) {
-                // Laterales ocultas
                 const direction = offset === 2 ? 150 : -250;
                 item.style.transform = `translate(${direction}%, -50%) scale(0.8)`;
                 item.style.zIndex = "1";
             } else {
-                // Ocultar tarjetas fuera del rango
                 item.style.transform = "translate(0, -50%) scale(0)";
                 item.style.zIndex = "0";
             }
         });
     }
 
-    // Navegar hacia la izquierda
     function moveLeft() {
         currentIndex = (currentIndex - 1 + totalItems) % totalItems;
         updateCarousel();
-        resetAutoSlide(); // Reinicia el temporizador automático
+        resetAutoSlide();
     }
 
-    // Navegar hacia la derecha
     function moveRight() {
         currentIndex = (currentIndex + 1) % totalItems;
         updateCarousel();
-        resetAutoSlide(); // Reinicia el temporizador automático
+        resetAutoSlide();
     }
 
-    // Configurar botones
     document.getElementById("carousel-prev").addEventListener("click", moveLeft);
     document.getElementById("carousel-next").addEventListener("click", moveRight);
 
-    // Movimiento automático del carrusel
     function startAutoSlide() {
         autoSlideInterval = setInterval(moveRight, animationDelay);
     }
 
-    // Reiniciar el movimiento automático después de interacción manual
     function resetAutoSlide() {
-        clearInterval(autoSlideInterval); // Detener temporizador existente
-        startAutoSlide(); // Iniciar nuevo temporizador
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
     }
 
-    // Inicializar carrusel y movimiento automático
     updateCarousel();
     startAutoSlide();
+
+    // ==== Lightbox auto-inyectado ====
+
+    // Crear elementos dinámicamente
+    const lightboxOverlay = document.createElement("div");
+    lightboxOverlay.id = "lightbox-overlay";
+    lightboxOverlay.style.cssText = `
+        display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center;
+        z-index: 9999;
+    `;
+
+    const lightboxClose = document.createElement("span");
+    lightboxClose.id = "lightbox-close";
+    lightboxClose.innerHTML = "&times;";
+    lightboxClose.style.cssText = `
+        position: absolute; top: 20px; right: 40px; font-size: 50px;
+        color: #fff; cursor: pointer; z-index: 10000;
+    `;
+
+    const lightboxImage = document.createElement("img");
+    lightboxImage.id = "lightbox-image";
+    lightboxImage.alt = "Imagen ampliada";
+    lightboxImage.style.cssText = `
+        max-width: 90%; max-height: 90%; box-shadow: 0 0 20px #000;
+        transition: transform 0.3s ease;
+    `;
+
+    lightboxOverlay.appendChild(lightboxClose);
+    lightboxOverlay.appendChild(lightboxImage);
+    document.body.appendChild(lightboxOverlay);
+
+    // Evento para abrir Lightbox
+    carouselItems.forEach(item => {
+        const img = item.querySelector("img");
+        item.addEventListener("click", function (e) {
+            e.stopPropagation();
+            lightboxImage.src = img.src;
+            lightboxOverlay.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    // Eventos para cerrar
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightboxOverlay.addEventListener("click", function (e) {
+        if (e.target === lightboxOverlay) {
+            closeLightbox();
+        }
+    });
+
+    function closeLightbox() {
+        lightboxOverlay.style.display = "none";
+        lightboxImage.src = "";
+        document.body.style.overflow = "auto";
+    }
+
+    // Navegación touch/mouse dentro del Lightbox
+    let startX = 0;
+    let isDragging = false;
+
+    lightboxImage.addEventListener("touchstart", e => {
+        startX = e.touches[0].clientX;
+    });
+
+    lightboxImage.addEventListener("touchend", e => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) {
+            nextLightboxImage();
+        } else if (endX - startX > 50) {
+            prevLightboxImage();
+        }
+    });
+
+    lightboxImage.addEventListener("mousedown", e => {
+        isDragging = true;
+        startX = e.clientX;
+    });
+
+    lightboxImage.addEventListener("mouseup", e => {
+        if (!isDragging) return;
+        isDragging = false;
+        const endX = e.clientX;
+        if (startX - endX > 50) {
+            nextLightboxImage();
+        } else if (endX - startX > 50) {
+            prevLightboxImage();
+        }
+    });
+
+    function nextLightboxImage() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        lightboxImage.src = carouselItems[currentIndex].querySelector("img").src;
+    }
+
+    function prevLightboxImage() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        lightboxImage.src = carouselItems[currentIndex].querySelector("img").src;
+    }
 });
+
 
 // Toggle the visibility of the navbar
 function toggleNavbar() {
