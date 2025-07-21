@@ -59,12 +59,13 @@ header p {
 }
 
 .background img {
-    margin: 20px;
-    display: block; /* Evita espacios en blanco alrededor de la imagen */
-    width: 90%; /* Asegura que la imagen ocupe todo el ancho */
-    height: auto; /* Mantiene la proporción de la imagen */
-
+    border-radius: 20px; /* si quieres bordes redondeados, ok */
+    margin: 20px auto;      /* centra horizontalmente */
+    display: block; 
+    width: 90%; 
+    height: auto; 
 }
+
 
 /* Contenedor del modal */
 #searchModal {
