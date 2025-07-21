@@ -60,7 +60,7 @@ header p {
 
 .background img {
     border-radius: 20px; /* si quieres bordes redondeados, ok */
-    margin: 20px auto;      /* centra horizontalmente */
+    margin: 10px auto;      /* centra horizontalmente */
     display: block; 
     width: 90%; 
     height: auto; 
