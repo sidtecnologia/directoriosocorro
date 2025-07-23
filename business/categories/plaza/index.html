@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directorio empresarial de El Socorro, con un diseño moderno y dinámico.">
+    <title>Plaza de Mercado | Directorio Empresarial Socorro</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../../../assets/images/favicon.png" type="image/x-icon"/>
+
+    <!-- CSS Frameworks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../assets/css/bootstrap.css">
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "39676bba-2644-4e38-bed5-43d9f629a0ab",
+    });
+  });
+</script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Plaza de Mercado Socorro</h1>
+        <h2>Elige una Categoría</h2>
+</header>
+
+<!-- Horizontal Panel -->
+<div class="horizontal-panel"></div>
+
+
+<!-- Navigation Bar 
+<nav class="navbar" id="sidebar">
+    <div class="navbar-brand">
+        <img src="../../../../assets/images/logo.webp" class="menu-img" alt="Directorio El Socorro">
+    </div>
+    <div class="nav-links">
+        <a class="nav-buttons btn" href="https://www.facebook.com/share/153XVs5rya/" target="_blank">Facebook</a>
+        <a class="nav-buttons btn" href="../about/">Nosotros</a>
+        <a class="nav-buttons btn" href="../contact/">Contacto</a>
+    </div>
+</nav>-->
+
+<!-- Overlay Background -->
+<div id="overlay" class="overlay" onclick="closeNavbar()"></div>
+
+
+<!-- categories Section -->
+<section class="categories-grid fade-in">
+    <div class="category-item">
+        <img src="../../../../assets/images/categories/plaza/carne/carne.webp" alt="Carnicería" class="category-img" onclick="window.location.href='../../business/categories/plaza/carne/';">
+        <div class="category-title">Carnicería</div>
+    </div>
+    <div class="category-item">
+        <img src="../../../../assets/images/categories/plaza/verdura/verdura.webp" alt="Verduras" class="category-img" onclick="window.location.href='../../business/categories/plaza/verdura/';">
+        <div class="category-title">Verduras</div>
+    </div>
+    <div class="category-item">
+        <img src="../../../../assets/images/categories/plaza/grano/grano.webp" alt="Granero" class="category-img" onclick="window.location.href='../../business/categories/plaza/grano/';">
+        <div class="category-title">Granero</div>
+    </div>
+    <div class="category-item">
+        <img src="../../../../assets/images/categories/plaza/fruta/fruta.webp" alt="Frutería" class="category-img" onclick="window.location.href='../../business/categories/plaza/fruta/';">
+        <div class="category-title">Frutería</div>
+    </div>
+</section>
+
+
+        <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <p>&copy; 2025 Directorio Empresarial. Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="floating-panel">
+    <div class="btn-container">
+        <a id="searchButton" class="btn-panel" title="Búsqueda">
+            <i class="fas fa-search"></i>
+        </a>
+        <span class="btn-text">Búsqueda</span>
+    </div>
+
+    <div class="btn-container">
+        <a class="btn-center" href="../../../../" title="Inicio">
+            <i class="fas fa-home"></i>
+        </a>
+        <span class="btn-text">Inicio</span>
+    </div>
+
+    <div class="btn-container">
+        <a class="btn-panel" href="../../../../business/categories" title="Categorías">
+            <i class="fas fa-list"></i>
+        </a>
+        <span class="btn-text">Categorías</span>
+    </div>
+</div>
+
+
+<!-- Modal de Búsqueda -->
+<div id="searchModal" class="search-modal">
+    <div class="search-modal-content">
+        <button id="closeSearchModal" class="close-btn">&times;</button>
+        <h2>Buscar</h2>
+        <input type="text" id="searchInput" class="search-input" placeholder="Escribe aquí tu búsqueda...">
+        <button id="startSearchBtn" class="start-search-btn">Iniciar Búsqueda</button>
+        <div id="searchResults" class="search-results"></div> <!-- Sección para mostrar resultados -->
+    </div>
+</div>
+
+
+
+    <!-- JS Frameworks -->
+    <script src="../../../../assets/js/custom.js" defer></script>
+    <script src="../../../../assets/js/service-worker.js" defer></script>
+</body>
+</html>
