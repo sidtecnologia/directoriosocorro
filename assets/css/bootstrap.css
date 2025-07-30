@@ -920,7 +920,7 @@ body {
     display: grid;
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #4285F4;
+    background-color: #ff9900;
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -930,6 +930,80 @@ body {
 .btn:hover {
     background-color: #404259;
 }
+
+.categories-custom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Fila superior: 2 tarjetas horizontalmente */
+.row-superior {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Fila inferior: 1 tarjeta debajo */
+.row-inferior {
+  display: flex;
+  width: 100%;
+}
+
+/* Tarjetas: ocupan 50% o 100% según el caso */
+.row-superior .category-item {
+  width: 50%;
+}
+
+.row-inferior .category-item {
+  width: 100%;
+}
+
+.category-item {
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.category-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.category-img:hover {
+  transform: scale(1.02);
+}
+
+.category-title {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Mismo diseño en móviles (2 arriba, 1 abajo) */
+@media (max-width: 768px) {
+  .row-superior {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .row-superior .category-item {
+    width: 50%;
+  }
+
+  .row-inferior .category-item {
+    width: 100%;
+  }
+}
+
+
 
 /* Footer */
 footer {
