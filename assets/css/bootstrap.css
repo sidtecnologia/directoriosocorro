@@ -477,10 +477,9 @@ body {
 .text-recomended {
     font-weight: bold;
     font-size: 1.5rem;
-    text-shadow: 1px 1px black;
     margin-top: 0.5rem;
     padding: 20px;
-    color: #64b4f9;
+    color: #3849ff;
     text-align: center;
 }
 
