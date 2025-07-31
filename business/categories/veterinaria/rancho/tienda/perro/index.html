@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Directorio empresarial de Socorro, con un diseño moderno y dinámico.">
-    <title>Tienda El Rancho | Directorio Empresarial Socorro</title>
+    <meta name="description" content="Conecta con los mejores negocios, tiendas y servicios de El Socorro en un solo lugar. Nuestro Directorio Comercial te muestra horarios, contactos, ubicación en mapa, promociones y novedades de cada empresa, todo con un diseño rápido y fácil de usar desde tu celular o computador.">
+    <title>Tienda El Rancho | Directorio Comercial Socorro</title>    
     
     <!-- Favicon -->
-    <link rel="icon" href="../../../../../../../../../assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="../../../../../../assets/images/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../../../../assets/images/favicon.png">
+    <link rel="manifest" href="manifest.json"/>
+
 
     <!-- CSS Frameworks -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="../../../../../../../../../assets/css/bootstrap.css">
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "39676bba-2644-4e38-bed5-43d9f629a0ab",
-    });
-  });
-</script>
+    <link rel="stylesheet" type="text/css" href="../../../../../../assets/css/bootstrap.css">
+    <script charset="UTF-8" src="//web.webpushs.com/js/push/0a9b65de82a1eeed28044024e519e862_1.js" async></script>
+
 </head>
 <body>
+
     <!-- Header -->
     <header>
-        <h1>Perros</h1>
-        <h2>Tienda El Rancho</h2>
+        <h1>El Rancho</h1>
+        <h2>Tienda</h2>
     </header>
+
+    <section>
+        <div class="background">
+            <img class="background" src="../../../../../../assets\images\categories\veterinaria\rancho\tienda/perro.webp" alt="">
+        </div>
+    </section>
+
+
+    
 
 <!-- Horizontal Panel -->
 <div class="horizontal-panel"></div>
@@ -39,244 +45,337 @@
 <!-- Navigation Bar 
 <nav class="navbar" id="sidebar">
     <div class="navbar-brand">
-        <img src="../../../../../../../../../assets/images/logo.webp" class="menu-img" alt="Directorio Socorro">
+        <img src="../../../../../../assets/images/logo.webp" class="menu-img" alt="Directorio Barrancabermeja">
     </div>
     <div class="nav-links">
         <a class="nav-buttons btn" href="https://www.facebook.com/share/153XVs5rya/" target="_blank">Facebook</a>
-        <a class="nav-buttons btn" href="../../../nosotros.html">Nosotros</a>
-        <a class="nav-buttons btn" href="../../../contacto.html">Contacto</a>
+        <a class="nav-buttons btn" href="../../../../../../assets/nosotros/">Nosotros</a>
+        <a class="nav-buttons btn" href="../../../../../../assets/contacto/">Contacto</a>
+        <button class="nav-buttons btn" id="installBtn">Instalar App</button>
+
     </div>
 </nav>-->
 
-<!-- Overlay Background -->
 <div id="overlay" class="overlay" onclick="closeNavbar()"></div>
 
-    <!-- Cards Section -->
-<section class="py-5">
+
+<section class="categories-custom fade-in">
+  <div class="row-superior">
+    <div class="category-item">
+      <img  src="../../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/perro/juguete.webp" alt="Perros" class="category-img" onclick="window.location.href='../../../../../business/categories/veterinaria/rancho/tienda/perro/';">
+    </div>
+    <div class="category-item">
+      <img  src="../../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/accesorio.webp" alt="Gatos" class="category-img" onclick="window.location.href='../../../../../business/categories/veterinaria/rancho/tienda/gato/';">
+    </div>
+  </div>
+
+  <div class="row-inferior">
+    <div class="category-item">
+      <img  src="../../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/medicamento.webp" alt="Agro" class="category-img" onclick="window.location.href='../../../../../business/categories/veterinaria/rancho/tienda/agro/';">
+    </div>
+  </div>
+
+</section>
+
+    <section class="py-5">
   <div class="container">
+    <h2 class="text-recomended fade-in mb-4">Comida</h2>
     <div class="row">
 
-      <!-- Columna izquierda: tarjeta + carrusel -->
-      <div class="col-lg-4 mb-4 fade-in">
-        <!-- Tarjeta -->
-        <div class="card mb-4 shadow-sm agroveterinaria-elrancho medicamentos-veterinarios-elrancho concentrados-ganado-elrancho desparasitantes-bovinos-elrancho vacunas-mascotas-elrancho suplementos-animales-elrancho vitaminas-pollos-elrancho agroinsumos-elrancho fertilizantes-orgánicos-elrancho abonos-elrancho insecticidas-elrancho fungicidas-elrancho herbicidas-elrancho herramientas-agricolas-elrancho pastillas-animales-elrancho jeringas-veterinarias-elrancho comida-mascotas-elrancho sal-mineral-ganado-elrancho vitaminas-vacunos-elrancho productos-veterinarios-elrancho concentrados-purina-elrancho comida-perros-elrancho comida-gatos-elrancho">
-          <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/rancho.webp" class="card-img-top" alt="alcala" >
-                        <div class="card-body">
-                            <h3 class="card-title">Dirección: Cra. 16 #12 - 26</h3>
-                            <p><b>Horario de Atención:</b> Lunes a Viernes 7:00am a 12:30pm - 2:00pm a 6:00pm / Sábado y Domingo 7:00pm a 1:00pm</p>
-                            <p class="card-text">Cuidamos la salud de tus animales y el rendimiento de tu producción. 🐕 Contamos con medicamentos veterinarios, alimentos concentrados, suplementos, insumos agrícolas y asesoría técnica especializada. 🌽 Ya sea para mascotas o animales de granja, aquí encuentras lo que necesitas con respaldo y confianza. 🚚 Pregunta por nuestros domicilios y atención en zona rural. ¡Tu agro-veterinaria de confianza en El Socorro!</p>
-            <div class="card-body">
-              <h5 class="card-title">Nuestros Servicios</h5>
-              <ul>
-                <li>Venta de medicamentos veterinarios certificados.</li>
-                <li>Alimentos concentrados para ganado, aves y cerdos.</li>
-                <li>Vacunas y desparasitantes para mascotas y bovinos.</li>
-                <li>Accesorios y productos para mascotas.</li>
-                <li>Herramientas e insumos agropecuarios.</li>
-                <li>Fertilizantes y abonos orgánicos.</li>
-                <li>Suplementos vitamínicos y minerales para animales.</li>
-                <li>Asesoría técnica veterinaria y agropecuaria.</li>
-                <li>Atención a pequeños productores y campesinos.</li>
-              </ul>
-                            </div>
-                            <a class="btn btn-call" href="tel:+573212223258">📞 Llamar</a>
-                            <a href="https://wa.me/573212223258?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que " class="btn btn-whatsapp" target="_blank">Whatsapp</a>
-          </div>
-        </div>
-      </div>
+     <div class="col-12 col-lg-12">   
 
-      <!-- Sección Derecha: Galería + Mapa + Facebook -->
-      <div class="col-12 col-lg-8">
-
-        <!-- Galería de Productos -->
+      <!-- Galería de Productos -->
         <div class="row">
           <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card product-card shadow-sm h-100 text-center">
-              <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/venta1.webp" alt="Producto 1" class="card-img-top">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta1.webp" alt="Producto 1" class="card-img-top">
               <div class="card-body p-2">
-                <h6 class="card-title mb-1">Ringo Perro Adultos Raza Grand.-Med. 1Kg</h6>
+                <h6 class="card-title mb-1">Ringo Perro Adultos Raza Grand.-Med. 1Kg </h6>
                 <p class="product-venta mb-0">$17.500</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
               </div>
             </div>
           </div>
           <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card product-card shadow-sm h-100 text-center">
-              <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/venta2.webp" alt="Producto 2" class="card-img-top">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta2.webp" alt="Producto 2" class="card-img-top">
               <div class="card-body p-2">
                 <h6 class="card-title mb-1">Agility Gold Perro Adultos Raza Peq. 1Kg </h6>
                 <p class="product-venta mb-0">$29.990</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
               </div>
             </div>
           </div>
           <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card product-card shadow-sm h-100 text-center">
-              <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/venta3.webp" alt="Producto 3" class="card-img-top">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta3.webp" alt="Producto 3" class="card-img-top">
               <div class="card-body p-2">
                 <h6 class="card-title mb-1">Agility Gold Gatitos 1Kg</h6>
                 <p class="product-venta mb-0">$39.990</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
               </div>
             </div>
           </div>
           <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card product-card shadow-sm h-100 text-center">
-              <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/venta4.webp" alt="Producto 4" class="card-img-top">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta4.webp" alt="Producto 4" class="card-img-top">
               <div class="card-body p-2">
                 <h6 class="card-title mb-1">Chunky Perro Raza Peq. 1Kg</h6>
                 <p class="product-venta mb-0">$9.990</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
               </div>
             </div>
           </div>
           <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card product-card shadow-sm h-100 text-center">
-              <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/venta5.webp" alt="Producto 4" class="card-img-top">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta1.webp" alt="Producto 1" class="card-img-top">
               <div class="card-body p-2">
-                <h6 class="card-title mb-1">Chunky Perro Adulto Raza Grand.. 1Kg</h6>
-                <p class="product-venta mb-0">$9.990</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <h6 class="card-title mb-1">Ringo Perro Adultos Raza Grand.-Med. 1Kg </h6>
+                <p class="product-venta mb-0">$17.500</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
               </div>
             </div>
           </div>
           <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card product-card shadow-sm h-100 text-center">
-              <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/venta6.webp" alt="Producto 4" class="card-img-top">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta2.webp" alt="Producto 2" class="card-img-top">
               <div class="card-body p-2">
-                <h6 class="card-title mb-1">Dogourmet Cachorro Todas las Razas 1Kg</h6>
-                <p class="product-venta mb-0">$9.990</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <h6 class="card-title mb-1">Agility Gold Perro Adultos Raza Peq. 1Kg </h6>
+                <p class="product-venta mb-0">$29.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
               </div>
             </div>
           </div>
           <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card product-card shadow-sm h-100 text-center">
-              <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/venta7.webp" alt="Producto 4" class="card-img-top">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta3.webp" alt="Producto 3" class="card-img-top">
               <div class="card-body p-2">
-                <h6 class="card-title mb-1">Dogourmet Adulto Todas las Razas - Digestivo - 1Kg</h6>
-                <p class="product-venta mb-0">$9.990</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <h6 class="card-title mb-1">Agility Gold Gatitos 1Kg</h6>
+                <p class="product-venta mb-0">$39.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
               </div>
             </div>
           </div>
           <div class="col-6 col-md-4 col-lg-3 mb-4">
             <div class="card product-card shadow-sm h-100 text-center">
-              <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/venta8.webp" alt="Producto 4" class="card-img-top">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta4.webp" alt="Producto 4" class="card-img-top">
               <div class="card-body p-2">
-                <h6 class="card-title mb-1">Dogourmet Adulto Todas las Razas - Piel Sana - 1Kg</h6>
+                <h6 class="card-title mb-1">Chunky Perro Raza Peq. 1Kg</h6>
                 <p class="product-venta mb-0">$9.990</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
-                
-                            </div>
-                            <a class="btn btn-call" href="tel:+573212223258">📞 Llamar</a>
-                            <a href="https://wa.me/573212223258?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que " class="btn btn-whatsapp" target="_blank">Whatsapp</a>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
           </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta1.webp" alt="Producto 1" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Ringo Perro Adultos Raza Grand.-Med. 1Kg </h6>
+                <p class="product-venta mb-0">$17.500</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta2.webp" alt="Producto 2" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Agility Gold Perro Adultos Raza Peq. 1Kg </h6>
+                <p class="product-venta mb-0">$29.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta3.webp" alt="Producto 3" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Agility Gold Gatitos 1Kg</h6>
+                <p class="product-venta mb-0">$39.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta4.webp" alt="Producto 4" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Chunky Perro Raza Peq. 1Kg</h6>
+                <p class="product-venta mb-0">$9.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta1.webp" alt="Producto 1" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Ringo Perro Adultos Raza Grand.-Med. 1Kg </h6>
+                <p class="product-venta mb-0">$17.500</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta2.webp" alt="Producto 2" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Agility Gold Perro Adultos Raza Peq. 1Kg </h6>
+                <p class="product-venta mb-0">$29.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta3.webp" alt="Producto 3" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Agility Gold Gatitos 1Kg</h6>
+                <p class="product-venta mb-0">$39.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta4.webp" alt="Producto 4" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Chunky Perro Raza Peq. 1Kg</h6>
+                <p class="product-venta mb-0">$9.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta1.webp" alt="Producto 1" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Ringo Perro Adultos Raza Grand.-Med. 1Kg </h6>
+                <p class="product-venta mb-0">$17.500</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta2.webp" alt="Producto 2" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Agility Gold Perro Adultos Raza Peq. 1Kg </h6>
+                <p class="product-venta mb-0">$29.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta3.webp" alt="Producto 3" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Agility Gold Gatitos 1Kg</h6>
+                <p class="product-venta mb-0">$39.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta4.webp" alt="Producto 4" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Chunky Perro Raza Peq. 1Kg</h6>
+                <p class="product-venta mb-0">$9.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta1.webp" alt="Producto 1" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Ringo Perro Adultos Raza Grand.-Med. 1Kg </h6>
+                <p class="product-venta mb-0">$17.500</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta2.webp" alt="Producto 2" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Agility Gold Perro Adultos Raza Peq. 1Kg </h6>
+                <p class="product-venta mb-0">$29.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta3.webp" alt="Producto 3" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Agility Gold Gatitos 1Kg</h6>
+                <p class="product-venta mb-0">$39.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta4.webp" alt="Producto 4" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Chunky Perro Raza Peq. 1Kg</h6>
+                <p class="product-venta mb-0">$9.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta1.webp" alt="Producto 1" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Ringo Perro Adultos Raza Grand.-Med. 1Kg </h6>
+                <p class="product-venta mb-0">$17.500</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta2.webp" alt="Producto 2" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Agility Gold Perro Adultos Raza Peq. 1Kg </h6>
+                <p class="product-venta mb-0">$29.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta3.webp" alt="Producto 3" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Agility Gold Gatitos 1Kg</h6>
+                <p class="product-venta mb-0">$39.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 mb-4">
+            <div class="card product-card shadow-sm h-100 text-center">
+              <img src="../../../../../../assets/images/categories/veterinaria/rancho/venta4.webp" alt="Producto 4" class="card-img-top">
+              <div class="card-body p-2">
+                <h6 class="card-title mb-1">Chunky Perro Raza Peq. 1Kg</h6>
+                <p class="product-venta mb-0">$9.990</p>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
               </div>
             </div>
           </div>
 
 
-
-        <!-- Carrusel debajo de la tarjeta -->
-        <section id="carousel-section" class="mt-4">
-          <div class="carousel">
-            <button id="carousel-prev" class="carousel-nav">&lt;</button>
-            <div class="carousel-item" onclick="window.location.href='#'">
-              <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide1.webp" alt="cami">
-        </div>    
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide2.webp" alt="cami">
-        </div>  
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide3.webp" alt="cami">
-        </div>  
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide4.webp" alt="cami">
-        </div>  
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide5.webp" alt="cami">
-        </div>  
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide6.webp" alt="cami">
-        </div>  
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide7.webp" alt="cami">
-        </div>  
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide8.webp" alt="cami">
-        </div> 
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide9.webp" alt="cami">
-        </div> 
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide10.webp" alt="cami">
-        </div> 
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide11.webp" alt="cami">
-        </div> 
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide12.webp" alt="cami">
-        </div> 
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide13.webp" alt="cami">
-        </div>
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide14.webp" alt="cami">
-        </div>
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide15.webp" alt="cami">
-        </div>
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide16.webp" alt="cami">
-        </div>
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide17.webp" alt="cami">
-        </div>
-        <div class="carousel-item" onclick="window.location.href='#'">
-            <img src="../../../../../../../../../assets/images/categories/veterinaria/rancho/slide18.webp" alt="cami">
-        </div>
-        <button id="carousel-next" class="carousel-nav">&gt;</button> <!-- Botón siguiente -->
-          </div>
-        </section>
-      </div>
-
-        <!-- Mapa y Facebook en fila -->
-        <div class="row">
-          <!-- Mapa -->
-          <div class="col-12 col-md-6 mb-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body p-2 text-center">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4173358627077!2d-73.263043!3d6.468700199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683fd71c83ffff%3A0xe9f234cffaaba0df!2sVeterinar%C3%ADa%20El%20Rancho!5e0!3m2!1ses-419!2sco!4v1753489908051!5m2!1ses-419!2sco" width="100%" height="450" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     
-            <!-- Botón de Cómo Llegar -->
-            <a class="btn-map" href="https://www.google.com/maps/dir//Veterinar%C3%ADa+El+Rancho,+Cra.+16+%2312-26,+Socorro,+Santander/@6.4687002,-73.263043,17z/data=!4m17!1m7!3m6!1s0x8e683fd71c83ffff:0xe9f234cffaaba0df!2sVeterinar%C3%ADa+El+Rancho!8m2!3d6.4687002!4d-73.263043!16s%2Fg%2F11sy73dkqg!4m8!1m0!1m5!1m1!1s0x8e683fd71c83ffff:0xe9f234cffaaba0df!2m2!1d-73.2630144!2d6.4686958!3e2?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
-                📍 Cómo llegar
-                </a>
-              </div>
-            </div>
-          </div>
 
-          <!-- Facebook -->
-          <div class="col-12 col-md-6 mb-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body p-2">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fveterinariaelranchosocorro&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="500" style="border:none;border-radius: 20px; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
 
-      </div>
-    </div>
-  </div>
-</section>
 
-    
 
         <!-- Footer -->
-    <footer class="py-4 bg-dark text-white text-center">
-        <p>&copy; 2025 Directorio Empresarial. Todos los derechos reservados.</p>
+
+    <footer class="py-4 bg-dark text-white text-center"></p>
     </footer>
 
     <div class="floating-panel">
@@ -302,6 +401,7 @@
     </div>
 </div>
 
+
 <!-- Modal de Búsqueda -->
 <div id="searchModal" class="search-modal">
     <div class="search-modal-content">
@@ -316,7 +416,10 @@
 
 
     <!-- JS Frameworks -->
-    <script src="../../../../../../../../../assets/js/custom.js" defer></script>
-    <script src="../../../../../../../../../assets/js/service-worker.js" defer></script>
+    <script src="../../../../../../assets/js/custom.js" defer></script>
+    <script src="../../../../../../assets/js/service-worker.js" defer></script>
+    
+    
+
 </body>
 </html>
