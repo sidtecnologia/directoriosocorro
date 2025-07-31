@@ -981,6 +981,27 @@ body {
   transform: scale(1.02);
 }
 
+.category-mini-btn {
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-mini-btn img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.category-mini-btn:hover {
+  transform: scale(1.05);
+}
+
+
+
 .category-title {
   margin-top: 10px;
   font-weight: bold;
