@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "xyz.appmaker.kbizzy",
+      "sha256_cert_fingerprints": ["CD:AD:34:1C:14:48:D2:97:4B:D8:02:60:8E:2F:67:11:60:78:9B:59:89:FC:6E:A3:15:56:D1:9C:12:9F:58:AF"]
+    }
+  }
+]
