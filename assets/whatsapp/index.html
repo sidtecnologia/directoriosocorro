@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Redireccionando a WhatsApp...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script>
+    window.onload = function () {
+      const params = new URLSearchParams(window.location.search);
+      const numero = params.get("tel");
+
+      if (!numero || !/^[0-9]+$/.test(numero)) {
+        document.body.innerHTML = "<h2>Error: número de teléfono no válido.</h2>";
+        return;
+      }
+
+      // Redirige automáticamente
+      window.location.href = "whatsapp://send?phone=" + numero;
+    };
+  </script>
+</head>
+<body style="font-family: sans-serif; text-align: center; margin-top: 20%;">
+  <h2>Abriendo WhatsApp...</h2>
+  <p>Si no se abre automáticamente, verifica que tienes WhatsApp instalado.</p>
+</body>
+</html>
