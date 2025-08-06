@@ -8,6 +8,27 @@ body {
     padding: 0;
 }
 
+/* Contenedor central para PC */
+.contenedor {
+  max-width: 930px; /* ancho típico de móviles */
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Opcional: mejora estética en pantallas grandes */
+@media (min-width: 768px) {
+  body {
+    background-color: #ffffff; /* fondo gris claro para PC */
+  }
+
+  .contenedor {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: white;
+    min-height: 100vh;
+    border-radius: 8px;
+  }
+}
+
 
 /* Header */
 header {
@@ -277,7 +298,6 @@ header p {
 }
 
 .category-img {
-    border-radius: 10px;
     width: 100%;
     height: auto;
     display: block;
