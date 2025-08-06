@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeInElements.forEach(element => observer.observe(element));
 });
 
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+
 // ✅ Obtener elementos del DOM
 const searchButton = document.getElementById('searchButton');
 const closeSearchModal = document.getElementById('closeSearchModal');
