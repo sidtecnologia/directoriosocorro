@@ -998,11 +998,6 @@ body {
   width: 100%;
 }
 
-.category-item {
-  text-align: center;
-  box-sizing: border-box;
-}
-
 .category-mini-btn {
   border-radius: 8px;
   overflow: hidden;
