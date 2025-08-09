@@ -23,61 +23,67 @@
     <h2>Agro & Mascotas</h2>
   </header>
 
-  <div class="horizontal-panel">
+
+<!-- Horizontal Panel -->
+<div class="horizontal-panel">
   <button class="btn-back" onclick="history.back()" aria-label="Volver atrás">
     &#8592;
   </button>
 </div>
-  <section class="py-5">
-    <div class="container">
-      <div class="row g-4">
 
-        <!-- Columna izquierda -->
-        <div class="col-12 col-lg-4">
-          <div class="card h-100 shadow-sm">
+
+
+<!-- Navigation Bar 
+<nav class="navbar" id="sidebar">
+    <div class="navbar-brand">
+        <img src="../../../../assets/images/logo.webp" class="menu-img" alt="Directorio Barrancabermeja">
+    </div>
+    <div class="nav-links">
+        <a class="nav-buttons btn" href="https://www.facebook.com/share/153XVs5rya/" target="_blank">Facebook</a>
+        <a class="nav-buttons btn" href="../../../nosotros.html">Nosotros</a>
+        <a class="nav-buttons btn" href="../../../contacto.html">Contacto</a>
+    </div>
+</nav>-->
+
+<!-- Overlay Background -->
+<div id="overlay" class="overlay" onclick="closeNavbar()"></div>
+
+    <!-- Cards Section -->
+        <section class="py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Columna izquierda: tarjeta + carrusel -->
+      <div class="col-lg-4 mb-4 fade-in">
+        <!-- Tarjeta -->
+        <div class="card mb-4 shadow-sm">
             <img src="../../../../assets/images/categories/veterinaria/rancho/rancho.webp" class="card-img-top" alt="alcala">
             <div class="card-body">
-              <h3 class="card-title">Dirección: Cra. 16 #12 - 26</h3>
-              <p><b>Horario:</b> Lunes a Viernes 7:00am a 12:30pm - 2:00pm a 6:00pm / Sábados y Domingos 7:00pm a 1:00pm</p>
-              <p class="card-text">Cuidamos la salud de tus animales y el rendimiento de tu producción...</p>
-              <h5 class="mt-4">Nuestros Servicios</h5>
-              <ul>
-                <li>Medicamentos veterinarios certificados</li>
-                <li>Alimentos concentrados</li>
-                <li>Vacunas y desparasitantes</li>
-                <li>Accesorios para mascotas</li>
-                <li>Insumos agropecuarios</li>
-                <li>Fertilizantes y abonos</li>
-                <li>Vitaminas y suplementos</li>
-                <li>Asesoría técnica</li>
-                <li>Atención a campesinos</li>
-              </ul>
-              
-                <a class="btn btn-call w-50" href="tel:+573212223258">📞 Llamar</a>
-                <a class="btn btn-whatsapp w-50" href="https://wa.me/573212223258" target="_blank">Whatsapp</a>
-              </div>
-            </div>
+                            <h3 class="card-title">Dirección: Cra. 16 #12 - 26</h3>
+                            <p><b>Horario de Atención:</b> Lunes a Viernes 7:00am a 12:30pm - 2:00pm a 6:00pm / Sábados y Domingos 7:00pm a 1:00pm</p>
+                            <p class="card-text">Cuidamos la salud de tus animales y el rendimiento de tu producción...</p>
+                            <div class="card-body">
+                            <h5 class="card-title">Servicios</h5>
+                            <ul>
+                                <li>Medicamentos veterinarios certificados</li>
+                                <li>Alimentos concentrados</li>
+                                <li>Vacunas y desparasitantes</li>
+                                <li>Accesorios para mascotas</li>
+                                <li>Insumos agropecuarios</li>
+                                <li>Fertilizantes y abonos</li>
+                                <li>Vitaminas y suplementos</li>
+                                <li>Asesoría técnica</li>
+                                <li>Atención a campesinos</li>
+                            </ul>
+                        </div>
+                            <a class="btn btn-call w-50" href="tel:+573212223258">📞 Llamar</a>
+                            <a class="btn btn-whatsapp w-50" href="https://wa.me/573212223258" target="_blank">Whatsapp</a>
           </div>
         </div>
 
-        <!-- Columna derecha -->
-        <div class="col-12 col-lg-8">
-          <div class="row g-4">
-            <div class="col-12">
-              <div class="card shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="card-title">Ver nuestra tienda</h3>
-                  <a class="btn btn-map" href="../../../../../business/categories/veterinaria/rancho/tienda/">🛒 Comprar</a>
-                </div>
-              </div>
-            </div>
-
-            
-
-            <div class="col-12">
-              <section id="carousel-section" class="mt-2">
-                <div class="carousel">
-                  <button id="carousel-prev" class="carousel-nav">&lt;</button>
+        <!-- Carrusel debajo de la tarjeta -->
+        <section id="carousel-section" class="mt-4">
+          <div class="carousel">
+            <button id="carousel-prev" class="carousel-nav">&lt;</button>
                   <div class="carousel-item" onclick="window.location.href='#'">
               <img src="../../../../assets/images/categories/veterinaria/rancho/slide1.webp" alt="cami">
         </div>    
@@ -132,71 +138,86 @@
         <div class="carousel-item" onclick="window.location.href='#'">
             <img src="../../../../assets/images/categories/veterinaria/rancho/slide18.webp" alt="cami">
         </div>
-                  <button id="carousel-next" class="carousel-nav">&gt;</button>
+    <button id="carousel-next" class="carousel-nav">&gt;</button> <!-- Botón siguiente -->
+          </div>
+        </section>
+      </div>
+
+      <!-- Columna derecha -->
+        <div class="mt-4 col-12 col-lg-8">
+          <div class="row g-4">
+            <div class="col-12">
+              <div class="card shadow-sm h-100">
+                <div class="card-body">
+                  <h3 class="card-title">Ver nuestra tienda</h3>
+                  <a class="btn btn-map" href="../../../../business/categories/veterinaria/rancho/tienda/">🛒 Comprar</a>
                 </div>
-              </section>
+              </div>
             </div>
 
-            <div class="col-md-6">
-              <div class="card h-100 shadow-sm">
-                <div class="card-body text-center p-2">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4173358627077!2d-73.263043!3d6.468700199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683fd71c83ffff%3A0xe9f234cffaaba0df!2sVeterinar%C3%ADa%20El%20Rancho!5e0!3m2!1ses-419!2sco!4v1753489908051!5m2!1ses-419!2sco" width="100%" height="450" style="border:0; border-radius: 20px;" allowfullscreen loading="lazy"></iframe>
+      <!-- Columna derecha: mapa + iframe de Facebook -->
+      <div class="col-12 col-lg-8">
+        <!-- Mapa -->
+        <div class="row g-4">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4173358627077!2d-73.263043!3d6.468700199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683fd71c83ffff%3A0xe9f234cffaaba0df!2sVeterinar%C3%ADa%20El%20Rancho!5e0!3m2!1ses-419!2sco!4v1753489908051!5m2!1ses-419!2sco" width="100%" height="450" style="border:0; border-radius: 20px;" allowfullscreen loading="lazy"></iframe>
                   <a class="btn-map mt-3" href="https://www.google.com/maps/dir//Veterinar%C3%ADa+El+Rancho,+Cra.+16+%2312-26,+Socorro,+Santander/@6.4687002,-73.263043,17z/data=!4m17!1m7!3m6!1s0x8e683fd71c83ffff:0xe9f234cffaaba0df!2sVeterinar%C3%ADa+El+Rancho!8m2!3d6.4687002!4d-73.263043!16s%2Fg%2F11sy73dkqg!4m8!1m0!1m5!1m1!1s0x8e683fd71c83ffff:0xe9f234cffaaba0df!2m2!1d-73.2630144!2d6.4686958!3e2?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">📍 Cómo llegar</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="card h-100 shadow-sm">
-                <div class="card-body p-2">
-                  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fveterinariaelranchosocorro&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="500" style="border:none;border-radius: 20px; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
 
+        <!-- Facebook Iframe -->
+        <div class="map-container">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fveterinariaelranchosocorro&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="500" style="border:none;border-radius: 20px; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
-  </section>
-
-  <footer class="py-4 bg-dark text-white text-center">
-    <p>&copy; 2025 Directorio Empresarial. Todos los derechos reservados.</p>
-  </footer>
-
-  <div class="floating-panel">
-    <div class="btn-container">
-      <a id="searchButton" class="btn-panel" title="Búsqueda">
-        <i class="fas fa-search"></i>
-      </a>
-      <span class="btn-text">Búsqueda</span>
-    </div>
-    <div class="btn-container">
-      <a class="btn-center" href="../../../../" title="Inicio">
-        <i class="fas fa-home"></i>
-      </a>
-      <span class="btn-text">Inicio</span>
-    </div>
-    <div class="btn-container">
-      <a class="btn-panel" href="../../../../business/categories/" title="Categorías">
-        <i class="fas fa-list"></i>
-      </a>
-      <span class="btn-text">Categorías</span>
-    </div>
   </div>
+</section>
+    
 
-  <div id="searchModal" class="search-modal">
+        <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <p>&copy; 2025 Directorio Empresarial. Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="floating-panel">
+    <div class="btn-container">
+        <a id="searchButton" class="btn-panel" title="Búsqueda">
+            <i class="fas fa-search"></i>
+        </a>
+        <span class="btn-text">Búsqueda</span>
+    </div>
+
+    <div class="btn-container">
+        <a class="btn-center" href="../../../../" title="Inicio">
+            <i class="fas fa-home"></i>
+        </a>
+        <span class="btn-text">Inicio</span>
+    </div>
+
+    <div class="btn-container">
+        <a class="btn-panel" href="../../../../business/categories/" title="Categorías">
+            <i class="fas fa-list"></i>
+        </a>
+        <span class="btn-text">Categorías</span>
+    </div>
+</div>
+
+<!-- Modal de Búsqueda -->
+<div id="searchModal" class="search-modal">
     <div class="search-modal-content">
-      <button id="closeSearchModal" class="close-btn">&times;</button>
-      <h2>Buscar</h2>
-      <input type="text" id="searchInput" class="search-input" placeholder="Escribe aquí tu búsqueda...">
-      <button id="startSearchBtn" class="start-search-btn">Iniciar Búsqueda</button>
-      <div id="searchResults" class="search-results"></div>
+        <button id="closeSearchModal" class="close-btn">&times;</button>
+        <h2>Buscar</h2>
+        <input type="text" id="searchInput" class="search-input" placeholder="Escribe aquí tu búsqueda...">
+        <button id="startSearchBtn" class="start-search-btn">Iniciar Búsqueda</button>
+        <div id="searchResults" class="search-results"></div> <!-- Sección para mostrar resultados -->
     </div>
-  </div>
+</div>
 
-  <script src="../../../../assets/js/custom.js" defer></script>
-  <script src="../../../../assets/js/service-worker.js" defer></script>
+
+
+    <!-- JS Frameworks -->
+    <script src="../../../../assets/js/custom.js" defer></script>
+    <script src="../../../../assets/js/service-worker.js" defer></script>
 </body>
 </html>
