@@ -637,8 +637,7 @@ body {
     transform: scale(1.1);
 }
 
-
-    /* Botones de navegación */
+/* Botones de navegación */
 .carousel-nav {
     position: absolute;
     top: 50%;
@@ -658,11 +657,11 @@ body {
 }
 
 #carousel-prev {
-    left: 10px; /* Botón izquierdo */
+    left: 10px;
 }
 
 #carousel-next {
-    right: 10px; /* Botón derecho */
+    right: 10px;
 }
 
 .carousel-nav:hover {
