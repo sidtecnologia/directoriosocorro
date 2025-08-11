@@ -4,16 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'baldoria': {
             name: "Baldoria Pizzería",
             category: "Comida",
-            longDescription: "Somos Baldoria, la pizzería que lleva el auténtico sabor de Italia a cada rincón de nuestra comunidad. Con ingredientes frescos y de la más alta calidad, nuestras pizzas son un viaje culinario que no querrás que termine. Desde la clásica Margherita hasta nuestras creaciones de autor, cada pizza es hecha con pasión y dedicación. ¡Ven y vive una experiencia inolvidable con tu familia y amigos!",
+            longDescription: "En Baldoria 🍕🇮🇹 saborea pizzas artesanales recién horneadas, pastas deliciosas 🍝 y entradas clásicas italianas 🧀. Disfruta una experiencia que te transporta a Italia con cada bocado. Perfecto para cenas, celebraciones y momentos especiales en buena compañía 🍷✨.",
             logo: "../../../../assets/images/categories/comida/baldoria/baldoria.webp",
             address: "Calle 10 # 20-30, Centro",
-            hours: "Lunes a Sábado: 11:00 AM - 10:00 PM, Domingo: Cerrado",
+            hours: "Lunes a Domingo: 5:00pm - 10:00pm",
             services: ["Comida para llevar", "Entrega a domicilio", "Menú para niños"],
-            phone: "+573123456789",
-            whatsapp: "https://wa.me/573123456789",
-            deliveryLink: "#",
-            mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.620612457997!2d-73.12345678901!3d7.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDcnMjQuNCJOIDczwrAwNyc1Ni41Ilc!5e0!3m2!1ses!2sco!4v1625078123456!5m2!1ses!2sco",
-            socialLink: "https://www.facebook.com/PizzeriaBaldoria",
+            phone: "+573143157157",
+            whatsapp: "https://wa.me/573143157157",
+            deliveryLink: "https://wa.me/573188489124?text=%C2%A1Hola!%20Quiero%20pedir%20un%20domicilio.%0A%0A%F0%9F%9B%8D%EF%B8%8F%20Negocio%3ARestaurante%20Baldoria%0A%F0%9F%8F%A0%20Direcci%C3%B3n%3A%20Cra.%2014%20%23%2013-44%0A%E2%9C%85%20Entregar%20En%3A%20(Escribe...)%0A%F0%9F%93%A6%20Pedido%3A%20(Escribe...)%0A%0AGracias.",
+            mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.41130414593!2d-73.26122459999999!3d6.469468999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c369826848f3%3A0xd1cb62e60108c5d!2sCafe%20Baldoria%20pizzeria!5e0!3m2!1ses!2sco!4v1746221616197!5m2!1ses!2sco",
+            socialLink: "https://www.facebook.com/profile.php?id=61557079590244",
             gallery: [
                 "../../../../assets/images/categories/comida/baldoria/slide1.webp",
                 "../../../../assets/images/categories/comida/baldoria/slide2.webp",
@@ -145,21 +145,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const mapContainer = document.getElementById('business-map-container');
         mapContainer.innerHTML = `
-            <h5 class="card-title"><i class="fas fa-map-marked-alt"></i> Ubicación</h5>
+            <h5 class="card-title"><i class="fas fa-map-marked-alt"></i> Como Llegar</h5>
             <div class="ratio ratio-16x9">
-                <iframe src="${data.mapLink}" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="${data.mapLink}" style="border-radius:14px; border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         `;
         
         const socialCard = document.getElementById('business-social-card');
         const socialCardBody = socialCard.querySelector('.card-body');
-        socialCardBody.innerHTML = `
-            <h5 class="card-title"><i class="fab fa-facebook"></i> Redes Sociales</h5>
+
+            socialCardBody.innerHTML = `
+            <h5 class="card-title"><i class="fab fa-facebook"></i> Facebook</h5>
             <div class="ratio ratio-16x9">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(data.socialLink)}&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" 
-                        style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(data.socialLink)}&tabs=timeline&width=400&height=550&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                    width="100%" height="550" 
+                    style="border-radius:14px;border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>
             </div>
         `;
     }
 });
+

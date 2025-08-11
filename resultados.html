@@ -6,256 +6,59 @@
     <meta name="description" content="Directorio empresarial de Socorro, con un diseño moderno y dinámico.">
     <title>Busqueda | Directorio Empresarial Socorro</title>
     
-    <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
 
-    <!-- CSS Frameworks -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "39676bba-2644-4e38-bed5-43d9f629a0ab",
-    });
-  });
-</script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+            appId: "39676bba-2644-4e38-bed5-43d9f629a0ab",
+        });
+        });
+    </script>
 </head>
 <body class="">
-    <!-- Header -->
     <header>
         <h1>Resultados de Busqueda</h1>
         <h2>Directorio Socorro</h2>
     </header>
 
     <div class="contenedor">
-
-<!-- Horizontal Panel -->
-<div class="horizontal-panel">
-  <button class="btn-back" onclick="history.back()" aria-label="Volver atrás">
-    &#8592;
-  </button>
-</div>
-
-    
-<section class="py-5">
-  
-<!-- Contenedor centrado -->
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-8 col-lg-6">
-      <!-- Buscador -->
-      <div class="input-group mb-4">
-        <input type="text" id="newSearchInput" class="form-control" placeholder="Escribe tu búsqueda...">
-        <button class="btn btn-primary" id="newSearchBtn">Buscar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-    <!-- Botón Volver al Inicio centrado -->
-    <div class="text-center mb-4">
-      <button class="btn btn-primary" onclick="window.location.href='./'">Inicio</button>
-    </div>
-
-</section>
-    
-
-    <!-- Estado de búsqueda -->
-    <p id="searchStatus" class="mb-4 text-center">🔍 Buscando...</p>
-
-    <!-- Contenedor de resultados -->
-    <div id="resultsContainer" class="row g-4">
-      <!-- Tarjetas dinámicas aquí -->
-    </div>
-
-  </div>
-
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const query = params.get('q') || '';
-    const resultsContainer = document.getElementById('resultsContainer');
-    const searchStatus = document.getElementById('searchStatus');
-
-    const pagesToSearch = [
-    // Categoría: Vestuario
-    '../../../business/categories/vestuario/',
-    '../../../../business/categories/vestuario/adn/',
-    '../../../../business/categories/vestuario/angels/',
-    '../../../../business/categories/vestuario/antoine/',
-    '../../../../business/categories/vestuario/lilipink/',
-    '../../../../business/categories/vestuario/manitos/',
-    '../../../../business/categories/vestuario/rich/',
-    '../../../../business/categories/vestuario/veinte/',
-    
-    // Categoría: Comida
-    '../../../business/categories/comida/',
-    '../../../../business/categories/comida/baldoria/',
-    '../../../../business/categories/comida/chicbone/',
-    '../../../../business/categories/comida/empanadas/',
-    '../../../../business/categories/comida/fogon/',
-    '../../../../business/categories/comida/masterpizza/',
-    '../../../../business/categories/comida/orale/',
-    '../../../../business/categories/comida/patio/',
-    '../../../../business/categories/comida/saloon/',
-    
-    // Categoría: Belleza
-    '../../../business/categories/belleza/',
-    '../../../../business/categories/belleza/cami/',
-    '../../../../business/categories/belleza/july/',
-    '../../../../business/categories/belleza/lexus/',
-    '../../../../business/categories/belleza/luna/',
-    '../../../../business/categories/belleza/mara/',
-    '../../../../business/categories/belleza/reina/',
-    '../../../../business/categories/belleza/susy/',
-    '../../../../business/categories/belleza/yeye/',
-    
-    // Categoría: Bebidas
-    '../../../business/categories/bebida/',
-    '../../../../business/categories/bebida/alcala/',
-    '../../../../business/categories/bebida/blas/',
-    '../../../../business/categories/bebida/coco/',
-
-    // Categoría: Transporte
-    '../../../business/categories/transporte/',
-    '../../../../business/categories/transporte/cotrasaravita/',
-    '../../../../business/categories/transporte/cotrasangil/',
-
-    // Categoría: mensajeria
-    '../../../business/categories/mensajeria/',
-    '../../../../business/categories/mensajeria/serviya/',
-    '../../../../business/categories/mensajeria/hotmiguita/',
-
-    // Categoría: carnicería
-    '../../../business/categories/carne/',
-    '../../../../business/categories/carne/surticarne/',
-    '../../../../business/categories/carne/alespa/',
-    
-    // Categoría: Gimnasio
-    '../../../business/categories/gimnasio/',
-    
-    // Categoría: Droguería
-    '../../../business/categories/drogueria/',
-    '../../../../business/categories/drogueria/cruz-verde/',
-    
-    // Categoría: Entretenimiento
-    '../../../business/categories/entretenimiento/',
-    
-    
-    // Categoría: Servicios Porfesionales
-    '../../../business/categories/profesionales/',
-    '../../../../business/categories/profesionales/liliana/',
-    '../../../../business/categories/profesionales/fabio/',
-    
-    // Categoría: Agro & Mascotas
-    '../../../business/categories/veterinaria/',
-    '../../../../business/categories/veterinaria/rancho',
-    
-    // Categoría: Mecánica
-    '../../../business/categories/mecanica/',
-    
-    // Categoría: Inmobiliaria
-    '../../../business/categories/inmobiliaria/',
-    
-    // Categoría: Hotel
-    '../../../business/categories/hotel/',
-    
-    // Categoría: Tecnología
-    '../../../business/categories/tecnologia/',
-    
-    // Categoría: Deportes
-    '../../../business/categories/deportes/',
-    
-    // Categoría: Ferretería
-    '../../../business/categories/ferreteria/',
-    
-    // Categoría: Públicos
-    '../../../business/categories/publicos/',
-    
-    
-    // Categoría: Plaza de Mercado
-    '../../../business/categories/plaza/',
-    '../../../../business/categories/plaza/carne/',
-    '../../../../../business/categories/plaza/carne/carne1/',
-    
-    // Categoría General
-    '../../business/categories/',
-    ];
-
-    function normalizeText(text) {
-      return text ? text.toLowerCase().replace(/\s+/g, '') : '';
-    }
-
-    async function searchPages(query) {
-      const normalizedQuery = normalizeText(query);
-      let found = [];
-      searchStatus.textContent = `🔍 Buscando "${query}"...`;
-
-      for (const page of pagesToSearch) {
-        try {
-          const response = await fetch(page);
-          if (!response.ok) continue;
-          const html = await response.text();
-          const doc = new DOMParser().parseFromString(html, 'text/html');
-
-          const allElements = doc.querySelectorAll('[class]');
-          let match = false;
-
-          allElements.forEach(el => {
-            const classes = el.className.split(/\s+/);
-            classes.forEach(cl => {
-              if (normalizeText(cl).includes(normalizedQuery)) {
-                match = true;
-              }
-            });
-          });
-
-          if (match) {
-            const title = doc.querySelector('h1')?.innerText || 'Sin título';
-            const img = doc.querySelector('img')?.src || 'https://via.placeholder.com/400x200?text=Sin+Imagen';
-
-            found.push({ title, img, link: page });
-
-            resultsContainer.insertAdjacentHTML('beforeend', `
-              <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card result-card h-100 shadow-sm">
-                  <img src="${img}" class="result-img" alt="${title}">
-                  <div class="card-body">
-                    <h5 class="card-title">${title}</h5>
-                    <a href="${page}?q=${encodeURIComponent(query)}" class="btn btn-primary">Ver más</a>
-
-                  </div>
+        <div class="horizontal-panel">
+            <button class="btn-back" onclick="history.back()" aria-label="Volver atrás">
+                &#8592;
+            </button>
+        </div>
+        
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="input-group mb-4">
+                            <input type="text" id="newSearchInput" class="form-control" placeholder="Escribe tu búsqueda...">
+                            <button class="btn btn-primary" id="newSearchBtn">Buscar</button>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            `);
-
-            searchStatus.textContent = `✅ ${found.length} resultado${found.length !== 1 ? 's' : ''} encontrado${found.length !== 1 ? 's' : ''} para "${query}"`;
-          }
-
-        } catch (err) {
-          console.error('Error cargando', page, err);
-        }
-      }
-
-      if (found.length === 0) {
-        searchStatus.textContent = `❌ No se encontraron resultados para "${query}".`;
-      }
-    }
-
-    if (query) searchPages(query);
-
-    document.getElementById('newSearchBtn').addEventListener('click', () => {
-      const newQuery = document.getElementById('newSearchInput').value.trim();
-      if (newQuery) {
-        window.location.href = `resultados.html?q=${encodeURIComponent(newQuery)}`;
-      }
-    });
-  </script>
-
+            </div>
+            
+            <div class="text-center mb-4">
+                <button class="btn btn-primary" onclick="window.location.href='./'">Inicio</button>
+            </div>
+        </section>
+        
+        <p id="searchStatus" class="mb-4 text-center">🔍 Buscando...</p>
+        
+        <div id="resultsContainer" class="row g-4">
+            </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 </html>

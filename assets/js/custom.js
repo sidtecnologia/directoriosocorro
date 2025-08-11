@@ -15,94 +15,165 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeInElements.forEach(element => observer.observe(element));
 });
 
-document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-  });
-
-// ✅ Obtener elementos del DOM
-const searchButton = document.getElementById('searchButton');
-const closeSearchModal = document.getElementById('closeSearchModal');
-const searchModal = document.getElementById('searchModal');
-const startSearchBtn = document.getElementById('startSearchBtn');
-const searchInput = document.getElementById('searchInput');
-
-// ✅ Ocultar modal al cargar
-if (searchModal) {
-  searchModal.style.display = 'none';
-}
-
-// ✅ Abrir modal
-if (searchButton && searchModal) {
-  searchButton.addEventListener('click', () => {
-    searchModal.style.display = 'flex';
-  });
-
-  closeSearchModal.addEventListener('click', () => {
-    searchModal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (e) => {
-    if (e.target === searchModal) {
-      searchModal.style.display = 'none';
+const businesses = [
+    {
+        id: 'baldoria',
+        name: 'Baldoria Pizzería',
+        category: 'Comida',
+        logo: '../../../../assets/images/categories/comida/baldoria/baldoria.webp',
+        address: 'Calle 10 # 20-30, Centro'
+    },
+    {
+        id: 'orale',
+        name: 'Orale, que viva México',
+        category: 'Comida',
+        logo: '../../../../assets/images/principal/carousel/slide1.webp',
+        address: 'Carrera 15 # 30-50, Cabecera'
+    },
+    {
+        id: 'adn',
+        name: 'ADN Couture',
+        category: 'Vestuario',
+        logo: '../../../../assets/images/principal/carousel/slide3.webp',
+        address: 'Calle 50 # 10-25, Centro Comercial'
+    },
+    {
+        id: 'coco',
+        name: 'Coco\'s Bar',
+        category: 'Bebida',
+        logo: '../../../../assets/images/principal/carousel/slide5.webp',
+        address: 'Avenida 20 # 45-12, Zona Rosa'
     }
-  });
-}
+];
 
-// ✅ Función para cerrar modal
-function closeSearchModalFunction() {
-  if (searchModal) {
-    searchModal.style.display = 'none';
-  }
-}
+document.addEventListener('DOMContentLoaded', () => {
+    // Lógica del modal de búsqueda
+    const searchButton = document.getElementById('searchButton');
+    const closeSearchModal = document.getElementById('closeSearchModal');
+    const searchModal = document.getElementById('searchModal');
+    const startSearchBtn = document.getElementById('startSearchBtn');
+    const searchInput = document.getElementById('searchInput');
 
-if (startSearchBtn && searchInput) {
-  startSearchBtn.addEventListener('click', () => {
-    const query = searchInput.value.trim();
-    if (query) {
-      // Calcula la carpeta base de tu proyecto
-      const base = window.location.origin + '/' + window.location.pathname.split('/')[1];
-      window.location.href = `/resultados.html?q=${encodeURIComponent(query)}`;
+    if (searchModal) {
+        searchModal.style.display = 'none';
+    }
+
+    if (searchButton && searchModal) {
+        searchButton.addEventListener('click', () => {
+            searchModal.style.display = 'flex'; // Usar 'flex' para activar el centrado CSS
+            // setTimeout(() => searchModal.classList.add('show'), 10);
+            searchInput.focus();
+        });
+
+        closeSearchModal.addEventListener('click', () => {
+            // searchModal.classList.remove('show');
+            // setTimeout(() => searchModal.style.display = 'none', 300);
+            searchModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === searchModal) {
+                // searchModal.classList.remove('show');
+                // setTimeout(() => searchModal.style.display = 'none', 300);
+                searchModal.style.display = 'none';
+            }
+        });
+    }
+
+    if (startSearchBtn && searchInput) {
+        startSearchBtn.addEventListener('click', () => {
+            const query = searchInput.value.trim();
+            if (query) {
+                window.location.href = `/resultados.html?q=${encodeURIComponent(query)}`;
+            } else {
+                alert('Por favor, ingresa un término de búsqueda.');
+            }
+        });
+
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const query = searchInput.value.trim();
+                if (query) {
+                    window.location.href = `/resultados.html?q=${encodeURIComponent(query)}`;
+                }
+            }
+        });
+    }
+
+    // Lógica de la página de resultados
+    const resultsContainer = document.getElementById('resultsContainer');
+    const searchStatus = document.getElementById('searchStatus');
+    const newSearchInput = document.getElementById('newSearchInput');
+    const newSearchBtn = document.getElementById('newSearchBtn');
+
+    function renderResults(query) {
+        if (!resultsContainer) return;
+
+        resultsContainer.innerHTML = '';
+        searchStatus.textContent = `🔍 Buscando "${query}"...`;
+
+        const normalizedQuery = query.toLowerCase().trim();
+        const foundBusinesses = businesses.filter(business =>
+            business.name.toLowerCase().includes(normalizedQuery) ||
+            business.category.toLowerCase().includes(normalizedQuery) ||
+            business.address.toLowerCase().includes(normalizedQuery)
+        );
+
+        if (foundBusinesses.length > 0) {
+            foundBusinesses.forEach(business => {
+                const cardHTML = `
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <a href="../../../../../business/categories/negocio/?id=${business.id}" class="card-link">
+                            <div class="card result-card h-100 shadow-sm">
+                                <img src="${business.logo}" class="result-img card-img-top" alt="Logo de ${business.name}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${business.name}</h5>
+                                    <p class="card-text text-muted">${business.category}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                `;
+                resultsContainer.insertAdjacentHTML('beforeend', cardHTML);
+            });
+            searchStatus.textContent = `✅ ${foundBusinesses.length} resultado${foundBusinesses.length !== 1 ? 's' : ''} encontrado${foundBusinesses.length !== 1 ? 's' : ''} para "${query}"`;
+        } else {
+            searchStatus.textContent = `❌ No se encontraron resultados para "${query}".`;
+        }
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const queryFromUrl = params.get('q');
+
+    if (queryFromUrl) {
+        if (newSearchInput) {
+            newSearchInput.value = queryFromUrl;
+        }
+        renderResults(queryFromUrl);
     } else {
-      alert('Por favor, ingresa un término de búsqueda.');
-    }
-  });
-}
-
-  const params = new URLSearchParams(window.location.search);
-  const searchTerm = params.get('q');
-
-  if (searchTerm) {
-    const normalized = searchTerm.toLowerCase().trim();
-
-    // Busca todos los elementos de texto del body
-    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-
-    let found = false;
-    while (walker.nextNode()) {
-      const node = walker.currentNode;
-      if (node.nodeValue.toLowerCase().includes(normalized)) {
-        const span = document.createElement('span');
-        span.style.background = 'yellow';
-        span.textContent = node.nodeValue;
-
-        const highlight = span.textContent.replace(new RegExp(normalized, 'gi'), `<mark>$&</mark>`);
-        const wrapper = document.createElement('span');
-        wrapper.innerHTML = highlight;
-        node.parentNode.replaceChild(wrapper, node);
-
-        wrapper.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        found = true;
-        break;
-      }
+        if (searchStatus) {
+            searchStatus.textContent = 'Ingresa un término para comenzar la búsqueda.';
+        }
     }
 
-    if (!found) {
-      console.log('No se encontró la palabra:', searchTerm);
+    if (newSearchBtn && newSearchInput) {
+        newSearchBtn.addEventListener('click', () => {
+            const newQuery = newSearchInput.value.trim();
+            if (newQuery) {
+                window.location.href = `resultados.html?q=${encodeURIComponent(newQuery)}`;
+            }
+        });
+
+        newSearchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const newQuery = newSearchInput.value.trim();
+                if (newQuery) {
+                    window.location.href = `resultados.html?q=${encodeURIComponent(newQuery)}`;
+                }
+            }
+        });
     }
-  }
-
-
-
+});
 
 
   function mostrarBoton() {
