@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             logo: "../../../../assets/images/categories/comida/baldoria/baldoria.webp",
             address: "Calle 10 # 20-30, Centro",
             hours: "Lunes a Domingo: 5:00pm - 10:00pm",
-            services: ["Comida para llevar", "Entrega a domicilio", "Menú para niños"],
+            services: ["Pizzas artesanales italianas", "Pastas frescas y lasañas", "Entradas y antipastos", "Bebidas, vinos y postres"],
             phone: "+573143157157",
             whatsapp: "https://wa.me/573143157157",
             deliveryLink: "https://wa.me/573188489124?text=%C2%A1Hola!%20Quiero%20pedir%20un%20domicilio.%0A%0A%F0%9F%9B%8D%EF%B8%8F%20Negocio%3ARestaurante%20Baldoria%0A%F0%9F%8F%A0%20Direcci%C3%B3n%3A%20Cra.%2014%20%23%2013-44%0A%E2%9C%85%20Entregar%20En%3A%20(Escribe...)%0A%F0%9F%93%A6%20Pedido%3A%20(Escribe...)%0A%0AGracias.",
@@ -24,6 +24,97 @@ document.addEventListener('DOMContentLoaded', () => {
                 "../../../../assets/images/categories/comida/baldoria/slide7.webp",
                 "../../../../assets/images/categories/comida/baldoria/slide8.webp",
                 "../../../../assets/images/categories/comida/baldoria/slide9.webp",
+            ]
+        }, 
+        'chicbone': {
+            name: "Chicbone",
+            category: "Comida",
+            longDescription: "En Chicbone 🍔🔥 encuentras arepas rellenas generosas, burgers jugosas al carbón 🍖 y combos que combinan sabor y rapidez 🚀. Todo preparado al instante, con ingredientes frescos y ese toque casero que se siente en cada bocado 🤤. ¡Prueba, repite y comparte! ✨",
+            logo: "../../../../assets/images/categories/comida/chicbone/chicbone.webp",
+            address: "Cll. 8 # 7 - 39",
+            hours: "Viernes a Sábado: 6:00am - 9:00pm",
+            services: ["Arepas rellenas al gusto", "Hamburguesas al carbón", "Bebidas frías y acompañamientos", "Comida rápida y combos"],
+            phone: "+573213077368",
+            whatsapp: "https://wa.me/573213077368",
+            deliveryLink: "https://wa.me/573188489124?text=%C2%A1Hola!%20Quiero%20pedir%20un%20domicilio.%0A%0A%F0%9F%9B%8D%EF%B8%8F%20Negocio%3ARestaurante%20Chicbone%0A%F0%9F%8F%A0%20Direcci%C3%B3n%3A%20Cll.%208%20%23%207%20-%2039%0A%E2%9C%85%20Entregar%20En%3A%20(Escribe...)%0A%F0%9F%93%A6%20Pedido%3A%20(Escribe...)%0A%0AGracias.",
+            mapLink: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7928.909286396728!2d-73.258149!3d6.463943!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81e7022bb99%3A0xeeb43cd3620c0fa7!2sCl.%208%20%237-39%2C%20Socorro%2C%20Santander!5e0!3m2!1ses!2sco!4v1754950148737!5m2!1ses!2sco",
+            socialLink: "https://www.facebook.com/profile.php?id=100075961761461&ref=embed_page",
+            gallery: [
+                "../../../../assets/images/categories/comida/chicbone/slide1.webp",
+                "../../../../assets/images/categories/comida/chicbone/slide2.webp",
+                "../../../../assets/images/categories/comida/chicbone/slide3.webp",
+                "../../../../assets/images/categories/comida/chicbone/slide4.webp",
+            ]
+        }, 
+        'empanadas': {
+            name: "Empanadas de la Casa",
+            category: "Comida",
+            longDescription: "En Empanadas de la Casa 🥟🍟 encuentras empanadas crujientes, salsas caseras y antojos rápidos para calmar el hambre en cualquier momento 🌟. Tenemos variedad de rellenos, acompañamientos y combos para disfrutar solo o con amigos. ¡Prueba y vuelve siempre! 🤤✨",
+            logo: "../../../../assets/images/categories/comida/empanadas/empanadas.webp",
+            address: "Cra. 14 #06 - 35",
+            hours: "Lunes a Domingo: 5:00pm - 11:00pm",
+            services: ["Venta de empanadas frescas", "🍟 Comida rápida variada", "Perros, hamburguesas y snacks", "Bebidas frías y jugos naturales"],
+            phone: "+573132270897",
+            whatsapp: "https://wa.me/573132270897",
+            deliveryLink: "https://wa.me/573188489124?text=%C2%A1Hola!%20Quiero%20pedir%20un%20domicilio.%0A%0A%F0%9F%9B%8D%EF%B8%8F%20Negocio%3A%20Empanadas%20de%20la%20Casa%0A%F0%9F%8F%A0%20Direcci%C3%B3n%3A%20Cll.%206%20%2315%20-%2005%0A%E2%9C%85%20Entregar%20En%3A%20(Escribe...)%0A%F0%9F%93%A6%20Pedido%3A%20(Escribe...)%0A%0AGracias.",
+            mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4527907106044!2d-73.2629457!3d6.4641793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81d13201a55%3A0x2abb2359797005af!2sEMPANADAS%20DE%20LA%20CASA!5e0!3m2!1ses!2sco!4v1746033514220!5m2!1ses!2sco",
+            socialLink: "https://www.facebook.com/profile.php?id=100063474525984&ref=embed_page",
+            gallery: [
+                "../../../../assets/images/categories/comida/empanadas/slide1.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide2.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide3.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide4.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide5.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide6.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide7.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide8.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide9.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide10.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide11.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide12.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide13.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide14.webp",
+                "../../../../assets/images/categories/comida/empanadas/slide15.webp",
+            ]
+        }, 
+        'orale': {
+            name: "Orale, que viva México",
+            category: "Comida Mexicana",
+            longDescription: "Auténtica comida mexicana con tacos 🌮, enchiladas y margaritas. ¡Siente el sabor de México en cada bocado! Ambiente festivo 🎊 y música en vivo 🎶. Perfecto para una noche divertida con amigos y familia 🎉.",
+            logo: "../../../../assets/images/categories/comida/chicbone/slide1.webp",
+            address: "Carrera 15 # 30-50, Cabecera",
+            hours: "Martes a Sábado: 6:00pm - 12:00am",
+            services: ["Comida para llevar", "Entrega a domicilio", "Reservaciones"],
+            phone: "+573101234567",
+            whatsapp: "https://wa.me/573101234567",
+            deliveryLink: "https://wa.me/573101234567?text=%C2%A1Hola!%20Quiero%20pedir%20un%20domicilio.%0A%0A%F0%9F%9B%8D%EF%B8%8F%20Negocio%3A%20Orale%2C%20que%20viva%20M%C3%A9xico%0A%F0%9F%8F%A0%20Direcci%C3%B3n%3A%20(Escribe...)%0A%E2%9C%85%20Entregar%20En%3A%20(Escribe...)%0A%F0%9F%93%A6%20Pedido%3A%20(Escribe...)%0A%0AGracias.",
+            mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.41130414593!2d-73.26122459999999!3d6.469468999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c369826848f3%3A0xd1cb62e60108c5d!2sCafe%20Baldoria%20pizzeria!5e0!3m2!1ses!2sco!4v1746221616197!5m2!1ses!2sco",
+            socialLink: "https://www.facebook.com/OraleQueVivaMexico",
+            gallery: [
+                "../../../../assets/images/categories/comida/chicbone/slide1.webp",
+                "../../../../assets/images/categories/comida/chicbone/slide2.webp",
+                "../../../../assets/images/categories/comida/chicbone/slide3.webp",
+                "../../../../assets/images/categories/comida/chicbone/slide4.webp",
+            ]
+        }, 
+        'orale': {
+            name: "Orale, que viva México",
+            category: "Comida Mexicana",
+            longDescription: "Auténtica comida mexicana con tacos 🌮, enchiladas y margaritas. ¡Siente el sabor de México en cada bocado! Ambiente festivo 🎊 y música en vivo 🎶. Perfecto para una noche divertida con amigos y familia 🎉.",
+            logo: "../../../../assets/images/categories/comida/chicbone/slide1.webp",
+            address: "Carrera 15 # 30-50, Cabecera",
+            hours: "Martes a Sábado: 6:00pm - 12:00am",
+            services: ["Comida para llevar", "Entrega a domicilio", "Reservaciones"],
+            phone: "+573101234567",
+            whatsapp: "https://wa.me/573101234567",
+            deliveryLink: "https://wa.me/573101234567?text=%C2%A1Hola!%20Quiero%20pedir%20un%20domicilio.%0A%0A%F0%9F%9B%8D%EF%B8%8F%20Negocio%3A%20Orale%2C%20que%20viva%20M%C3%A9xico%0A%F0%9F%8F%A0%20Direcci%C3%B3n%3A%20(Escribe...)%0A%E2%9C%85%20Entregar%20En%3A%20(Escribe...)%0A%F0%9F%93%A6%20Pedido%3A%20(Escribe...)%0A%0AGracias.",
+            mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.41130414593!2d-73.26122459999999!3d6.469468999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c369826848f3%3A0xd1cb62e60108c5d!2sCafe%20Baldoria%20pizzeria!5e0!3m2!1ses!2sco!4v1746221616197!5m2!1ses!2sco",
+            socialLink: "https://www.facebook.com/OraleQueVivaMexico",
+            gallery: [
+                "../../../../assets/images/categories/comida/chicbone/slide1.webp",
+                "../../../../assets/images/categories/comida/chicbone/slide2.webp",
+                "../../../../assets/images/categories/comida/chicbone/slide3.webp",
+                "../../../../assets/images/categories/comida/chicbone/slide4.webp",
             ]
         }
     };
@@ -157,8 +248,8 @@ document.addEventListener('DOMContentLoaded', () => {
             socialCardBody.innerHTML = `
             <h5 class="card-title"><i class="fab fa-facebook"></i> Facebook</h5>
             <div class="ratio ratio-16x9">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(data.socialLink)}&tabs=timeline&width=400&height=550&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="100%" height="550" 
+                <iframe src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(data.socialLink)}&tabs=timeline&width=300&height=550&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                    width="300" height="550" 
                     style="border-radius:14px;border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
                 </iframe>

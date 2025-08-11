@@ -8,6 +8,24 @@ body {
     padding: 0;
 }
 
+/* Altura de los iframes del mapa y redes sociales */
+.card-iframe-container {
+    height: 550px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card-iframe-container iframe {
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .card-iframe-container {
+        height: 350px; /* Altura más baja para dispositivos móviles */
+    }
+}
+
 /* Contenedor central para PC */
 .contenedor {
   max-width: 930px; /* ancho típico de móviles */
@@ -927,7 +945,7 @@ body {
 }
 
 
-.map-container {
+.card-iframe-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -941,7 +959,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
 }
-.map-container h2 {
+.card-iframe-container h2 {
     margin-top: 0;
     color: #333;
 }

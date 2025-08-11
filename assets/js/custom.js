@@ -21,28 +21,32 @@ const businesses = [
         name: 'Baldoria Pizzería',
         category: 'Comida',
         logo: '../../../../assets/images/categories/comida/baldoria/baldoria.webp',
-        address: 'Calle 10 # 20-30, Centro'
+        address: 'Calle 10 # 20-30, Centro',
+        keywords: ['pizza', 'pizzas', 'comida italiana', 'restaurante', 'pasta']
     },
     {
-        id: 'orale',
-        name: 'Orale, que viva México',
+        id: 'chicbone',
+        name: 'Chicbone',
         category: 'Comida',
-        logo: '../../../../assets/images/principal/carousel/slide1.webp',
-        address: 'Carrera 15 # 30-50, Cabecera'
+        logo: '../../../../assets/images/categories/comida/chicbone/chicbone.webp',
+        address: 'Carrera 15 # 30-50, Cabecera',
+        keywords: ['hamburguesas', 'malteadas', 'comida rápida', 'restaurante', 'postres']
     },
     {
-        id: 'adn',
-        name: 'ADN Couture',
-        category: 'Vestuario',
-        logo: '../../../../assets/images/principal/carousel/slide3.webp',
-        address: 'Calle 50 # 10-25, Centro Comercial'
+        id: 'empanadas',
+        name: 'Empanadas de la Casa',
+        category: 'Comida',
+        logo: '../../../../assets/images/categories/comida/empanadas/empanadas.webp',
+        address: 'Cra. 14 #06 - 35',
+        keywords: ['empanadas', 'empanada', 'hamburguesas', 'arepa', 'perro', 'bebidas']
     },
     {
         id: 'coco',
         name: 'Coco\'s Bar',
         category: 'Bebida',
         logo: '../../../../assets/images/principal/carousel/slide5.webp',
-        address: 'Avenida 20 # 45-12, Zona Rosa'
+        address: 'Avenida 20 # 45-12, Zona Rosa',
+        keywords: ['bar', 'cocteles', 'cerveza', 'tragos', 'discoteca', 'bebidas']
     }
 ];
 
@@ -61,20 +65,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchButton && searchModal) {
         searchButton.addEventListener('click', () => {
             searchModal.style.display = 'flex'; // Usar 'flex' para activar el centrado CSS
-            // setTimeout(() => searchModal.classList.add('show'), 10);
             searchInput.focus();
         });
 
         closeSearchModal.addEventListener('click', () => {
-            // searchModal.classList.remove('show');
-            // setTimeout(() => searchModal.style.display = 'none', 300);
             searchModal.style.display = 'none';
         });
 
         window.addEventListener('click', (e) => {
             if (e.target === searchModal) {
-                // searchModal.classList.remove('show');
-                // setTimeout(() => searchModal.style.display = 'none', 300);
                 searchModal.style.display = 'none';
             }
         });
@@ -86,7 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (query) {
                 window.location.href = `/resultados.html?q=${encodeURIComponent(query)}`;
             } else {
-                alert('Por favor, ingresa un término de búsqueda.');
+                // Reemplazado 'alert()' con un mensaje en la consola para evitar problemas con la interfaz
+                console.log('Por favor, ingresa un término de búsqueda.');
             }
         });
 
@@ -116,7 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const foundBusinesses = businesses.filter(business =>
             business.name.toLowerCase().includes(normalizedQuery) ||
             business.category.toLowerCase().includes(normalizedQuery) ||
-            business.address.toLowerCase().includes(normalizedQuery)
+            business.address.toLowerCase().includes(normalizedQuery) ||
+            (business.keywords && business.keywords.some(keyword => keyword.toLowerCase().includes(normalizedQuery)))
         );
 
         if (foundBusinesses.length > 0) {
@@ -160,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newSearchBtn.addEventListener('click', () => {
             const newQuery = newSearchInput.value.trim();
             if (newQuery) {
-                window.location.href = `resultados.html?q=${encodeURIComponent(newQuery)}`;
+                window.location.href = `/resultados.html?q=${encodeURIComponent(newQuery)}`;
             }
         });
 
@@ -168,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Enter') {
                 const newQuery = newSearchInput.value.trim();
                 if (newQuery) {
-                    window.location.href = `resultados.html?q=${encodeURIComponent(newQuery)}`;
+                    window.location.href = `/resultados.html?q=${encodeURIComponent(newQuery)}`;
                 }
             }
         });
