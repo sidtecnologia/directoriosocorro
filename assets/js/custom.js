@@ -41,12 +41,44 @@ const businesses = [
         keywords: ['empanadas', 'empanada', 'hamburguesas', 'arepa', 'perro', 'bebidas']
     },
     {
-        id: 'coco',
-        name: 'Coco\'s Bar',
-        category: 'Bebida',
-        logo: '../../../../assets/images/principal/carousel/slide5.webp',
-        address: 'Avenida 20 # 45-12, Zona Rosa',
-        keywords: ['bar', 'cocteles', 'cerveza', 'tragos', 'discoteca', 'bebidas']
+        id: 'fogon',
+        name: 'Fogón Socorrano',
+        category: 'Comida',
+        logo: '../../../../assets/images/categories/comida/fogon/fogon.webp',
+        address: 'Cra. 14 Con 4 Atrás de Hospital',
+        keywords: ['fogon', 'almuerzos', 'desayunos', 'caseros', 'comida santandereana', 'platos tipicos']
+    },
+    {
+        id: 'masterpizza',
+        name: 'Masterpizza',
+        category: 'Comida',
+        logo: '../../../../assets/images/categories/comida/masterpizza/masterpizza.webp',
+        address: 'Cra. 14 #9 - 44',
+        keywords: ['Pizza', 'lasagña', 'pasta', 'ensalada', 'panzerotti', 'bebidas']
+    },
+    {
+        id: 'orale',
+        name: 'Órale, que Viva México',
+        category: 'Comida',
+        logo: '../../../../assets/images/categories/comida/orale/orale.webp',
+        address: 'Cra. 14 Con 4 Atrás de Hospital',
+        keywords: ['orale', 'Comida Mexicana', 'tacos', 'quesadillas', 'burritos', 'bebidas', 'platos tipicos de mexico', 'nachos']
+    },
+    {
+        id: 'patio',
+        name: 'El Patio Restaurante Parrilla',
+        category: 'Comida',
+        logo: '../../../../assets/images/categories/comida/patio/patio.webp',
+        address: 'Cll. 12 #12 - 25',
+        keywords: ['carne asada', 'asados', 'parrilla', 'platos tipicos', 'almuerzos', 'espacios familiares', 'bebidas', 'eventos privados']
+    },
+    {
+        id: 'saloon',
+        name: 'Saloon1822',
+        category: 'Comida',
+        logo: '../../../../assets/images/categories/comida/saloon/saloon.webp',
+        address: 'Cra. 12 # 13 - 14',
+        keywords: ['comida rápida', 'rapida', 'hamburguesa', 'perro caliente', 'salchipapa', 'picadas', 'choripapa', 'jugos', 'micheladas', 'frappes']
     }
 ];
 
