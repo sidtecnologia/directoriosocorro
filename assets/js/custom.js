@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeInElements.forEach(element => observer.observe(element));
 });
 
+// Categoría Comida
+
 const businesses = [
     {
         id: 'baldoria',
@@ -79,7 +81,128 @@ const businesses = [
         logo: '../../../../assets/images/categories/comida/saloon/saloon.webp',
         address: 'Cra. 12 # 13 - 14',
         keywords: ['comida rápida', 'rapida', 'hamburguesa', 'perro caliente', 'salchipapa', 'picadas', 'choripapa', 'jugos', 'micheladas', 'frappes']
+    },
+
+    // Categoría Vestuario
+
+    
+    {
+        id: 'adn',
+        name: 'ADN Couture',
+        category: 'Vestuario',
+        logo: '../../../../assets/images/categories/vestuario/adn/adn.webp',
+        address: 'Cll. 9 #15-25',
+        keywords: ['tienda ropa femenina', 'moda accesorios', 'gorras', 'vestidos', 'blusas']
+    },
+    {
+        id: 'angels',
+        name: 'Angels',
+        category: 'Vestuario',
+        logo: '../../../../assets/images/categories/vestuario/angels/angels.webp',
+        address: 'Cra. 14 #11-13',
+        keywords: ['tienda virtual', 'calzado-femenino', 'sandalias', 'tacones', 'bolsos', 'carteras']
+    },
+    {
+        id: 'antoine',
+        name: 'Antoine Confort Shoes',
+        category: 'Vestuario',
+        logo: '../../../../assets/images/categories/vestuario/antoine/antoine.webp',
+        address: 'Cll. 19 #14-36',
+        keywords: ['fabrica calzado', 'cuero zapatos', 'medicados', 'ortopedicos', 'confort', 'plantillas']
+    },
+    {
+        id: 'lilipink',
+        name: 'LiliPink',
+        category: 'Vestuario',
+        logo: '../../../../assets/images/categories/vestuario/lilipink/lilipink.webp',
+        address: 'Cra. 14 #9 - 44',
+        keywords: ['ropa interior', 'Tangas', 'Cremas Faciales', 'Ropa Mujer', 'Brasier', 'Ropa Sexy']
+    },
+    {
+        id: 'manitos',
+        name: 'Manitos Creativas',
+        category: 'Vestuario',
+        logo: '../../../../assets/images/categories/vestuario/manitos/manitos.webp',
+        address: 'Cll. 10 #15-37',
+        keywords: ['tienda ropa infantil', 'ropa niños', 'accesorios infantiles', 'vestidos', 'moños', 'gorros']
+    },
+    {
+        id: 'rich',
+        name: 'Calzado Rich',
+        category: 'Vestuario',
+        logo: '../../../../assets/images/categories/vestuario/rich/rich.webp',
+        address: 'Cra. 14 #13-21',
+        keywords: ['tienda calzado', 'bolsos', 'cinturones', 'billeteras', 'zapatos dama', 'calzado caballero', 'calzado niños']
+    },
+    {
+        id: 'veinte',
+        name: 'Veinte Veinte',
+        category: 'Vestuario',
+        logo: '../../../../assets/images/categories/vestuario/veinte/veinte.webp',
+        address: 'Cll. 13 #14-09',
+        keywords: ['moda', 'jeans', 'vestidos', 'calzado', 'gorras', 'correas', 'cinturones', 'chevignon', 'boss', 'under armour', 'levis']
+    },
+
+    // Categoría Belleza
+
+    
+    {
+        id: 'cami',
+        name: 'Cami Marin Accesorios',
+        category: 'Belleza - Estética',
+        logo: '../../../../assets/images/categories/belleza/cami/cami.webp',
+        address: 'Cra. 16 #11 - 75',
+        keywords: ['distribuidora belleza', 'productos belleza', 'cuidado personal', 'estetica', 'insumos peluqueria', 'manicuristas', 'maquillaje', 'bolsos']
+    },
+    {
+        id: 'july',
+        name: 'July´s Beauty',
+        category: 'Belleza - Estética',
+        logo: '../../../../assets/images/categories/belleza/july/july.webp',
+        address: 'Cra. 15 #11 - 06',
+        keywords: ['estetica belleza', 'productos belleza', 'cuidado personal', 'estetica', 'insumos peluqueria', 'manicuristas', 'maquilladores', 'maquillaje']
+    },
+    {
+        id: 'lexus',
+        name: 'Centro de Belleza DLexus',
+        category: 'Belleza - Estética',
+        logo: '../../../../assets/images/categories/belleza/lexus/lexus.webp',
+        address: 'Cll. 16 #11 - 27',
+        keywords: ['centro belleza', 'salón de belleza', 'spa', 'peluqueria', 'manicure pedicure', 'tratamientos capilares']
+    },
+    {
+        id: 'luna',
+        name: 'Sombra de Luna Tattoo',
+        category: 'Belleza - Estética',
+        logo: '../../../../assets/images/categories/belleza/luna/luna.webp',
+        address: 'Cll. 16 #14 - 70 Local 1',
+        keywords: ['estudio tatuajes', 'arte tatuaje', 'tatuajes personalizados', 'diseño piel']
+    },
+    {
+        id: 'manitos',
+        name: 'Manitos Creativas',
+        category: 'Vestuario',
+        logo: '../../../../assets/images/categories/vestuario/manitos/manitos.webp',
+        address: 'Cll. 10 #15-37',
+        keywords: ['tienda ropa infantil', 'ropa niños', 'accesorios infantiles', 'vestidos', 'moños', 'gorros']
+    },
+    {
+        id: 'rich',
+        name: 'Calzado Rich',
+        category: 'Vestuario',
+        logo: '../../../../assets/images/categories/vestuario/rich/rich.webp',
+        address: 'Cra. 14 #13-21',
+        keywords: ['tienda calzado', 'bolsos', 'cinturones', 'billeteras', 'zapatos dama', 'calzado caballero', 'calzado niños']
+    },
+    {
+        id: 'veinte',
+        name: 'Veinte Veinte',
+        category: 'Vestuario',
+        logo: '../../../../assets/images/categories/vestuario/veinte/veinte.webp',
+        address: 'Cll. 13 #14-09',
+        keywords: ['moda', 'jeans', 'vestidos', 'calzado', 'gorras', 'correas', 'cinturones', 'chevignon', 'boss', 'under armour', 'levis']
     }
+
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
