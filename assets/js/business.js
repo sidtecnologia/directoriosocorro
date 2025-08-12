@@ -551,8 +551,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 "../../../../assets/images/categories/belleza/luna/slide11.webp",
                 "../../../../assets/images/categories/belleza/luna/slide12.webp",
                 "../../../../assets/images/categories/belleza/luna/slide13.webp",
-                "../../../../assets/images/categories/belleza/luna/slide14.webp",
-                "../../../../assets/images/categories/belleza/luna/slide15.webp",
             ]
         }
 
