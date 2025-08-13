@@ -26,6 +26,17 @@ body {
     }
 }
 
+#business-social-card {
+    display: flex;
+    justify-content: center;
+}
+
+#business-social-card iframe {
+    max-width: 500px; /* ajusta el ancho máximo */
+    width: 100%;
+}
+
+
 /* Contenedor central para PC */
 .contenedor {
   max-width: 930px; /* ancho típico de móviles */

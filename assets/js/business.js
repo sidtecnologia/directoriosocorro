@@ -885,8 +885,7 @@ document.addEventListener('DOMContentLoaded', () => {
             startAutoSlide();
         }
 
-        const mapContainer = document.getElementById('business-map-container');
-        mapContainer.innerHTML = `
+        document.getElementById('business-map-container').innerHTML = `
             <h5 class="card-title"><i class="fas fa-map-marked-alt"></i> Como Llegar</h5>
             <div class="ratio ratio-16x9">
                 <iframe src="${data.mapLink}" style="border-radius:14px; border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -894,18 +893,20 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         
         const socialCard = document.getElementById('business-social-card');
-        const socialCardBody = socialCard.querySelector('.card-body');
 
-            socialCardBody.innerHTML = `
-            <h5 class="card-title"><i class="fab fa-facebook"></i> Facebook</h5>
-            <div class="ratio ratio-16x9">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(data.socialLink)}&tabs=timeline&width=300&height=550&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="300" height="550" 
-                    style="border-radius:14px;border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>
-            </div>
-        `;
+socialCard.innerHTML = `
+    <iframe 
+        src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(data.socialLink)}&tabs=timeline&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+        width="100%" 
+        height="550" 
+        style="border-radius:14px;border:none;overflow:hidden" 
+        scrolling="no" 
+        frameborder="0" 
+        allowfullscreen="true" 
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+    </iframe>
+`;
+
     }
 });
 
