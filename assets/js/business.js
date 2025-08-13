@@ -896,9 +896,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 socialCard.innerHTML = `
     <iframe 
-        src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(data.socialLink)}&tabs=timeline&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-        width="100%" 
-        height="550" 
+        src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(data.socialLink)}&tabs=timeline&width=300&height=550&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+        width="300px" 
+        height="550px" 
         style="border-radius:14px;border:none;overflow:hidden" 
         scrolling="no" 
         frameborder="0" 
