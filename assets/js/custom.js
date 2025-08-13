@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeInElements.forEach(element => observer.observe(element));
 });
 
+// ELEMENTOS BUSCADOR
 // Categoría Comida
 
 const businesses = [
@@ -179,28 +180,63 @@ const businesses = [
         keywords: ['estudio tatuajes', 'arte tatuaje', 'tatuajes personalizados', 'diseño piel']
     },
     {
-        id: 'manitos',
-        name: 'Manitos Creativas',
-        category: 'Vestuario',
-        logo: '../../../../assets/images/categories/vestuario/manitos/manitos.webp',
-        address: 'Cll. 10 #15-37',
-        keywords: ['tienda ropa infantil', 'ropa niños', 'accesorios infantiles', 'vestidos', 'moños', 'gorros']
+        id: 'mara',
+        name: 'Distribuidora de Belleza Mara',
+        category: 'Belleza - Estética',
+        logo: '../../../../assets/images/categories/belleza/mara/mara.webp',
+        address: 'Cra. 15 #12 - 36',
+        keywords: ['distribuidora belleza', 'productos belleza', 'cuidado personal', 'insumos peluqueria', 'manicuristas', 'cosmeticos']
     },
     {
-        id: 'rich',
-        name: 'Calzado Rich',
-        category: 'Vestuario',
-        logo: '../../../../assets/images/categories/vestuario/rich/rich.webp',
-        address: 'Cra. 14 #13-21',
-        keywords: ['tienda calzado', 'bolsos', 'cinturones', 'billeteras', 'zapatos dama', 'calzado caballero', 'calzado niños']
+        id: 'reina',
+        name: 'Uñas de Reina SPA',
+        category: 'Belleza - Estética',
+        logo: '../../../../assets/images/categories/belleza/reina/reina.webp',
+        address: 'Cll. 10 #15 - 68',
+        keywords: ['uñas acrilicas gel', 'productos belleza', 'manicura nail', 'manos pies', 'manicuristas']
     },
     {
-        id: 'veinte',
-        name: 'Veinte Veinte',
-        category: 'Vestuario',
-        logo: '../../../../assets/images/categories/vestuario/veinte/veinte.webp',
-        address: 'Cll. 13 #14-09',
-        keywords: ['moda', 'jeans', 'vestidos', 'calzado', 'gorras', 'correas', 'cinturones', 'chevignon', 'boss', 'under armour', 'levis']
+        id: 'susy',
+        name: 'Cosmeticos Susy',
+        category: 'Belleza - Estética',
+        logo: '../../../../assets/images/categories/belleza/susy/susy.webp',
+        address: 'Cll. 10 #15 - 68',
+        keywords: ['productos belleza', 'cuidado personal', 'maquillaje', 'productos belleza', 'cuidado personal', 'insumos peluqueria', 'manicuristas', 'cosmeticos']
+    },
+    {
+        id: 'yeye',
+        name: 'Centro de Belleza Yeye',
+        category: 'Belleza - Estética',
+        logo: '../../../../assets/images/categories/belleza/yeye/yeye.webp',
+        address: 'Cll. 10 #15 - 68',
+        keywords: ['peinados', 'cuidado personal', 'maquillaje', 'productos belleza', 'cuidado personal', 'peluqueria', 'manicuristas', 'cosmeticos']
+    },
+
+    // Categoría Bebidas
+
+    {
+        id: 'alcala',
+        name: 'Café Bar Alcalá',
+        category: 'Bebidas',
+        logo: '../../../../assets/images/categories/bebida/alcala/alcala.webp',
+        address: 'Cra. 15 #3 - 12',
+        keywords: ['cocteles', 'noche', 'cervezas', 'fiesta', 'entretenimiento', 'alcala']
+    },
+    {
+        id: 'blas',
+        name: 'San Blas Café Bar',
+        category: 'Bebidas',
+        logo: '../../../../assets/images/categories/bebida/blas/blas.webp',
+        address: 'Cra. 15 #9 - 36',
+        keywords: ['bebidas', 'cocteles', 'cervezas', 'tragos', 'musica', 'celebraciones', 'noche']
+    },
+    {
+        id: 'coco',
+        name: 'Coco´s Café Bar',
+        category: 'Bebidas',
+        logo: '../../../../assets/images/categories/bebida/coco/coco.webp',
+        address: 'Cra. 13 #14 - 32',
+        keywords: ['cafe', 'cocteles', 'cervezas', 'tragos', 'musica', 'celebraciones', 'noche', 'reuniones']
     }
 
 ];
