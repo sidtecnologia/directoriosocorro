@@ -868,6 +868,52 @@ document.addEventListener('DOMContentLoaded', () => {
                 "../../../../assets/images/categories/transporte/cootrasaravita/slide7.webp",
                 "../../../../assets/images/categories/transporte/cootrasaravita/slide8.webp",
             ]
+        },
+
+        // Categoría Carnicerías
+
+        'alespa': {
+            name: "ALESPA",
+            category: "Carnicería",
+            longDescription: "🥩 En Carnes ALESPA trabajamos cada día para ofrecerte carne de res, cerdo y pollo de la mejor calidad. 🐄 Nos especializamos en cortes frescos y a tu gusto, con servicio amable y precios justos. 🍖 Queremos que lleves a tu mesa productos frescos y un servicio que siempre te haga volver. 🛒 ¡Calidad, frescura y sabor para tu hogar!",
+            logo: "../../../../assets/images/categories/carne/alespa/alespa.webp",
+            address: "Cll. 11 # 14 - 55",
+            hours: "Lunes a Domingo: 6:00 am - 8:00 pm",
+            services: ["Corte premium de res Angus y criolla", "Empaque especial para conservar frescura", "Cortes personalizados", "Asesoría en tipos de cortes y preparación"],
+            phone: "+573016799171",
+            whatsapp: "https://wa.me/573016799171",
+            deliveryLink: "https://wa.me/573188489124?text=%C2%A1Hola!%20Quiero%20pedir%20un%20domicilio.%0A%0A%F0%9F%9B%8D%EF%B8%8F%20Negocio%3A%%20Carnes%20ALESPA%0A%F0%9F%8F%A0%20Direcci%C3%B3n%3A%20Cll.%2011%20%23%2014%20-%2055%0A%E2%9C%85%20Entregar%20En%3A%20(Escribe...)%0A%F0%9F%93%A6%20Pedido%3A%20(Escribe...)%0A%0AGracias.",
+            mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4267625208995!2d-73.26244!3d6.4674985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c3bae40e77a1%3A0x922e9752f0c10d6c!2sCARNES%20ALESPA!5e0!3m2!1ses-419!2sco!4v1753287063342!5m2!1ses-419!2sco",
+            socialLink: "https://www.facebook.com/carnesalespa/?ref=embed_page",
+            gallery: [
+                "../../../../assets/images/categories/carne/alespa/slide1.webp",
+                "../../../../assets/images/categories/carne/alespa/slide2.webp",
+                "../../../../assets/images/categories/carne/alespa/slide3.webp",
+                "../../../../assets/images/categories/carne/alespa/slide4.webp",
+                "../../../../assets/images/categories/carne/alespa/slide5.webp",
+                "../../../../assets/images/categories/carne/alespa/slide6.webp",
+                "../../../../assets/images/categories/carne/alespa/slide7.webp",
+            ]
+        }, 
+        'surticarne': {
+            name: "Surti Carnes La 14",
+            category: "Carnicería",
+            longDescription: "🥩 En Carnes La 14 ofrecemos carne fresca, de calidad y al mejor precio. 🐄 Atendemos con amabilidad y experiencia para llevar a tu mesa los mejores cortes. 🍖 ¡Sabor y frescura garantizados!",
+            logo: "../../../../assets/images/categories/carne/surticarne/surticarne.webp",
+            address: "Cll. 14 # 11 - 06",
+            hours: "Lunes a Domingo: 5:00am - 2:00pm",
+            services: ["Venta de carne de res fresca", "Cortes especiales por encargo", "Asesoría para elección de cortes"],
+            phone: "+573134656118",
+            whatsapp: "https://wa.me/573134656118",
+            deliveryLink: "https://wa.me/573188489124?text=%C2%A1Hola!%20Quiero%20pedir%20un%20domicilio.%0A%0A%F0%9F%9B%8D%EF%B8%8F%20Negocio%3A%Surti%20Carnes%20La%2014%0A%F0%9F%8F%A0%20Direcci%C3%B3n%3A%20Cll.%2014%20%23%2011%20-%2006%0A%E2%9C%85%20Entregar%20En%3A%20(Escribe...)%0A%F0%9F%93%A6%20Pedido%3A%20(Escribe...)%0A%0AGracias.",
+            mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.428417516813!2d-73.2618356!3d6.467287499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c33de42a88e5%3A0x931163bedffd4506!2sSurti%20carnes%20la%2014!5e0!3m2!1ses-419!2sco!4v1753281902484!5m2!1ses-419!2sco",
+            socialLink: "https://www.facebook.com/friogan.sa?ref=embed_video",
+            gallery: [
+                "../../../../assets/images/categories/carne/surticarne/slide1.webp",
+                "../../../../assets/images/categories/carne/surticarne/slide2.webp",
+                "../../../../assets/images/categories/carne/surticarne/slide3.webp",
+                "../../../../assets/images/categories/carne/surticarne/slide4.webp",
+            ]
         }
     };
 

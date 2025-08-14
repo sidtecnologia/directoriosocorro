@@ -287,6 +287,26 @@ const businesses = [
         address: 'Cra. 17 # 14-32',
         keywords: ['viaje', 'buseta', 'taxi', 'bus', 'viajar']
     },
+
+    // Categoría Carnicería
+
+    
+    {
+        id: 'alespa',
+        name: 'ALESPA',
+        category: 'Carnicería',
+        logo: '../../../../assets/images/categories/carne/alespa/alespa.webp',
+        address: 'Cll. 11 # 14 - 55',
+        keywords: ['res angus', 'carne de cerdo', 'pechuga pollo', 'pescado', 'carne de res']
+    },
+    {
+        id: 'surticarne',
+        name: 'Surticarne La 14',
+        category: 'Carnicería',
+        logo: '../../../../assets/images/categories/carne/surticarne/surticarne.webp',
+        address: 'Cll. 14 # 11 - 06',
+        keywords: ['res angus', 'carne de cerdo', 'pechuga pollo', 'pescado', 'carne de res']
+    }
 ];
 
 const products = [
