@@ -42,6 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
             deliveryLink: "https://wa.me/573188489124?text=%C2%A1Hola!%20Quiero%20pedir%20un%20domicilio.%0A%0A%F0%9F%9B%8D%EF%B8%8F%20Negocio%3ARestaurante%20Chicbone%0A%F0%9F%8F%A0%20Direcci%C3%B3n%3A%20Cll.%208%20%23%207%20-%2039%0A%E2%9C%85%20Entregar%20En%3A%20(Escribe...)%0A%F0%9F%93%A6%20Pedido%3A%20(Escribe...)%0A%0AGracias.",
             mapLink: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7928.909286396728!2d-73.258149!3d6.463943!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81e7022bb99%3A0xeeb43cd3620c0fa7!2sCl.%208%20%237-39%2C%20Socorro%2C%20Santander!5e0!3m2!1ses!2sco!4v1754950148737!5m2!1ses!2sco",
             socialLink: "https://www.facebook.com/profile.php?id=100075961761461&ref=embed_page",
+            additionalAction: {
+                url: "https://wa.me/c/573213077368",
+                text: "Menu",
+                icon: "fas fa-utensils"
+            },
             gallery: [
                 "../../../../assets/images/categories/comida/chicbone/slide1.webp",
                 "../../../../assets/images/categories/comida/chicbone/slide2.webp",
@@ -340,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "Manitos Creativas",
             category: "Vestuario",
             longDescription: "En Manitos Creativas 🧒👧 encontrarás ropa adorable 👕👗 y accesorios 🎀 para niños y niñas. Desde conjuntos, vestidos y camisetas hasta gorros, moños y más 🎉. ¡Todo para que tus peques luzcan creativos, cómodos y felices! ✨💖",
-            logo: "../../../../assets/images/categories/vestuario/lilipink/lilipink.webp",
+            logo: "../../../../assets/images/categories/vestuario/manitos/manitos.webp",
             address: "Cll. 10 #15-37",
             hours: "Lunes a Domingo 9:00 am - 7:45 pm",
             services: ["Ropa para niños y niñas", "Vestidos, conjuntos y camisetas", "Accesorios y moños", "Gorros y sombreros infantiles", "Regalos personalizados"],
@@ -784,6 +789,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "../../../../assets/images/categories/veterinaria/rancho/slide18.webp",
             ]
         },
+
+        // Categoría Profesionales
+
         'fabio': {
             name: "Abogado Fabio Garrido",
             category: "Servicios Profesionales",
@@ -829,6 +837,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 "../../../../assets/images/categories/profesionales/liliana/slide6.webp",
             ]
         },
+
+        // Categoría Transporte
+
         'cootrasaravita': {
             name: "Cootrasaravita",
             category: "Transporte",

@@ -770,7 +770,12 @@ installBtn.addEventListener('click', async () => {
 
         deferredPrompt = null; // Reinicia la variable
     }
-});
+})
+
+;document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+  return false; // Asegura que se detiene la acción por completo
+}, false);
 
 function setupModals() {
     console.log("Modales listos");
