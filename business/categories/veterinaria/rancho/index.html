@@ -19,10 +19,11 @@
 </head>
 <body>
   <header class="text-center py-4">
-    <h1>El Rancho</h1>
+    <h1 id="rancho">El Rancho</h1>
     <h2>Agro & Mascotas</h2>
   </header>
 
+<div class="contenedor">
 
 <!-- Horizontal Panel -->
 <div class="horizontal-panel">
@@ -156,18 +157,18 @@
             </div>
 
       <!-- Columna derecha: mapa + iframe de Facebook -->
-      <div class="col-12 col-lg-8">
+      <div class="col-12 mb-4">
         <!-- Mapa -->
         <div class="row g-4">
-          <div class="map-container">
+          <div class="business-map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4173358627077!2d-73.263043!3d6.468700199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683fd71c83ffff%3A0xe9f234cffaaba0df!2sVeterinar%C3%ADa%20El%20Rancho!5e0!3m2!1ses-419!2sco!4v1753489908051!5m2!1ses-419!2sco" width="100%" height="450" style="border:0; border-radius: 20px;" allowfullscreen loading="lazy"></iframe>
-                  <a class="btn-map mt-3" href="https://www.google.com/maps/dir//Veterinar%C3%ADa+El+Rancho,+Cra.+16+%2312-26,+Socorro,+Santander/@6.4687002,-73.263043,17z/data=!4m17!1m7!3m6!1s0x8e683fd71c83ffff:0xe9f234cffaaba0df!2sVeterinar%C3%ADa+El+Rancho!8m2!3d6.4687002!4d-73.263043!16s%2Fg%2F11sy73dkqg!4m8!1m0!1m5!1m1!1s0x8e683fd71c83ffff:0xe9f234cffaaba0df!2m2!1d-73.2630144!2d6.4686958!3e2?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">📍 Cómo llegar</a>
+                  
           </div>
         </div>
 
         <!-- Facebook Iframe -->
-        <div class="map-container">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fveterinariaelranchosocorro&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="500" style="border:none;border-radius: 20px; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen></iframe>
+        <div class="business-social-card">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fveterinariaelranchosocorro&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300px" height="500px" style="border:none;border-radius: 20px; overflow:hidden" scrolling="no" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -219,5 +220,6 @@
     <!-- JS Frameworks -->
     <script src="../../../../assets/js/custom.js" defer></script>
     <script src="../../../../assets/js/service-worker.js" defer></script>
+</div>
 </body>
 </html>

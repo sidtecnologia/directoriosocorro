@@ -16,10 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ELEMENTOS BUSCADOR
-// Categoría Comida
 
 const businesses = [
     {
+
+// NEGOCIOS
+// Categoría Comida
+
         id: 'baldoria',
         name: 'Baldoria Pizzería',
         category: 'Comida',
@@ -239,6 +242,17 @@ const businesses = [
         keywords: ['cafe', 'cocteles', 'cervezas', 'tragos', 'musica', 'celebraciones', 'noche', 'reuniones']
     },
 
+    // Categoría Veterinaria
+
+    {
+        id: 'rancho',
+        name: 'El Rancho',
+        category: 'Agro - Veterinaria',
+        logo: '../../../../assets/images/categories/veterinaria/rancho/rancho.webp',
+        address: 'Cra. 16 #12 - 26',
+        keywords: ['Medicamentos veterinarios', 'Alimentos concentrados', 'Vacunas y desparasitantes', 'mascotas', 'agropecuarios', 'Fertilizantes']
+    },
+
     // Categoría Profesionales
 
     {
@@ -268,19 +282,98 @@ const businesses = [
         address: 'Cra. 17 # 14-32',
         keywords: ['viaje', 'buseta', 'taxi', 'bus', 'viajar']
     },
-    {
-        id: 'liliana',
-        name: 'Abogada Liliana Becerra',
-        category: 'Servicios Profesionales',
-        logo: '../../../../assets/images/categories/profesionales/liliana/liliana.webp',
-        address: 'Cra. 15 #3 - 12',
-        keywords: ['derecho civil', 'abogados', 'derecho penal', 'derecho comercial', 'cartera', 'asesoría jurídica', 'asesoria juridica']
-    }
+];
 
+const products = [
+    {
+
+
+    // PRODUCTOS    
+    // Alimento
+
+        id: 'dog-chow-adultos',
+        name: 'Dog Chow Adultos - Extra Life',
+        category: 'Perro - Comida',
+        image: '../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/perro/comida/dogchow/dogchow-adultos-extra-life.webp',
+        keywords: ['dog chow', 'comida para perros', 'alimento perros', 'extra life']
+    },
+    {
+        id: 'agility-gold',
+        name: 'Agility Gold ',
+        category: 'Perro - Comida',
+        image: '../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/perro/comida/agility/agility-adultos-raza-peq-piel.webp',
+        keywords: ['comida perros', 'agility', 'raza pequeña']
+    },
+    {
+        id: 'pomada-alfa',
+        name: 'Pomada Alfa',
+        category: 'Agro - Medicamento',
+        image: '../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/agro/medicamento/pomada-alfa.webp',
+        keywords: ['pomada', 'medicamento', 'alfa']
+    },
+    {
+        id: 'donkan-adultos',
+        name: 'Donkan Adultos - Carne y Cereales',
+        category: 'Perro - Comida',
+        image: '../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/perro/comida/donkan/donkan-adultos-carne.webp',
+        keywords: ['donkan', 'comida para perros', 'carne', 'cereales']
+    },
+    {
+        id: 'canapet',
+        name: 'Canapet',
+        category: 'Agro - Medicamento',
+        image: '../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/agro/medicamento/canapet.webp',
+        keywords: ['canapet', 'medicamento']
+    },
+
+    // Accesorios
+
+    {
+        id: 'cortauña-perro-gato',
+        name: 'Cortauña para Perro y Gato',
+        category: 'Perro - Accesorios',
+        image: '../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/perro/accesorios/cortauña.webp',
+        businessId: 'el-rancho',
+        pagePath: '../../../../../business/categories/veterinaria/rancho/tienda/',
+        keywords: ['cortauña', 'accesorios para perros', 'accesorios para gatos', 'corta uñas']
+    },
+    {
+        id: 'monello-premium',
+        name: 'Monello Premium Adultos Especial Tradicional',
+        category: 'Perro - Comida',
+        image: '../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/perro/comida/monello/monello-adulto-raza-grande.webp',
+        keywords: ['monello', 'comida para perros', 'premium', 'tradicional']
+    },
+    {
+        id: 'nutrecan-adultos',
+        name: 'Nutre Can Adultos - Raza Pequeña',
+        category: 'Perro - Comida',
+        image: '../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/perro/comida/nutrecan/nutrecan-adultos-raza-peq.webp',
+        keywords: ['nutre can', 'comida para perros', 'raza pequeña']
+    },
+    {
+        id: 'juguete-erizo',
+        name: 'Juguete para Perro Erizo',
+        category: 'Perro - Juguetes',
+        image: '../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/perro/juguetes/pelota-erizo.webp',
+        keywords: ['juguete para perros', 'erizo', 'pelota']
+    },
+
+    // Juguetes
+
+    {
+        id: 'cama-gloopet',
+        name: 'Cama Gloopet Premium Gris',
+        category: 'Gatos - Accesorios',
+        image: '../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/perro/accesorios/cama-gato.webp',
+        businessId: 'el-rancho',
+        pagePath: '../../../../../business/categories/veterinaria/rancho/tienda/',
+        keywords: ['cama', 'accesorios para perros', 'gloopet']
+    }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Lógica del modal de búsqueda
+    // Lógica del modal de búsqueda (sin cambios)
     const searchButton = document.getElementById('searchButton');
     const closeSearchModal = document.getElementById('closeSearchModal');
     const searchModal = document.getElementById('searchModal');
@@ -293,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (searchButton && searchModal) {
         searchButton.addEventListener('click', () => {
-            searchModal.style.display = 'flex'; // Usar 'flex' para activar el centrado CSS
+            searchModal.style.display = 'flex';
             searchInput.focus();
         });
 
@@ -314,7 +407,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (query) {
                 window.location.href = `/resultados.html?q=${encodeURIComponent(query)}`;
             } else {
-                // Reemplazado 'alert()' con un mensaje en la consola para evitar problemas con la interfaz
                 console.log('Por favor, ingresa un término de búsqueda.');
             }
         });
@@ -342,6 +434,8 @@ document.addEventListener('DOMContentLoaded', () => {
         searchStatus.textContent = `🔍 Buscando "${query}"...`;
 
         const normalizedQuery = query.toLowerCase().trim();
+
+        // Buscar en el array de negocios
         const foundBusinesses = businesses.filter(business =>
             business.name.toLowerCase().includes(normalizedQuery) ||
             business.category.toLowerCase().includes(normalizedQuery) ||
@@ -349,24 +443,55 @@ document.addEventListener('DOMContentLoaded', () => {
             (business.keywords && business.keywords.some(keyword => keyword.toLowerCase().includes(normalizedQuery)))
         );
 
-        if (foundBusinesses.length > 0) {
-            foundBusinesses.forEach(business => {
-                const cardHTML = `
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                        <a href="../../../../../business/categories/negocio/?id=${business.id}" class="card-link">
+        // Buscar en el nuevo array de productos
+        const foundProducts = products.filter(product =>
+            product.name.toLowerCase().includes(normalizedQuery) ||
+            product.category.toLowerCase().includes(normalizedQuery) ||
+            (product.keywords && product.keywords.some(keyword => keyword.toLowerCase().includes(normalizedQuery)))
+        );
+
+        const totalResults = [...foundBusinesses, ...foundProducts];
+
+        if (totalResults.length > 0) {
+            totalResults.forEach(item => {
+                let cardHTML = '';
+                if (item.address) { // Negocios
+                    cardHTML = `
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div class="card result-card h-100 shadow-sm">
-                                <img src="${business.logo}" class="result-img card-img-top" alt="Logo de ${business.name}">
-                                <div class="card-body">
-                                    <h5 class="card-title">${business.name}</h5>
-                                    <p class="card-text text-muted">${business.category}</p>
-                                </div>
+                                <a href="../../../../../business/categories/negocio/?id=${item.id}" class="card-link">
+                                    <img src="${item.logo}" class="result-img card-img-top" alt="Logo de ${item.name}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${item.name}</h5>
+                                        <p class="card-text text-muted">${item.category}</p>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                `;
+                        </div>
+                    `;
+                } else { // Productos
+
+                    const parentBusiness = businesses.find(b => b.id === item.businessId);
+                    const locationUrl = parentBusiness ? parentBusiness.locationUrl : '#';
+                    
+                    // El enlace de la tarjeta ahora lleva a la página correcta del producto y se desplaza al ID
+                    cardHTML = `
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card product-card h-100 shadow-sm">
+                                <a href="${item.pagePath}#${item.id}" class="card-link">
+                                    <img src="${item.image}" class-img-top" alt="Imagen de ${item.name}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${item.name}</h5>
+                                        <p class="card-text text-muted">${item.category}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                }
                 resultsContainer.insertAdjacentHTML('beforeend', cardHTML);
             });
-            searchStatus.textContent = `✅ ${foundBusinesses.length} resultado${foundBusinesses.length !== 1 ? 's' : ''} encontrado${foundBusinesses.length !== 1 ? 's' : ''} para "${query}"`;
+            searchStatus.textContent = `✅ ${totalResults.length} resultado${totalResults.length !== 1 ? 's' : ''} encontrado${totalResults.length !== 1 ? 's' : ''} para "${query}"`;
         } else {
             searchStatus.textContent = `❌ No se encontraron resultados para "${query}".`;
         }

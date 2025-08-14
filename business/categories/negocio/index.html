@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title id="business-title"> Directorio Comercial Socorro</title>
+    <title id="business-title">Directorio Comercial Socorro</title>
 
     <link rel="icon" href="../../../../assets/images/favicon.png" type="image/x-icon">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <link rel="stylesheet" type="text/css" href="../../../../assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../../../assets/css/custom-carousel.css">
+
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
     <script>
         window.OneSignalDeferred = window.OneSignalDeferred || [];
@@ -28,115 +27,121 @@
         <p id="business-category" class="lead text-white-50"></p>
     </header>
 
+    <div class="contenedor">
 
-<div class="contenedor">    
+        <div class="horizontal-panel">
+            <button class="btn-back" onclick="history.back()" aria-label="Volver atrás">
+                &#8592;
+            </button>
+        </div>
 
-<!-- Horizontal Panel -->
-<div class="horizontal-panel">
-  <button class="btn-back" onclick="history.back()" aria-label="Volver atrás">
-    &#8592;
-  </button>
-</div>
+        <main class="container py-5">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div id="business-info-card" class="card mb-4">
+                        <img id="business-logo" src="" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Descripción</h5>
+                            <p id="business-long-description" class="card-text"></p>
+                        </div>
+                    </div>
 
-    <main class="container py-5">
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div id="business-info-card" class="card mb-4">
-                    <div class="card-body">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> Dirección</h5>
+                            <p class="card-text" id="business-address"></p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-clock"></i> Horario de Atención</h5>
+                            <p class="card-text" id="business-hours"></p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Servicios</h5>
+                            <ul id="business-services" class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="btn-group w-100" role="group" aria-label="Acciones">
+                        <a id="btn-call" href="#" class="btn btn-success me-2" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-phone"></i> Llamar
+                        </a>
+                        <a id="btn-whatsapp" href="#" class="btn btn-success me-2" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i></a>
+                        <a id="btn-delivery" href="#" class="btn btn-warning me-2" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-motorcycle"></i> Domicilio
+                        </a>
+                        <a id="btn-additional-action" href="#" class="btn btn-primary d-none" rel="noopener noreferrer">
+                             <i class="fas fa-external-link-alt"></i> <span id="additional-action-text"></span>
+                        </a>
                     </div>
                 </div>
 
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-map-marker-alt"></i> Dirección</h5>
-                        <p class="card-text" id="business-address"></p>
-                    </div>
-                </div>
-                
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-clock"></i> Horario de Atención</h5>
-                        <p class="card-text" id="business-hours"></p>
-                    </div>
-                </div>
+                <div class="col-lg-6">
+                    <section id="carousel-section">
+                        <div class="carousel" id="profile-carousel">
+                            </div>
+                    </section>
 
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Servicios</h5>
-                        <ul id="business-services" class="list-group list-group-flush">
-                        </ul>
+                    <div id="business-map-container" class="mb-4 mt-4">
+                        <div class="card-iframe-container">
+                            </div>
                     </div>
-                </div>
 
-                <div class="btn-group w-100" role="group" aria-label="Acciones">
-                    <a id="btn-call" href="#" class="btn btn-success me-2" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-phone"></i> Llamar
-                    </a>
-                    <a id="btn-whatsapp" href="#" class="btn btn-success me-2" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-whatsapp"></i></a>
-                    <a id="btn-delivery" href="#" class="btn btn-warning" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-motorcycle"></i> Solicitar Servicio
-                    </a>
+                    <div id="business-social-card" style="height:auto;">
+                        <div class="card-iframe-container business-social-card">
+                            </div>
+                    </div>
+
                 </div>
             </div>
+        </main>
 
-            <div class="col-lg-6">
-    <section id="carousel-section">
-        <div class="carousel" id="profile-carousel">
+        <div class="floating-panel">
+            <div class="btn-container">
+                <a id="searchButton" class="btn-panel" title="Búsqueda">
+                    <i class="fas fa-search"></i>
+                </a>
+                <span class="btn-text">Búsqueda</span>
+            </div>
+            <div class="btn-container">
+                <a class="btn-center" href="../../../../" title="Inicio">
+                    <i class="fas fa-home"></i>
+                </a>
+                <span class="btn-text">Inicio</span>
+            </div>
+            <div class="btn-container">
+                <a class="btn-panel" href="../../../../business/categories/" title="Categorías">
+                    <i class="fas fa-list"></i>
+                </a>
+                <span class="btn-text">Categorías</span>
+            </div>
         </div>
-    </section>
-    
-    <div id="business-map-container" class="mb-4">
-    <div class="card-iframe-container"></div>
-</div>
-    
-    <div id="business-social-card" style="height:auto;">
-    <div class="card-iframe-container"></div>
-</div>
 
+        <div id="searchModal" class="search-modal">
+            <div class="search-modal-content">
+                <button id="closeSearchModal" class="close-btn">×</button>
+                <h2>Buscar</h2>
+                <input type="text" id="searchInput" class="search-input" placeholder="Escribe aquí tu búsqueda...">
+                <button id="startSearchBtn" class="start-search-btn">Iniciar Búsqueda</button>
+                <div id="searchResults" class="search-results"></div>
+            </div>
+        </div>
+
+        <footer class="py-4 bg-dark text-white text-center">
+            <p>© 2025 Directorio Empresarial. Todos los derechos reservados.</p>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../../assets/js/service-worker.js" defer></script>
+        <script src="../../../../assets/js/business.js" defer></script>
+        <script src="../../../../assets/js/custom.js" defer></script>
     </div>
-</div>
-        </div>
-    </main>
-
-    <div class="floating-panel">
-        <div class="btn-container">
-            <a id="searchButton" class="btn-panel" title="Búsqueda">
-                <i class="fas fa-search"></i>
-            </a>
-            <span class="btn-text">Búsqueda</span>
-        </div>
-        <div class="btn-container">
-            <a class="btn-center" href="../../../../" title="Inicio">
-                <i class="fas fa-home"></i>
-            </a>
-            <span class="btn-text">Inicio</span>
-        </div>
-        <div class="btn-container">
-            <a class="btn-panel" href="../../../../business/categories/" title="Categorías">
-                <i class="fas fa-list"></i>
-            </a>
-            <span class="btn-text">Categorías</span>
-        </div>
-    </div>
-
-    <div id="searchModal" class="search-modal">
-        <div class="search-modal-content">
-            <button id="closeSearchModal" class="close-btn">×</button>
-            <h2>Buscar</h2>
-            <input type="text" id="searchInput" class="search-input" placeholder="Escribe aquí tu búsqueda...">
-            <button id="startSearchBtn" class="start-search-btn">Iniciar Búsqueda</button>
-            <div id="searchResults" class="search-results"></div>
-        </div>
-    </div>
-
-    <footer class="py-4 bg-dark text-white text-center">
-        <p>© 2025 Directorio Empresarial. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../../assets/js/service-worker.js" defer></script>
-    <script src="../../../../assets/js/business.js" defer></script>
-    <script src="../../../../assets/js/custom.js" defer></script>
 </body>
 </html>

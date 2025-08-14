@@ -743,8 +743,47 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
 
-        // Categoría Profesionales
+        // Categoría Veterinaria
 
+        'rancho': {
+            name: "El Rancho",
+            category: "Agro - Veterinaria",
+            longDescription: "Cuidamos la salud de tus animales y el rendimiento de tu producción...",
+            logo: "../../../../assets/images/categories/veterinaria/rancho/rancho.webp",
+            address: "Cra. 16 #12 - 26",
+            hours: "Lunes a Viernes 7:00am a 12:30pm - 2:00pm a 6:00pm / Sábados y Domingos 7:00pm a 1:00pm",
+            services: ["Medicamentos veterinarios certificados.", "Alimentos concentrados", "Vacunas y desparasitantes", "Accesorios para mascotas", "Insumos agropecuarios","Fertilizantes y abonos","Vitaminas y suplementos","Asesoría técnica","Atención a campesinos"],
+            phone: "+573212223258",
+            whatsapp: "https://wa.me/573212223258",
+            deliveryLink: "https://wa.me/573212223258?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+            mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4173358627077!2d-73.263043!3d6.468700199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683fd71c83ffff%3A0xe9f234cffaaba0df!2sVeterinar%C3%ADa%20El%20Rancho!5e0!3m2!1ses-419!2sco!4v1753489908051!5m2!1ses-419!2sco",
+            socialLink: "https://www.facebook.com/veterinariaelranchosocorro/?ref=embed_page",
+            additionalAction: {
+                url: "../../../../business/categories/veterinaria/rancho/tienda/",
+                text: "Tienda",
+                icon: "fas fa-store"
+            },
+            gallery: [
+                "../../../../assets/images/categories/veterinaria/rancho/slide1.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide2.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide3.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide4.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide5.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide6.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide7.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide8.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide9.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide10.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide11.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide12.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide13.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide14.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide15.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide16.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide17.webp",
+                "../../../../assets/images/categories/veterinaria/rancho/slide18.webp",
+            ]
+        },
         'fabio': {
             name: "Abogado Fabio Garrido",
             category: "Servicios Profesionales",
@@ -768,7 +807,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 "../../../../assets/images/categories/profesionales/fabio/slide7.webp",
             ]
         },
-
         'liliana': {
             name: "Abogada Liliana Becerra",
             category: "Servicios Profesionales",
@@ -791,9 +829,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 "../../../../assets/images/categories/profesionales/liliana/slide6.webp",
             ]
         },
-
-        // Categoría Transporte
-
         'cootrasaravita': {
             name: "Cootrasaravita",
             category: "Transporte",
@@ -807,6 +842,11 @@ document.addEventListener('DOMContentLoaded', () => {
             deliveryLink: "https://cootrasaravita.teletiquete.com/",
             mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.411615634734!2d-73.25995039999995!3d6.469429300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6c14b8fab%3A0x381f7a77f9cc05f8!2sCra.%2012%20%23%2014-14%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1752810045111!5m2!1ses-419!2sco",
             socialLink: "https://www.facebook.com/cootrasaravita",
+            additionalAction: {
+                url: "https://cootrasaravita.teletiquete.com/",
+                text: "Comprar tiquetes",
+                icon: "fas fa-ticket-alt"
+            },
             gallery: [
                 "../../../../assets/images/categories/transporte/cootrasaravita/slide1.webp",
                 "../../../../assets/images/categories/transporte/cootrasaravita/slide2.webp",
@@ -818,7 +858,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 "../../../../assets/images/categories/transporte/cootrasaravita/slide8.webp",
             ]
         }
-
     };
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -858,10 +897,32 @@ document.addEventListener('DOMContentLoaded', () => {
             servicesList.appendChild(li);
         });
 
+        // Asegurarse de que el botón de domicilios tenga el enlace correcto
         document.getElementById('btn-call').href = `tel:${data.phone}`;
         document.getElementById('btn-whatsapp').href = data.whatsapp;
         document.getElementById('btn-delivery').href = data.deliveryLink;
         
+        // =========================================================================
+        // LÓGICA PARA MOSTRAR/OCULTAR EL BOTÓN ADICIONAL
+        // =========================================================================
+        const btnAdditional = document.getElementById('btn-additional-action');
+        const additionalActionText = document.getElementById('additional-action-text');
+
+        if (data.additionalAction && btnAdditional && additionalActionText) {
+            btnAdditional.classList.remove('d-none'); // Mostrar el botón
+            btnAdditional.href = data.additionalAction.url;
+            additionalActionText.textContent = data.additionalAction.text;
+            
+            // Opcional: Actualizar el ícono si se proporciona
+            const iconElement = btnAdditional.querySelector('i');
+            if (iconElement && data.additionalAction.icon) {
+                iconElement.className = data.additionalAction.icon;
+            }
+        } else if (btnAdditional) {
+            btnAdditional.classList.add('d-none'); // Ocultar el botón si no existe la propiedad
+        }
+        // =========================================================================
+
         // Lógica del carrusel personalizado para el perfil de negocio
         const carouselEl = document.getElementById('profile-carousel');
         const carouselItemsHTML = data.gallery.map((img, index) => `
@@ -945,19 +1006,18 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const socialCard = document.getElementById('business-social-card');
 
-socialCard.innerHTML = `
-    <iframe 
-        src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(data.socialLink)}&tabs=timeline&width=300&height=550&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-        width="300px" 
-        height="550px" 
-        style="border-radius:14px;border:none;overflow:hidden" 
-        scrolling="no" 
-        frameborder="0" 
-        allowfullscreen="true" 
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-    </iframe>
-`;
-
+        socialCard.innerHTML = `
+            <iframe
+                src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(data.socialLink)}&tabs=timeline&width=300&height=550&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="300px"
+                height="550px"
+                style="border-radius:14px;border:none;overflow:hidden"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+            </iframe>
+        `;
     }
 });
 

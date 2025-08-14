@@ -8,27 +8,12 @@ body {
     padding: 0;
 }
 
-/* Altura de los iframes del mapa y redes sociales */
+
 .card-iframe-container {
-    height: 550px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.card-iframe-container iframe {
-    height: 100%;
-    width: 100%;
-}
-
-@media (max-width: 768px) {
-    .card-iframe-container {
-        height: 350px; /* Altura más baja para dispositivos móviles */
-    }
-}
-
-#business-social-card {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin-top: 2rem; /* Espacio entre el mapa y el iframe */
+
 }
 
 #business-social-card iframe {
@@ -957,19 +942,6 @@ body {
 }
 
 
-.card-iframe-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    max-width: 600px;
-    margin: 30px auto;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
 }
 .card-iframe-container h2 {
     margin-top: 0;
