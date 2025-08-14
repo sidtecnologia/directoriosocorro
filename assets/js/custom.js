@@ -309,6 +309,8 @@ const products = [
         name: 'Pomada Alfa',
         category: 'Agro - Medicamento',
         image: '../../../../../assets/images/categories/veterinaria/rancho/tienda/productos/agro/medicamento/pomada-alfa.webp',
+        businessId: 'pomada-alfa',
+        pagePath: '../../../../../business/categories/veterinaria/rancho/tienda/',
         keywords: ['pomada', 'medicamento', 'alfa']
     },
     {

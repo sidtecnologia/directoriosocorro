@@ -839,13 +839,13 @@ document.addEventListener('DOMContentLoaded', () => {
             services: ["Transporte urbano colectivo.", "Transporte urbano individual (taxi)", "Transporte intermunicipal", "Transporte mixto", "Transporte Especial","Transporte de carga","Mensajería express","Almacén de repuestos","Estación de servicio","CDA"],
             phone: "+573187172496",
             whatsapp: "https://wa.me/573187172496",
-            deliveryLink: "https://cootrasaravita.teletiquete.com/",
+            deliveryLink:"https://wa.me/573187172496?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
             mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.411615634734!2d-73.25995039999995!3d6.469429300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6c14b8fab%3A0x381f7a77f9cc05f8!2sCra.%2012%20%23%2014-14%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1752810045111!5m2!1ses-419!2sco",
             socialLink: "https://www.facebook.com/cootrasaravita",
             additionalAction: {
                 url: "https://cootrasaravita.teletiquete.com/",
-                text: "Comprar tiquetes",
-                icon: "fas fa-ticket-alt"
+                text: "Tiquetes",
+                icon: "fas fa-bus"
             },
             gallery: [
                 "../../../../assets/images/categories/transporte/cootrasaravita/slide1.webp",
@@ -902,8 +902,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('btn-whatsapp').href = data.whatsapp;
         document.getElementById('btn-delivery').href = data.deliveryLink;
         
-        // =========================================================================
-        // LÓGICA PARA MOSTRAR/OCULTAR EL BOTÓN ADICIONAL
         // =========================================================================
         const btnAdditional = document.getElementById('btn-additional-action');
         const additionalActionText = document.getElementById('additional-action-text');
