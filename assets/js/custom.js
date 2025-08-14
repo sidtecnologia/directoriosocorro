@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeInElements.forEach(element => observer.observe(element));
 });
 
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+  return false; 
+}, false);
+
 // ELEMENTOS BUSCADOR
 
 const businesses = [
@@ -476,7 +481,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const parentBusiness = businesses.find(b => b.id === item.businessId);
                     const locationUrl = parentBusiness ? parentBusiness.locationUrl : '#';
                     
-                    // El enlace de la tarjeta ahora lleva a la página correcta del producto y se desplaza al ID
+                    // Enlace de la tarjeta 
                     cardHTML = `
                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                             <div class="card product-card h-100 shadow-sm">
@@ -772,10 +777,7 @@ installBtn.addEventListener('click', async () => {
     }
 })
 
-;document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-  return false; // Asegura que se detiene la acción por completo
-}, false);
+
 
 function setupModals() {
     console.log("Modales listos");
