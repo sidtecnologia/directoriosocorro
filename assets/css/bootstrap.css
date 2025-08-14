@@ -347,9 +347,10 @@ header p {
 }
 
 /* Efecto hover para imagen */
-.category-item:hover .category-img {
+.category-item:hover {
     transform: scale(1.1);
     cursor: pointer;
+    transition: transform 0.6s ease;
 }
 
 /* Para pantallas pequeñas */

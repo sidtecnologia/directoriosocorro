@@ -745,26 +745,77 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Categoría Profesionales
 
-        'alcala': {
-            name: "Café Bar Alcalá",
-            category: "Bebidas",
-            longDescription: "Bar Alcalá se ha convertido en uno de los bares preferidos por quienes buscan un lugar para relajarse, compartir y vivir la noche al máximo. Contamos con un ambiente acogedor y dinámico, ideal para disfrutar entre amigos o celebrar momentos especiales. Ofrecemos una carta de bebidas variadas, desde cervezas bien frías hasta cocteles preparados con estilo.",
-            logo: "../../../../assets/images/categories/bebida/alcala/alcala.webp",
-            address: "Cra. 15 #3 - 12",
-            hours: "Lunes a Miercoles 9:00am - 11:00pm / Jueves 7:00am - 11:00pm / Viernes a Sábado 7:00am - 2:00am / Domingo 2:00pm - 11:00pm",
-            services: ["Venta de cervezas, licores y cocteles.", "Promociones en bebidas por días o temporadas.", "Ambientación con música crossover y noches temáticas", "Atención para grupos y celebraciones"],
-            phone: "+",
-            whatsapp: "https://wa.me/",
-            deliveryLink: "https://wa.me/?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
-            mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.462493768035!2d-73.2635409!3d6.4629415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81cdc5df1df%3A0x5d222a417a4656a4!2sCra.%2015%20%23%203-12%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750353950399!5m2!1ses-419!2sco",
-            socialLink: "https://www.facebook.com/profile.php?id=61558486235469&ref=embed_page",
+        'fabio': {
+            name: "Abogado Fabio Garrido",
+            category: "Servicios Profesionales",
+            longDescription: "Con experiencia en diferentes áreas del derecho, el Abogado Fabio de Jesús Garrido ofrece soluciones legales personalizadas, claras y eficaces. Acompaña a personas y empresas en la toma de decisiones importantes, garantizando respaldo jurídico, gestión oportuna de conflictos y un servicio basado en la confianza y la ética profesional.",
+            logo: "../../../../assets/images/categories/profesionales/fabio/fabio.webp",
+            address: "Carrera 12 # 14 – 14",
+            hours: "Lunes a Viernes 8:00am a 12:00pm - 2:00pm - 5:00pm",
+            services: ["Asesoría Jurídica Preventiva.", "Derecho Penal y Defensa Judicial", "Derecho Civil y Comercial", "Atención para grupos y celebraciones", "Cobro de Cartera y Procesos Ejecutivos","Derecho Laboral y Asuntos Empresariales"],
+            phone: "+57158397089",
+            whatsapp: "https://wa.me/57158397089",
+            deliveryLink: "https://wa.me/57158397089?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+            mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.411615634734!2d-73.25995039999995!3d6.469429300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6c14b8fab%3A0x381f7a77f9cc05f8!2sCra.%2012%20%23%2014-14%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1752810045111!5m2!1ses-419!2sco",
+            socialLink: "https://www.facebook.com/WorldLegalCorpo/",
             gallery: [
-                "../../../../assets/images/categories/bebida/alcala/slide1.webp",
-                "../../../../assets/images/categories/bebida/alcala/slide2.webp",
-                "../../../../assets/images/categories/bebida/alcala/slide3.webp",
-                "../../../../assets/images/categories/bebida/alcala/slide4.webp",
-                "../../../../assets/images/categories/bebida/alcala/slide5.webp",
-                "../../../../assets/images/categories/bebida/alcala/slide6.webp",
+                "../../../../assets/images/categories/profesionales/fabio/slide1.webp",
+                "../../../../assets/images/categories/profesionales/fabio/slide2.webp",
+                "../../../../assets/images/categories/profesionales/fabio/slide3.webp",
+                "../../../../assets/images/categories/profesionales/fabio/slide4.webp",
+                "../../../../assets/images/categories/profesionales/fabio/slide5.webp",
+                "../../../../assets/images/categories/profesionales/fabio/slide6.webp",
+                "../../../../assets/images/categories/profesionales/fabio/slide7.webp",
+            ]
+        },
+
+        'liliana': {
+            name: "Abogada Liliana Becerra",
+            category: "Servicios Profesionales",
+            longDescription: "⚖️ Con una sólida formación académica y amplia experiencia, la Dra. Liliana Becerra asesora y representa a personas y empresas, ofreciendo a,tención personalizada y estrategias legales efectivas. Su objetivo es proteger los derechos de sus clientes, resolver conflictos y prevenir futuros inconvenientes, siempre con transparencia y profesionalismo.",
+            logo: "../../../../assets/images/categories/profesionales/liliana/liliana.webp",
+            address: "Carrera 12 # 14 – 18",
+            hours: "Lunes a Viernes 8:00am a 12:00pm - 2:00pm - 5:00pm",
+            services: ["Asesoría Jurídica Integral.", "Derecho Civil y de Familia", "Elaboración y Revisión de Contratos", "Representación Judicial y Extrajudicial", "Cobro de Cartera y Procesos Ejecutivos","Sucesiones y Testamentos"],
+            phone: "+573208276995",
+            whatsapp: "https://wa.me/573208276995",
+            deliveryLink: "https://wa.me/573208276995?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+            mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.411627403766!2d-73.25990390000005!3d6.4694278000000125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6c6b0a77b%3A0x13517bdf56e4af32!2sCra.%2012%20%2314-18%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1752800142676!5m2!1ses-419!2sco",
+            socialLink: "https://www.facebook.com/WorldLegalCorpo/",
+            gallery: [
+                "../../../../assets/images/categories/profesionales/liliana/slide1.webp",
+                "../../../../assets/images/categories/profesionales/liliana/slide2.webp",
+                "../../../../assets/images/categories/profesionales/liliana/slide3.webp",
+                "../../../../assets/images/categories/profesionales/liliana/slide4.webp",
+                "../../../../assets/images/categories/profesionales/liliana/slide5.webp",
+                "../../../../assets/images/categories/profesionales/liliana/slide6.webp",
+            ]
+        },
+
+        // Categoría Transporte
+
+        'cootrasaravita': {
+            name: "Cootrasaravita",
+            category: "Transporte",
+            longDescription: "Somos una cooperativa con más de 50 años de trayectoria, líder en el transporte público terrestre y servicios complementarios como mensajería, turismo, combustibles y repuestos. Con presencia regional y un equipo humano comprometido, ofrecemos soluciones seguras, puntuales y de calidad para nuestros usuarios y aliados.",
+            logo: "../../../../assets/images/categories/transporte/cootrasaravita/cootrasaravita.webp",
+            address: "Cra. 17 # 14-32",
+            hours: "Lunes a Viernes: 3:00 am - 8:00 pm / Sábados: 3:00 am - 6:00 pm / Domingos y Festivos: 5:00 am - 4:00 pm",
+            services: ["Transporte urbano colectivo.", "Transporte urbano individual (taxi)", "Transporte intermunicipal", "Transporte mixto", "Transporte Especial","Transporte de carga","Mensajería express","Almacén de repuestos","Estación de servicio","CDA"],
+            phone: "+573187172496",
+            whatsapp: "https://wa.me/573187172496",
+            deliveryLink: "https://cootrasaravita.teletiquete.com/",
+            mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.411615634734!2d-73.25995039999995!3d6.469429300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6c14b8fab%3A0x381f7a77f9cc05f8!2sCra.%2012%20%23%2014-14%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1752810045111!5m2!1ses-419!2sco",
+            socialLink: "https://www.facebook.com/cootrasaravita",
+            gallery: [
+                "../../../../assets/images/categories/transporte/cootrasaravita/slide1.webp",
+                "../../../../assets/images/categories/transporte/cootrasaravita/slide2.webp",
+                "../../../../assets/images/categories/transporte/cootrasaravita/slide3.webp",
+                "../../../../assets/images/categories/transporte/cootrasaravita/slide4.webp",
+                "../../../../assets/images/categories/transporte/cootrasaravita/slide5.webp",
+                "../../../../assets/images/categories/transporte/cootrasaravita/slide6.webp",
+                "../../../../assets/images/categories/transporte/cootrasaravita/slide7.webp",
+                "../../../../assets/images/categories/transporte/cootrasaravita/slide8.webp",
             ]
         }
 

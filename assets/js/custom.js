@@ -237,6 +237,44 @@ const businesses = [
         logo: '../../../../assets/images/categories/bebida/coco/coco.webp',
         address: 'Cra. 13 #14 - 32',
         keywords: ['cafe', 'cocteles', 'cervezas', 'tragos', 'musica', 'celebraciones', 'noche', 'reuniones']
+    },
+
+    // Categoría Profesionales
+
+    {
+        id: 'fabio',
+        name: 'Abogado Fabio Garrido',
+        category: 'Servicios Profesionales',
+        logo: '../../../../assets/images/categories/profesionales/fabio/fabio.webp',
+        address: 'Carrera 12 # 14 – 14',
+        keywords: ['derecho civil', 'abogados', 'derecho penal', 'derecho comercial', 'cartera', 'asesoría jurídica', 'asesoria juridica']
+    },
+    {
+        id: 'liliana',
+        name: 'Abogada Liliana Becerra',
+        category: 'Servicios Profesionales',
+        logo: '../../../../assets/images/categories/profesionales/liliana/liliana.webp',
+        address: 'Cra. 15 #3 - 12',
+        keywords: ['derecho civil', 'abogados', 'derecho penal', 'derecho comercial', 'cartera', 'asesoría jurídica', 'asesoria juridica']
+    },
+
+    // Categoría Transporte
+
+    {
+        id: 'cootrasaravita',
+        name: 'Cootrasaravita',
+        category: 'Transporte',
+        logo: '../../../../assets/images/categories/transporte/cootrasaravita/cootrasaravita.webp',
+        address: 'Cra. 17 # 14-32',
+        keywords: ['viaje', 'buseta', 'taxi', 'bus', 'viajar']
+    },
+    {
+        id: 'liliana',
+        name: 'Abogada Liliana Becerra',
+        category: 'Servicios Profesionales',
+        logo: '../../../../assets/images/categories/profesionales/liliana/liliana.webp',
+        address: 'Cra. 15 #3 - 12',
+        keywords: ['derecho civil', 'abogados', 'derecho penal', 'derecho comercial', 'cartera', 'asesoría jurídica', 'asesoria juridica']
     }
 
 ];
