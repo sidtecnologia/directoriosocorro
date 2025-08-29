@@ -781,47 +781,23 @@ window.addEventListener('beforeinstallprompt', (event) => {
     installBtn.style.display = 'block'; // Muestra el botón si es posible instalar
 });
 
-let deferredPrompt;
-const installBtn = document.getElementById('installBtn');
+// Evento al hacer clic en el botón de instalación
+installBtn.addEventListener('click', async () => {
+    if (deferredPrompt) {
+        deferredPrompt.prompt();
 
-// Oculta el botón de instalación por defecto
-if (installBtn) {
-    installBtn.style.display = 'none';
-}
+        const result = await deferredPrompt.userChoice;
+        if (result.outcome === 'accepted') {
+            console.log('Usuario instaló la PWA');
+        } else {
+            console.log('Usuario canceló la instalación');
+        }
 
-// 1. Captura el evento beforeinstallprompt
-window.addEventListener('beforeinstallprompt', (e) => {
-    // Evita que el navegador muestre su propio cuadro de diálogo de instalación
-    e.preventDefault();
-    // Almacena el evento para poder dispararlo después
-    deferredPrompt = e;
-    // Muestra el botón de instalación al usuario
-    if (installBtn) {
-        installBtn.style.display = 'block';
+        deferredPrompt = null; // Reinicia la variable
     }
-    console.log(`'beforeinstallprompt' event was fired.`);
 });
 
-// 2. Maneja el clic en el botón de instalación
-if (installBtn) {
-    installBtn.addEventListener('click', async () => {
-        // Oculta el botón una vez que se inicia el proceso
-        installBtn.style.display = 'none';
-        
-        if (deferredPrompt) {
-            // Muestra el cuadro de diálogo de instalación del navegador
-            deferredPrompt.prompt();
 
-            // Espera la respuesta del usuario
-            const { outcome } = await deferredPrompt.userChoice;
-
-            console.log(`User response to the install prompt: ${outcome}`);
-
-            // Reinicia la variable, ya que solo se puede usar una vez
-            deferredPrompt = null;
-        }
-    });
-}
 
 function setupModals() {
     console.log("Modales listos");
