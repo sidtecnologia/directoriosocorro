@@ -210,6 +210,11 @@ document.addEventListener('DOMContentLoaded', () => {
             deliveryLink: "https://wa.me/573188489124?text=%C2%A1Hola!%20Quiero%20pedir%20un%20domicilio.%0A%0A%F0%9F%9B%8D%EF%B8%8F%20Negocio%3A%20Saloon1822%0A%F0%9F%8F%A0%20Direcci%C3%B3n%3A%20Cra.%2012%20%23%2013%20-%2014%0A%E2%9C%85%20Entregar%20En%3A%20(Escribe...)%0A%F0%9F%93%A6%20Pedido%3A%20(Escribe...)%0A%0AGracias.",
             mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4161465224!2d-73.26002059999999!3d6.4688517999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c39329e5fd21%3A0xfd754bc554b36f99!2sSaloon%201822%20Hamburgueser%C3%ADa!5e0!3m2!1ses!2sco!4v1746244884926!5m2!1ses!2sco",
             socialLink: "https://www.facebook.com/saloon1822",
+            additionalAction: {
+                url: "https://saloon1822menu.vercel.app",
+                text: "Menu",
+                icon: "fas fa-utensils"
+            },
             gallery: [
                 "../../../../assets/images/categories/comida/saloon/slide1.webp",
                 "../../../../assets/images/categories/comida/saloon/slide2.webp",
