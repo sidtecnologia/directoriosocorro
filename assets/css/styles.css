@@ -1,0 +1,129 @@
+
+        
+        :root {
+            --color-primary: #1e40af; /* Azul oscuro */
+            --color-secondary: #fcd34d; /* Amarillo */
+            --color-background: #f9fafb; /* Fondo claro */
+            --color-card: #ffffff;
+            --fixed-nav-height: 60px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            padding-bottom: var(--fixed-nav-height); /* Espacio para la barra de navegación fija */
+        }
+
+        h2 {
+
+            text-align: center;
+
+        }
+        
+        /* Estilos generales y scrollbar */
+        .container-padding {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        /* Estilo para el carrusel y ocultar scrollbar */
+        .carousel-container {
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE 10+ */
+        }
+        .carousel-container::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        .carousel-item {
+          scroll-snap-align: start;
+          flex-shrink: 0;
+          width: 100%;
+        }
+
+        .carousel-item img {
+
+          width: 100%;
+          height: 100%;
+          max-width: 100%;
+
+        }
+
+        /* Fija el nav inferior */
+        .fixed-bottom-nav {
+            height: var(--fixed-nav-height);
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Clases de utilidad para el diseño */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+
+        .highlight-button {
+            transition: all 0.2s ease-in-out;
+        }
+        .highlight-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(30, 64, 175, 0.3), 0 4px 6px -4px rgba(30, 64, 175, 0.2);
+        }
+
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Ocultar vistas */
+        .hidden-view {
+            display: none;
+        }
+
+        /* Estilos del logo en el perfil */
+        .logo-background {
+            background: linear-gradient(135deg, var(--color-primary), #3b82f6);
+        }
+
+        /* Iframe maps responsive */
+        .map-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%; /* 4:3 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        /* Contenedor para el iframe de Facebook para asegurar 100% de ancho */
+        .fb-iframe-container iframe {
+            display: block;
+            width: 100%;
+        }
+
+        .contenedor {
+  max-width: 930px; /* ancho típico de móviles */
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Opcional: mejora estética en pantallas grandes */
+@media (min-width: 768px) {
+  body {
+    background-color: #ffffff; /* fondo gris claro para PC */
+  }
+
+  .contenedor {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: white;
+    min-height: 100vh;
+    border-radius: 8px;
+  }
+}

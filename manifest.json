@@ -1,0 +1,21 @@
+{
+    "short_name": "Directorio Comercial",
+    "name": "Directorio Comercial",
+    "icons":
+    [
+        {
+            "src": "favicon.png",
+            "type": "assets/image/png",
+            "sizes": "350x350"
+        },
+        {
+            "src": "favicon.png",
+            "type": "assets/image/png",
+            "sizes": "712x712"
+        }
+    ],
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#3849ff"
+}
