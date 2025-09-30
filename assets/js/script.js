@@ -509,24 +509,4 @@
             changeView('home');
         }
 
-const installBanner = document.getElementById('install-banner');
-const installCloseBtn = document.getElementById('install-close-btn');
-const installPromptBtn = document.getElementById('install-prompt-btn');
-
-
-window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBanner.classList.add('visible');
-});
-
-installPromptBtn && installPromptBtn.addEventListener('click', async () => {
-    if (!deferredPrompt) return;
-    installBanner.classList.remove('visible');
-    deferredPrompt.prompt();
-    await deferredPrompt.userChoice;
-    deferredPrompt = null;
-});
-
-installCloseBtn && installCloseBtn.addEventListener('click', () => installBanner.classList.remove('visible'));
-
+        
