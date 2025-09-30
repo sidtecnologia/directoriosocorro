@@ -134,3 +134,56 @@
     border-radius: 8px;
   }
 }
+
+/* PWA Install Banner */
+.install-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%);
+}
+
+.install-banner.visible {
+  transform: translateY(0);
+}
+
+.install-banner span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.install-banner div {
+  display: flex;
+  gap: 10px;
+}
+
+.install-banner button {
+  padding: 8px 15px;
+  border-radius: 14px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.install-banner button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.install-banner .install-btn {
+  background-color: var(--accent);
+  color: var(--primary);
+  border-color: var(--accent);
+}
