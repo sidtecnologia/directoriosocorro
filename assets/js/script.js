@@ -215,7 +215,7 @@
 
                 <!-- Carrusel Principal de Imágenes -->
                 <section class="mb-8">
-                    <div id="main-carousel" class="carousel-container flex w-full rounded-xl overflow-hidden shadow-lg h-48 sm:h-64 lg:h-80">
+                    <div id="main-carousel" class="carousel-container flex w-full rounded-xl overflow-hidden shadow-lg sm:h-64 lg:h-80">
                         <div class="carousel-item">
                             <img src="assets/images/carousel/baner1.webp" alt="Banner 1">
                             <!-- Overlay oscuro para mejor lectura del texto -->
@@ -456,7 +456,7 @@
                 <!-- Carrusel de Imágenes del Negocio -->
                 <section class="mb-6">
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Galería</h3>
-                    <div id="profile-carousel" class="carousel-container flex w-full rounded-xl overflow-hidden shadow-lg h-56 sm:h-72 lg:h-96">
+                    <div id="profile-carousel" class="carousel-container flex w-full rounded-xl overflow-hidden shadow-lg sm:h-72 lg:h-96">
                         ${business.images.map(img => `
                             <div class="carousel-item bg-gray-100 flex items-center justify-center">
                                 <img src="${img}" alt="Imagen de ${business.name}" class="w-full h-full object-cover">

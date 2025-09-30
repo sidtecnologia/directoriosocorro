@@ -44,9 +44,16 @@
 
         .carousel-item img {
 
-          width: 100%;
-          height: 100%;
-          max-width: 100%;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        box-shadow: --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);;
 
         }
 
