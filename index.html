@@ -67,6 +67,22 @@
             <span class="text-xs font-medium mt-1">Buscar</span>
         </button>
     </nav>
+
+    <div id="install-banner" class="install-banner" hidden>
+        <span>Añadir a pantalla de inicio</span>
+        <div>
+            <button id="install-close-btn">No</button>
+            <button id="install-prompt-btn" class="install-btn">Instalar</button>
+        </div>
+    </div>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js').catch(()=>{});
+      }
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    
     <script src="assets/js/data.js"></script>
     <script src="assets/js/script.js"></script>
 </div>
