@@ -1,3 +1,4 @@
+
         
         :root {
             --color-primary: #1e40af; /* Azul oscuro */
@@ -10,9 +11,7 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--color-background);
-            /* Importante: el padding-bottom se mantiene para la barra inferior, el padding-top lo maneja JS */
-            padding-bottom: var(--fixed-nav-height); 
-            transition: padding-top 0.3s ease; /* Añadido para suavizar el desplazamiento al mostrar/ocultar el banner */
+            padding-bottom: var(--fixed-nav-height); /* Espacio para la barra de navegación fija */
         }
 
         h2 {
@@ -43,33 +42,41 @@
           width: 100%;
         }
 
-        /* Estilos de las sombras para las tarjetas */
+        .carousel-item img {
+
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        box-shadow: --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);;
+
+        }
+
+        /* Fija el nav inferior */
+        .fixed-bottom-nav {
+            height: var(--fixed-nav-height);
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Clases de utilidad para el diseño */
         .card-shadow {
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
         }
 
-        /* Navbar principal de escritorio */
-        #desktop-navbar {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            transition: top 0.3s ease; /* Añadido para suavizar el desplazamiento cuando aparece el banner PWA */
-        }
-
-        /* Navbar fija inferior (móvil) */
-        .fixed-bottom-nav {
-            height: var(--fixed-nav-height);
-            border-top: 1px solid #e5e7eb; /* Borde sutil */
-        }
-
-        /* Botón de inicio destacado */
         .highlight-button {
-            transform: translateY(-50%); /* Lo sube a la mitad de su altura */
+            transition: all 0.2s ease-in-out;
         }
         .highlight-button:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(30, 64, 175, 0.3), 0 4px 6px -4px rgba(30, 64, 175, 0.2);
         }
 
-        /* Estilo para las tarjetas de negocio y categoría */
-        .business-card:hover, .category-card:hover {
+        .category-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
@@ -109,6 +116,22 @@
         }
 
         .contenedor {
-  max-width: 90%;
+  max-width: 930px; /* ancho típico de móviles */
   margin: 0 auto;
+  padding: 0 10px;
 }
+
+/* Opcional: mejora estética en pantallas grandes */
+@media (min-width: 768px) {
+  body {
+    background-color: #ffffff; /* fondo gris claro para PC */
+  }
+
+  .contenedor {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: white;
+    min-height: 100vh;
+    border-radius: 8px;
+  }
+}
+
