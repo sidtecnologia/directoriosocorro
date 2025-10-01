@@ -5,6 +5,87 @@
             initApp();
         });
 
+        function initPWAInstallLogic() {
+            // 1. Capturar el evento de instalación
+            window.addEventListener('beforeinstallprompt', (e) => {
+                // Previene que el banner predeterminado del navegador se muestre
+                e.preventDefault();
+                // Guarda el evento para que se pueda disparar más tarde
+                deferredPrompt = e;
+                
+                // Si el evento está disponible, muestra nuestro banner personalizado
+                if (deferredPrompt) {
+                    installBanner.classList.remove('hidden');
+                    
+                    // Ajusta el padding-top del contenido principal para evitar solapamiento
+                    // Se asume que el desktop-navbar es la cabecera principal. 
+                    // Si el banner se muestra, el padding superior del body debe compensar ambas barras.
+                    const bannerHeight = installBanner.offsetHeight;
+                    const navbarHeight = desktopNavbar ? desktopNavbar.offsetHeight : 0;
+                    document.body.style.paddingTop = `${bannerHeight}px`;
+
+                    // Al hacer scroll, la navbar fija debe estar debajo del banner
+                    if (desktopNavbar) {
+                        desktopNavbar.style.top = `${bannerHeight}px`;
+                    }
+                }
+            });
+
+            // 2. Manejar el clic en el botón de instalación
+            installBtn.addEventListener('click', async () => {
+                if (deferredPrompt) {
+                    // Muestra el diálogo de instalación
+                    deferredPrompt.prompt();
+
+                    // Espera la respuesta del usuario
+                    const { outcome } = await deferredPrompt.userChoice;
+
+                    if (outcome === 'accepted') {
+                        console.log('El usuario aceptó la instalación de la PWA.');
+                    } else {
+                        console.log('El usuario rechazó la instalación de la PWA.');
+                    }
+
+                    // Oculta el banner después de la interacción
+                    hideInstallBanner();
+                    deferredPrompt = null;
+                }
+            });
+
+            // 3. Manejar el clic en el botón de cerrar
+            closeBtn.addEventListener('click', () => {
+                // Oculta el banner y evita que se muestre de nuevo temporalmente
+                hideInstallBanner();
+                // Opcional: Podrías usar localStorage para no mostrarlo por un tiempo.
+                // localStorage.setItem('pwaDismissed', Date.now());
+            });
+
+            // 4. Ocultar el banner
+            function hideInstallBanner() {
+                installBanner.classList.add('hidden');
+                
+                // Restaura el padding-top del body y la posición de la navbar principal
+                const bannerHeight = installBanner.offsetHeight;
+                const bodyPaddingTop = parseInt(document.body.style.paddingTop.replace('px', ''));
+
+                if (bodyPaddingTop >= bannerHeight) {
+                     document.body.style.paddingTop = `${bodyPaddingTop - bannerHeight}px`;
+                } else {
+                     document.body.style.paddingTop = '';
+                }
+
+                if (desktopNavbar) {
+                    desktopNavbar.style.top = '0px'; // Restaura la navbar a la posición superior
+                }
+            }
+
+            // Ocultar el banner si la PWA ya está instalada o es un navegador no compatible.
+            window.addEventListener('appinstalled', () => {
+                hideInstallBanner();
+                deferredPrompt = null;
+            });
+        }
+
         // ====================================================================
         // GESTIÓN DE VISTAS Y ESTADO GLOBAL
         // ====================================================================

@@ -14,6 +14,23 @@
 </head>
 <body>
 
+    <!-- 1.5. Banner de Instalación PWA (Oculto por defecto, se muestra con JS) -->
+    <div id="pwa-install-banner" class="fixed top-0 left-0 right-0 z-50 bg-blue-600 text-white p-3 shadow-lg hidden">
+        <div class="max-w-screen-xl mx-auto flex justify-between items-center space-x-4 container-padding">
+            <p class="text-sm font-medium">
+                ¿Quieres la mejor experiencia? ¡Instala nuestra App!
+            </p>
+            <div class="flex space-x-3">
+                <button id="pwa-install-btn" class="bg-white text-blue-600 font-semibold text-sm py-1 px-3 rounded-full hover:bg-gray-100 transition-colors shadow">
+                    Instalar
+                </button>
+                <button id="pwa-close-btn" class="text-white hover:text-gray-200 text-sm transition-colors opacity-80">
+                    Ahora no
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- 1. Navbar Superior (Muestra solo el título en móvil, y el buscador/nav en desktop) -->
     <header id="desktop-navbar" class="flex justify-center lg:justify-between items-center bg-white p-4 card-shadow sticky top-0 z-40">
         <h1 class="text-xl font-bold text-gray-800">Directorio <span class="text-blue-600">El Socorro</span></h1>
@@ -67,6 +84,16 @@
             <span class="text-xs font-medium mt-1">Buscar</span>
         </button>
     </nav>
+    
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js" type="module"></script>
+    <script>
+        // Inicializar iconos de lucide después de cargar el DOM (si se usa inline)
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
     <script src="assets/js/data.js"></script>
     <script src="assets/js/script.js"></script>
 </div>
