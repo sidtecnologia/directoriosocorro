@@ -217,32 +217,32 @@
                 <section class="mb-8">
                     <div id="main-carousel" class="carousel-container flex w-full rounded-xl overflow-hidden shadow-lg sm:h-64 lg:h-80">
                         <div class="carousel-item">
-                            <img src="assets/images/carousel/baner1.webp" alt="Banner 1">
+                            <img src="https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/carousel/baner1.webp" alt="Banner 1">
                             <!-- Overlay oscuro para mejor lectura del texto -->
                             <p class="text-white text-xl font-bold">¡Bienvenido a tu Directorio PWA!</p>
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/images/carousel/baner2.webp" alt="Banner 2">
+                            <img src="https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/carousel/baner2.webp" alt="Banner 2">
                             <!-- Overlay oscuro para mejor lectura del texto -->
                             <p class="text-white text-xl font-bold">¡Bienvenido a tu Directorio PWA!</p>
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/images/carousel/baner3.webp" alt="Banner 3">
+                            <img src="https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/carousel/baner3.webp" alt="Banner 3">
                             <!-- Overlay oscuro para mejor lectura del texto -->
                             <p class="text-white text-xl font-bold">¡Bienvenido a tu Directorio PWA!</p>
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/images/carousel/baner4.webp" alt="Banner 4">
+                            <img src="https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/carousel/baner4.webp" alt="Banner 4">
                             <!-- Overlay oscuro para mejor lectura del texto -->
                             <p class="text-white text-xl font-bold">¡Bienvenido a tu Directorio PWA!</p>
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/images/carousel/baner5.webp" alt="Banner 5">
+                            <img src="https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/carousel/baner5.webp" alt="Banner 5">
                             <!-- Overlay oscuro para mejor lectura del texto -->
                             <p class="text-white text-xl font-bold">¡Bienvenido a tu Directorio PWA!</p>
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/images/carousel/baner6.webp" alt="Banner 6">
+                            <img src="https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/carousel/baner6.webp" alt="Banner 6">
                             <!-- Overlay oscuro para mejor lectura del texto -->
                             <p class="text-white text-xl font-bold">¡Bienvenido a tu Directorio PWA!</p>
                         </div>
@@ -509,4 +509,3 @@
             changeView('home');
         }
 
-        
