@@ -508,10 +508,10 @@
                     </div>
                 </section>
 
-                <section class="fb-iframe-container mb-8">
+                <section class="text-sm text-gray-400 mt-1">
                     <iframe
-                        src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(business.facebookIframeHtml)}&tabs=timeline&width=300&height=550&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                        width="300px"
+                        src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(business.facebookIframeHtml)}&tabs=timeline&width=350&height=550&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                        width="350px"
                         height="550px"
                         style="border-radius:14px;border:none;overflow:hidden"
                         scrolling="no"
