@@ -508,7 +508,7 @@
                     </div>
                 </section>
 
-                <section class="fb-iframe-container mb-6">
+                <section class="fb-iframe-container mb-8">
                     <iframe
                         src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(business.facebookIframeHtml)}&tabs=timeline&width=300&height=550&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
                         width="300px"
