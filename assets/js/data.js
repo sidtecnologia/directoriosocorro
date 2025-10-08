@@ -8,6 +8,7 @@
             { id: 'comida', name: 'Comida', icon: 'pizza' },
             { id: 'belleza', name: 'Belleza', icon: 'scissors' },
             { id: 'veterinaria', name: 'Veterinaria', icon: 'paw-print' },
+            { id: 'carniceria', name: 'Carnicería', icon: 'ham' },
             { id: 'profesional', name: 'Servicios Profesionales', icon: 'graduation-cap' },
             { id: 'automotriz', name: 'Automotriz', icon: 'car' },
             { id: 'tecnologia', name: 'Tecnología', icon: 'laptop' },
@@ -70,10 +71,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/comida/chicbone/slide4.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7928.909286396728!2d-73.258149!3d6.463943!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81e7022bb99%3A0xeeb43cd3620c0fa7!2sCl.%208%20%237-39%2C%20Socorro%2C%20Santander!5e0!3m2!1ses!2sco!4v1754950148737!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/profile.php?id=100075961761461&ref=embed_page`
             },
             {
                 id: 'empanadas',
@@ -108,10 +106,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/comida/empanadas/slide15.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4527907106044!2d-73.2629457!3d6.4641793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81d13201a55%3A0x2abb2359797005af!2sEMPANADAS%20DE%20LA%20CASA!5e0!3m2!1ses!2sco!4v1746033514220!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/profile.php?id=100063474525984&ref=embed_page`
             },
             {
                 id: 'fogon',
@@ -144,10 +139,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/comida/fogon/slide13.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.457432386201!2d-73.26312279999999!3d6.463587200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e97fe9909d9f%3A0xe872025ead8b8e01!2sFog%C3%B3n%20socorrano!5e0!3m2!1ses!2sco!4v1745948546673!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/p/Restaurante-El-Fog%C3%B3n-Socorrano-100063656529462/`
             },
             {
                 id: 'masterpizza',
@@ -180,10 +172,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/comida/masterpizza/slide13.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.5062528842677!2d-73.2645762!3d6.4573563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e916670ec20f%3A0x5c7a49936a7c39ac!2sMasterpizza%20Socorro!5e0!3m2!1ses!2sco!4v1746228359639!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/masterpizzasocorro`
             },
             {
                 id: 'orale',
@@ -248,10 +237,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/comida/patio/slide16.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4249623576657!2d-73.260756!3d6.467728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a00afdb1c5%3A0xddc5cf3f50892f6a!2sEL%20PATIO%20RESTAURANTE%20PARRILLA!5e0!3m2!1ses!2sco!4v1746029099489!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/elpatiorestauranteparrilla/?locale=es_LA`
             },
             {
                 id: 'saloon',
@@ -283,10 +269,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/comida/saloon/slide12.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4249623576657!2d-73.260756!3d6.467728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a00afdb1c5%3A0xddc5cf3f50892f6a!2sEL%20PATIO%20RESTAURANTE%20PARRILLA!5e0!3m2!1ses!2sco!4v1746029099489!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/saloon1822`
             },
 
         // Categoría Vestuario
@@ -324,7 +307,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/vestuario/adn/slide15.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4388952951103!2d-73.26325389999998!3d6.465951500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81d601cfae5%3A0x3491d50d38001f03!2sCl.%209%20%23%2015-25%2C%20Socorro%2C%20Santander!5e0!3m2!1ses!2sco!4v1745852169814!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1447724196251242%2F&show_text=false&width=266&t=0" width="266" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>`
+                facebookIframeHtml: `https://www.instagram.com/adncouture2025/`
             },
             {
                 id: 'angels',
@@ -355,10 +338,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/vestuario/angels/slide11.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.426914688645!2d-73.261902!3d6.467479099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a7a0c8ea8f%3A0x6e22999d4b43f098!2sCra.%2014%20%2311-13%2C%20Socorro%2C%20Santander!5e0!3m2!1ses!2sco!4v1745942909432!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/tienda.angelssocorro`
             },
             {
                 id: 'antoine',
@@ -394,10 +374,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/vestuario/antoine/slide16.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.3820141298406!2d-73.26041900000004!3d6.473201000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a45ddd3b5b%3A0xe9f7d9e2e1ef9395!2sCl.%2019%20%23%2014-36%2C%20Socorro%2C%20Santander!5e0!3m2!1ses!2sco!4v1746027621480!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/antoineshoescol/`
             },
             {
                 id: 'lilipink',
@@ -425,10 +402,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/vestuario/lilipink/slide8.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.409712149497!2d-73.26095049999999!3d6.4696719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c3b5d7bb78a9%3A0x4ef67a9214f24df!2sRopa%20Interior%20Lili%20Pink%20Socorro!5e0!3m2!1ses!2sco!4v1745774384150!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/lilipinksocorro/`
             },
             {
                 id: 'manitos',
@@ -461,10 +435,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/vestuario/manitos/slide13.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4329727918657!2d-73.2630787!3d6.466706700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a7925009a7%3A0x65303489cf6fb584!2sCl.%2010%20%2315-37%2C%20Socorro%2C%20Santander!5e0!3m2!1ses!2sco!4v1745937008120!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/profile.php?id=61556482394352`
             },
             {
                 id: 'rich',
@@ -500,10 +471,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/vestuario/rich/slide16.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4137026390845!2d-73.2613264!3d6.4691633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c3a07b729649%3A0x6c2edfdbe17488e4!2sCALZADO%20RICH%20DSC%20SOCORRO!5e0!3m2!1ses!2sco!4v1745941282505!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/calzadorich?ref=hl`
             },
             {
                 id: 'veinte',
@@ -535,10 +503,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/vestuario/veinte/slide12.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.414706881403!2d-73.26151870000001!3d6.4690353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6f9c1d237%3A0x41fdcddd6b0df4e4!2sCl.%2013%20%2314-09%2C%20Socorro%2C%20Santander!5e0!3m2!1ses!2sco!4v1745849370859!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/VeinteVienteSocorro`
             },
 
         // Categoría Belleza
@@ -573,10 +538,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/cami/slide13.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.420577380202!2d-73.26331989999998!3d6.468287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a7ca6d3edb%3A0xc4acd8c3848680a5!2sCra.%2016%20%23%2011-75%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750349389228!5m2!1ses-419!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/profile.php?id=100095053041256`
             },
             {
                 id: 'july',
@@ -614,10 +576,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/july/slide18.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4047130046365!2d-73.25921800000005!3d6.470309000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6b1ffe0c7%3A0x68326e183f850722!2sCl.%2016%20%23%2011-27%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750298302132!5m2!1ses-419!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/profile.php?id=61572758675161`
             },
             {
                 id: 'lexus',
@@ -652,10 +611,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/lexus/slide15.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.409899294247!2d-73.26141741139226!3d6.469648048722612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6b1ffe0c7%3A0x68326e183f850722!2sCl.%2016%20%23%2011-27%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750296070786!5m2!1ses-419!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/dlexuscentrodebelleza`
             },
             {
                 id: 'luna',
@@ -688,10 +644,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/luna/slide13.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.3970065662556!2d-73.26138!3d6.471291000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a4295b36c1%3A0x9b21e66fc328d9a1!2sCl.%2016%20%23%2014-70%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750301460846!5m2!1ses-419!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.instagram.com/sombra_delunatattoo/`
             },
             {
                 id: 'mara',
@@ -723,10 +676,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/mara/slide12.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.418769937988!2d-73.26233130000003!3d6.46851740000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a65331eded%3A0xfc0de9dba0b0a7bc!2sCra.%2015%20%23%2012-36%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750348609716!5m2!1ses-419!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/profile.php?id=100085418034060&ref=embed_page`
             },
             {
                 id: 'reina',
@@ -758,10 +708,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide12.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15857.726256855274!2d-73.26902888148864!3d6.466886300000025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a7eccc505b%3A0x69e22930fc3d2c21!2sU%C3%B1as%20de%20Reina%20Spa%20Socorro!5e0!3m2!1ses-419!2sco!4v1750287598165!5m2!1ses-419!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/spaunasdereinasocorro/?ref=embed_page`
             },
             {
                 id: 'susy',
@@ -794,10 +741,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide13.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.420427546934!2d-73.26383858255618!3d6.468306099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c322e8a067d3%3A0xe98d4e22c441158b!2sCosm%C3%A9ticos%20susy!5e0!3m2!1ses-419!2sco!4v1750292158406!5m2!1ses-419!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/CosmeticosSusySocorro/?ref=embed_page`
             },
             {
                 id: 'yeye',
@@ -830,10 +774,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide13.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.443791505669!2d-73.2624793!3d6.465327099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81d7b44a815%3A0x6169ab6e750dd83c!2sCra.%2014%20%238-12%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750345301653!5m2!1ses-419!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/profile.php?id=100054207473430&ref=embed_page`
             },
 
         // Categoría Bebidas
@@ -862,10 +803,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/alcala/slide6.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.462493768035!2d-73.2635409!3d6.4629415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81cdc5df1df%3A0x5d222a417a4656a4!2sCra.%2015%20%23%203-12%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750353950399!5m2!1ses-419!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/profile.php?id=61558486235469&ref=embed_page`
             },
             {
                 id: 'blas',
@@ -888,10 +826,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/blas/slide3.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.437144965956!2d-73.2627308!3d6.466174700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a78f179b6b%3A0xf56e34312312718e!2sCra.%2015%20%239-36%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750351348289!5m2!1ses-419!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/profile.php?id=100067775179394&ref=embed_page`
             },
             {
                 id: 'coco',
@@ -922,10 +857,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/slide11.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.413431176436!2d-73.261701!3d6.469197899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6f7c077c7%3A0xe94345ea62999b71!2sCl.%2013%20%23%2014-32%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750356278096!5m2!1ses-419!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `https://www.facebook.com/Cocoscafebarsocorro/?ref=embed_page`
             },
 
         // Categoría Veterinaria
@@ -1023,5 +955,59 @@
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.411627403766!2d-73.25990390000005!3d6.4694278000000125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6c6b0a77b%3A0x13517bdf56e4af32!2sCra.%2012%20%2314-18%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1752800142676!5m2!1ses-419!2sco',
                 facebookIframeHtml: 'https://www.facebook.com/WorldLegalCorpo/'
+            },
+
+        // Categoría Carnicería
+
+            {
+                id: 'alespa',
+                name: 'ALESPA',
+                category: 'Carnicería',
+                featured: true,
+                logoUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/alespa/alespa.webp',
+                bgImageUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/alespa/slide5.webp',
+                description: '🥩 En Carnes ALESPA trabajamos cada día para ofrecerte carne de res, cerdo y pollo de la mejor calidad. 🐄 Nos especializamos en cortes frescos y a tu gusto, con servicio amable y precios justos. 🍖 Queremos que lleves a tu mesa productos frescos y un servicio que siempre te haga volver. 🛒 ¡Calidad, frescura y sabor para tu hogar!',
+                address: 'Cll. 14 # 11 - 06',
+                hours: 'Lunes a Domingo: 5:00am - 2:00pm',
+                services: 'Venta de carne de res fresca, Cortes especiales por encargo, Asesoría para elección de cortes',
+                phone: '+573134656118',
+                whatsapp: 'https://wa.me/573134656118',
+                delivery: "https://wa.me/573134656118?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+                storeLink: null,
+                images: [
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/alespa/slide1.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/alespa/slide2.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/alespa/slide3.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/alespa/slide4.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/alespa/slide5.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/alespa/slide6.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/alespa/slide7.webp",
+            ],
+                mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.428417516813!2d-73.2618356!3d6.467287499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c33de42a88e5%3A0x931163bedffd4506!2sSurti%20carnes%20la%2014!5e0!3m2!1ses-419!2sco!4v1753281902484!5m2!1ses-419!2sco',
+                facebookIframeHtml: 'https://www.facebook.com/carnesalespa/?ref=embed_page'
+            },
+            {
+                id: 'surticarne',
+                name: 'Surti Carnes La 14',
+                category: 'Carnicería',
+                featured: false,
+                logoUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/surticarne/surticarne.webp',
+                bgImageUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/surticarne/slide3.webp',
+                description: '🥩 En Carnes La 14 ofrecemos carne fresca, de calidad y al mejor precio. 🐄 Atendemos con amabilidad y experiencia para llevar a tu mesa los mejores cortes. 🍖 ¡Sabor y frescura garantizados!',
+                address: 'Cll. 14 # 11 - 06',
+                hours: 'Lunes a Domingo: 5:00am - 2:00pm',
+                services: 'Venta de carne de res fresca, Cortes especiales por encargo, Asesoría para elección de cortes',
+                phone: '+573134656118',
+                whatsapp: 'https://wa.me/573134656118',
+                delivery: "https://wa.me/573134656118?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+                storeLink: null,
+                images: [
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/surticarne/slide1.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/surticarne/slide2.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/surticarne/slide3.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/carne/surticarne/slide4.webp",
+            ],
+                mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.411615634734!2d-73.25995039999995!3d6.469429300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6c14b8fab%3A0x381f7a77f9cc05f8!2sCra.%2012%20%23%2014-14%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1752810045111!5m2!1ses-419!2sco',
+                facebookIframeHtml: 'https://www.facebook.com/friogan.sa?ref=embed_video'
             }
         ];

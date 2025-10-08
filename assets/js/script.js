@@ -1,85 +1,52 @@
-
-        // Inicialización de iconos Lucide
+// Inicialización de iconos Lucide
         document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
             initApp();
         });
 
         function initPWAInstallLogic() {
-            // 1. Capturar el evento de instalación
+            let deferredPrompt;
+            const installBanner = document.getElementById('pwa-install-banner');
+            const installBtn = document.getElementById('pwa-install-btn');
+            const closeBtn = document.getElementById('pwa-close-btn');
+            const desktopNavbar = document.getElementById('desktop-navbar');
+
             window.addEventListener('beforeinstallprompt', (e) => {
-                // Previene que el banner predeterminado del navegador se muestre
                 e.preventDefault();
-                // Guarda el evento para que se pueda disparar más tarde
                 deferredPrompt = e;
                 
-                // Si el evento está disponible, muestra nuestro banner personalizado
                 if (deferredPrompt) {
                     installBanner.classList.remove('hidden');
                     
-                    // Ajusta el padding-top del contenido principal para evitar solapamiento
-                    // Se asume que el desktop-navbar es la cabecera principal. 
-                    // Si el banner se muestra, el padding superior del body debe compensar ambas barras.
                     const bannerHeight = installBanner.offsetHeight;
-                    const navbarHeight = desktopNavbar ? desktopNavbar.offsetHeight : 0;
-                    document.body.style.paddingTop = `${bannerHeight}px`;
-
-                    // Al hacer scroll, la navbar fija debe estar debajo del banner
-                    if (desktopNavbar) {
-                        desktopNavbar.style.top = `${bannerHeight}px`;
-                    }
+                    const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--fixed-nav-height'), 10) || 60;
+                    document.body.style.paddingBottom = `${bannerHeight + navHeight}px`;
                 }
             });
 
-            // 2. Manejar el clic en el botón de instalación
             installBtn.addEventListener('click', async () => {
                 if (deferredPrompt) {
-                    // Muestra el diálogo de instalación
                     deferredPrompt.prompt();
-
-                    // Espera la respuesta del usuario
                     const { outcome } = await deferredPrompt.userChoice;
-
                     if (outcome === 'accepted') {
                         console.log('El usuario aceptó la instalación de la PWA.');
                     } else {
                         console.log('El usuario rechazó la instalación de la PWA.');
                     }
-
-                    // Oculta el banner después de la interacción
                     hideInstallBanner();
                     deferredPrompt = null;
                 }
             });
 
-            // 3. Manejar el clic en el botón de cerrar
             closeBtn.addEventListener('click', () => {
-                // Oculta el banner y evita que se muestre de nuevo temporalmente
                 hideInstallBanner();
-                // Opcional: Podrías usar localStorage para no mostrarlo por un tiempo.
-                // localStorage.setItem('pwaDismissed', Date.now());
             });
 
-            // 4. Ocultar el banner
             function hideInstallBanner() {
                 installBanner.classList.add('hidden');
-                
-                // Restaura el padding-top del body y la posición de la navbar principal
-                const bannerHeight = installBanner.offsetHeight;
-                const bodyPaddingTop = parseInt(document.body.style.paddingTop.replace('px', ''));
-
-                if (bodyPaddingTop >= bannerHeight) {
-                     document.body.style.paddingTop = `${bodyPaddingTop - bannerHeight}px`;
-                } else {
-                     document.body.style.paddingTop = '';
-                }
-
-                if (desktopNavbar) {
-                    desktopNavbar.style.top = '0px'; // Restaura la navbar a la posición superior
-                }
+                document.body.style.paddingBottom = '';
             }
 
-            // Ocultar el banner si la PWA ya está instalada o es un navegador no compatible.
             window.addEventListener('appinstalled', () => {
                 hideInstallBanner();
                 deferredPrompt = null;
@@ -153,7 +120,6 @@
                         <i data-lucide="search" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6"></i>
                     </div>
                     
-                    <!-- Resultados de la búsqueda -->
                     <div id="mobile-search-results" class="space-y-4 max-h-[80vh] overflow-y-auto">
                         <p class="text-center text-gray-500">Ingresa un término para empezar a buscar.</p>
                     </div>
@@ -294,43 +260,35 @@
             homeView.innerHTML = `
                 <h2 class="text-3xl font-extrabold text-gray-900 mb-6 lg:text-4xl">Guía Comercial</h2>
 
-                <!-- Carrusel Principal de Imágenes -->
                 <section class="mb-8">
                     <div id="main-carousel" class="carousel-container flex w-full rounded-xl overflow-hidden shadow-lg sm:h-64 lg:h-80">
                         <div class="carousel-item">
                             <img src="https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/carousel/baner1.webp" alt="Banner 1">
-                            <!-- Overlay oscuro para mejor lectura del texto -->
                             <p class="text-white text-xl font-bold">¡Bienvenido a tu Directorio PWA!</p>
                         </div>
                         <div class="carousel-item">
                             <img src="https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/carousel/baner2.webp" alt="Banner 2">
-                            <!-- Overlay oscuro para mejor lectura del texto -->
                             <p class="text-white text-xl font-bold">¡Bienvenido a tu Directorio PWA!</p>
                         </div>
                         <div class="carousel-item">
                             <img src="https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/carousel/baner3.webp" alt="Banner 3">
-                            <!-- Overlay oscuro para mejor lectura del texto -->
                             <p class="text-white text-xl font-bold">¡Bienvenido a tu Directorio PWA!</p>
                         </div>
                         <div class="carousel-item">
                             <img src="https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/carousel/baner4.webp" alt="Banner 4">
-                            <!-- Overlay oscuro para mejor lectura del texto -->
                             <p class="text-white text-xl font-bold">¡Bienvenido a tu Directorio PWA!</p>
                         </div>
                         <div class="carousel-item">
                             <img src="https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/carousel/baner5.webp" alt="Banner 5">
-                            <!-- Overlay oscuro para mejor lectura del texto -->
                             <p class="text-white text-xl font-bold">¡Bienvenido a tu Directorio PWA!</p>
                         </div>
                         <div class="carousel-item">
                             <img src="https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/carousel/baner6.webp" alt="Banner 6">
-                            <!-- Overlay oscuro para mejor lectura del texto -->
                             <p class="text-white text-xl font-bold">¡Bienvenido a tu Directorio PWA!</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- Negocios Destacados -->
                 <section class="mb-8">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Negocios Destacados</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -348,7 +306,6 @@
                     </div>
                 </section>
 
-                <!-- 4 Banners Promocionales Cuadrados -->
                 <section class="mb-8">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Promociones</h3>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -363,13 +320,11 @@
                     </div>
                 </section>
 
-                <!-- Sección de Plugin de Facebook -->
                 <section class="mb-8">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Síguenos en Facebook</h3>
                     <p class="text-sm text-gray-400 mt-1"><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02WDhtWRS8HWokNpPgncv7LxyDCMLsu6kdzb2QzXztHCrLkLW1jTfcY8yeT7hk8SR5l%26id%3D100063474525984&width=350&show_text=true&height=573&appId" width="350" height="573" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></p>
                 </section>
 
-                <!-- Banners Destacados Cuadrados #2 -->
                 <div class="carousel-item">
                 <section class="mb-8">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Más Destacados</h3>
@@ -385,7 +340,6 @@
                     </div>
                 </section>
 
-                <!-- Sección de Plugin de Facebook #2-->
                 <section class="mb-8">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Te Puede Gustar</h3>
                     <p class="text-sm text-gray-400 mt-1"><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FVeinteVienteSocorro%2Fvideos%2F1492663198534052%2F&width=350&show_text=false&height=630&appId" width="350" height="630" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe></p>
@@ -477,9 +431,7 @@
                     <i data-lucide="arrow-left" class="w-5 h-5 mr-1"></i> Volver
                 </button>
 
-                <!-- Sección de Cabecera y Logo con Background Image -->
                 <div class="relative overflow-hidden rounded-xl shadow-xl bg-white mb-6">
-                    <!-- Background Image Area -->
                     <div 
                         class="h-40 sm:h-56 bg-cover bg-center" 
                         style="background-image: url('${business.bgImageUrl}')"
@@ -487,13 +439,11 @@
                         <div class="absolute inset-0 bg-black opacity-30"></div>
                     </div>
                     
-                    <!-- Logo y Nombre Content -->
                     <div class="relative z-10 p-4 -mt-16 sm:-mt-20 flex flex-col items-center">
                         <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full p-1 bg-white shadow-lg ring-4 ring-blue-500 transform transition-transform duration-300 hover:scale-105">
                             <img src="${business.logoUrl}" alt="${business.name}" class="w-full h-full object-cover rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1e40af/ffffff?text=Logo'">
                         </div>
 
-                        <!-- Text Content -->
                         <div class="mt-3 text-center">
                             <h2 class="text-3xl font-extrabold text-gray-900">${business.name}</h2>
                             <p class="text-lg font-medium text-blue-600 mb-2">${business.category}</p>
@@ -502,7 +452,6 @@
                     </div>
                 </div>
 
-                <!-- Tarjetas de Información Importante -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                     <div class="bg-white p-4 rounded-xl shadow-md">
                         <i data-lucide="map-pin" class="w-6 h-6 text-blue-600 mb-1"></i>
@@ -521,7 +470,6 @@
                     </div>
                 </div>
 
-                <!-- Botones de Contacto -->
                 <section class="mb-6">
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Contacto Rápido</h3>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -534,7 +482,6 @@
                     </div>
                 </section>
 
-                <!-- Carrusel de Imágenes del Negocio -->
                 <section class="mb-6">
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Galería</h3>
                     <div id="profile-carousel" class="carousel-container flex w-full rounded-xl overflow-hidden shadow-lg sm:h-72 lg:h-96">
@@ -546,7 +493,6 @@
                     </div>
                 </section>
 
-                <!-- Google Maps Iframe -->
                 <section class="mb-6">
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Ubicación</h3>
                     <div class="map-container card-shadow">
@@ -562,7 +508,6 @@
                     </div>
                 </section>
 
-                <!-- Facebook Page Iframe -->
                 <section class="fb-iframe-container mb-6">
                     <iframe
                         src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(business.facebookIframeHtml)}&tabs=timeline&width=300&height=550&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
@@ -590,5 +535,7 @@
             
             // Inicia la aplicación en la vista de inicio
             changeView('home');
+            
+            // Inicializa la lógica del banner PWA
+            initPWAInstallLogic();
         }
-
