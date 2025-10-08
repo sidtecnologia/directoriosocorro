@@ -5,25 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Conecta con los mejores negocios, tiendas y servicios de El Socorro en un solo lugar. Nuestro Directorio Comercial te muestra horarios, contactos, ubicación en mapa, promociones y novedades de cada empresa, todo con un diseño rápido y fácil de usar desde tu celular o computador.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- Favicon -->
     <link rel="icon" href="https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href=".https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/favicon.png">
     <link rel="manifest" href="manifest.json"/>
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    <!-- Carga de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Carga de Lucide Icons (opcional, para iconos limpios) -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     
 </head>
 <body>
 
-    <!-- 1.5. Banner de Instalación PWA (Oculto por defecto, se muestra con JS) -->
-    <div id="pwa-install-banner" class="fixed top-0 left-0 right-0 z-50 bg-blue-600 text-white p-3 shadow-lg hidden">
+    <div id="pwa-install-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-blue-600 text-white p-3 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.1)] hidden">
         <div class="max-w-screen-xl mx-auto flex justify-between items-center space-x-4 container-padding">
             <p class="text-sm font-medium">
-                ¿Quieres la mejor experiencia? ¡Instala nuestra App!
+                ¡Instala la App para una mejor experiencia!
             </p>
             <div class="flex space-x-3">
                 <button id="pwa-install-btn" class="bg-white text-blue-600 font-semibold text-sm py-1 px-3 rounded-full hover:bg-gray-100 transition-colors shadow">
@@ -36,20 +32,15 @@
         </div>
     </div>
 
-    <!-- 1. Navbar Superior (Muestra solo el título en móvil, y el buscador/nav en desktop) -->
     <header id="desktop-navbar" class="flex justify-center lg:justify-between items-center bg-white p-4 card-shadow sticky top-0 z-40">
         <h1 class="text-xl font-bold text-gray-800">Directorio <span class="text-blue-600">El Socorro</span></h1>
         
-        <!-- Contenedor de Buscador e Inicio (Oculto en móvil, visible en desktop) -->
         <div class="hidden lg:flex items-center flex-grow justify-end space-x-6">
-            <!-- Buscador Inteligente -->
             <div class="relative w-1/3 min-w-[300px]">
                 <input type="text" id="desktop-search-input" placeholder="Buscar negocios o categorías..." class="w-full p-2 pl-10 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                 <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></i>
-                <!-- Resultados automáticos para Desktop -->
                 <div id="desktop-search-results" class="absolute top-full mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-xl max-h-60 overflow-y-auto hidden">
-                    <!-- Los resultados se inyectan aquí -->
-                </div>
+                    </div>
             </div>
             <div class="text-sm text-gray-500">
                 <button onclick="changeView('home')" class="p-2 text-blue-600 hover:text-blue-800 font-medium">Inicio</button>
@@ -59,31 +50,24 @@
 
     <div class="contenedor">
 
-    <!-- Contenido Principal -->
     <main id="app-container" class="pb-16 lg:pb-0">
-        <!-- Vistas dinámicas -->
         <div id="home-view" class="pt-4 lg:pt-8 container-padding transition-opacity duration-300"></div>
         <div id="profile-view" class="hidden-view pt-4 lg:pt-8 container-padding transition-opacity duration-300"></div>
         <div id="categories-view" class="hidden-view pt-4 lg:pt-8 container-padding transition-opacity duration-300"></div>
-        <!-- Contenedor para modales (Búsqueda) -->
         <div id="modal-container"></div>
     </main>
 
-    <!-- 2. Navbar Fijo Inferior (Visible siempre, principal en móviles) -->
     <nav class="fixed-bottom-nav fixed bottom-0 left-0 right-0 bg-white z-50 flex justify-around items-center pt-2">
-        <!-- Botón Categorías -->
         <button id="nav-categories-btn" onclick="openCategories()" class="flex flex-col items-center justify-center p-2 text-gray-500 hover:text-blue-600 transition-colors">
             <i data-lucide="layout-list" class="w-6 h-6"></i>
             <span class="text-xs font-medium mt-1">Categorías</span>
         </button>
 
-        <!-- Botón Inicio (Más grande, destacado) -->
         <button id="nav-home-btn" onclick="changeView('home')" class="highlight-button flex flex-col items-center justify-center bg-blue-600 text-white rounded-full p-3 -mt-6 mx-4 w-16 h-16 shadow-xl">
             <i data-lucide="home" class="w-7 h-7"></i>
             <span class="text-xs font-medium hidden">Inicio</span>
         </button>
 
-        <!-- Botón Buscador (Modal de resultados) -->
         <button id="nav-search-btn" onclick="openSearchModal()" class="flex flex-col items-center justify-center p-2 text-gray-500 hover:text-blue-600 transition-colors">
             <i data-lucide="search" class="w-6 h-6"></i>
             <span class="text-xs font-medium mt-1">Buscar</span>
@@ -91,7 +75,6 @@
     </nav>
 
 
-    <!-- Enlace al archivo JavaScript -->
     <script src="script.js" type="module"></script>
     <script>
         // Inicializar iconos de lucide después de cargar el DOM (si se usa inline)
