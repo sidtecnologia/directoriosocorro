@@ -4,8 +4,11 @@
 
         const CATEGORY_DATA = [
             { id: 'vestuario', name: 'Vestuario', icon: 'shirt' },
+            { id: 'bebidas', name: 'Bebidas', icon: 'beer' },
             { id: 'comida', name: 'Comida', icon: 'pizza' },
             { id: 'belleza', name: 'Belleza', icon: 'scissors' },
+            { id: 'veterinaria', name: 'Veterinaria', icon: 'paw-print' },
+            { id: 'profesional', name: 'Servicios Profesionales', icon: 'graduation-cap' },
             { id: 'automotriz', name: 'Automotriz', icon: 'car' },
             { id: 'tecnologia', name: 'Tecnología', icon: 'laptop' },
             { id: 'salud', name: 'Salud y Farmacia', icon: 'heart-pulse' },
@@ -321,10 +324,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/vestuario/adn/slide15.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4388952951103!2d-73.26325389999998!3d6.465951500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81d601cfae5%3A0x3491d50d38001f03!2sCl.%209%20%23%2015-25%2C%20Socorro%2C%20Santander!5e0!3m2!1ses!2sco!4v1745852169814!5m2!1ses!2sco',
-                facebookIframeHtml: `<iframe 
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>`
+                facebookIframeHtml: `<iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1447724196251242%2F&show_text=false&width=266&t=0" width="266" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>`
             },
             {
                 id: 'angels',
@@ -727,5 +727,301 @@
                     src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
                     width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
                 </iframe>`
+            },
+            {
+                id: 'reina',
+                name: 'Uñas de Reina SPA',
+                category: 'Belleza',
+                featured: false,
+                logoUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/reina.webp',
+                bgImageUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide1.webp',
+                description: 'Te ofrecemos una experiencia única en el cuidado de tus uñas. Trabajamos con productos de alta calidad y técnicas modernas para que luzcas unas manos impecables, elegantes y saludables.',
+                address: 'Cll. 10 #15 - 68',
+                hours: 'Lunes a Sábado 9:00am - 8:00pm',
+                services: 'Manicure y pedicure spa., Uñas acrílicas, en gel y semipermanentes., Decoración artística y diseños a la medida, Tratamientos de cuidado y reparación',
+                phone: '+573168219098',
+                whatsapp: 'https://wa.me/573168219098',
+                delivery: "https://wa.me/573168219098?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+                storeLink: null,
+                images: [
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide1.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide2.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide3.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide4.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide5.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide6.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide7.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide8.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide9.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide10.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide11.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/reina/slide12.webp",
+            ],
+                mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15857.726256855274!2d-73.26902888148864!3d6.466886300000025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a7eccc505b%3A0x69e22930fc3d2c21!2sU%C3%B1as%20de%20Reina%20Spa%20Socorro!5e0!3m2!1ses-419!2sco!4v1750287598165!5m2!1ses-419!2sco',
+                facebookIframeHtml: `<iframe 
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>`
+            },
+            {
+                id: 'susy',
+                name: 'Cosmeticos Susy',
+                category: 'Belleza',
+                featured: false,
+                logoUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/susy.webp',
+                bgImageUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide1.webp',
+                description: 'Nos especializamos en ofrecerte los mejores productos de belleza y cuidado personal, pensados para realzar tu estilo, cuidar tu piel y ayudarte a sentirte bien por dentro y por fuera. ✨ Contamos con un catálogoUrl amplio y actualizado de marcas reconocidas, ideales tanto para uso personal como para quienes se dedican a la belleza profesional.',
+                address: 'Cll. 10 #15 - 68',
+                hours: 'Lunes a Sábado 8:00am - 7:00pm / Domingo 8:00am - 1:00pm',
+                services: 'Maquillaje de alta calidad: bases, labiales, sombras, delineadores y más., Productos para el cuidado de la piel: sérums, cremas hidratantes, limpiadores y mascarillas., Fragancias para todos los gustos, Accesorios de belleza, brochas, esponjas y más',
+                phone: '+573007976485',
+                whatsapp: 'https://wa.me/573007976485',
+                delivery: "https://wa.me/573007976485?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+                storeLink: null,
+                images: [
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide1.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide2.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide3.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide4.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide5.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide6.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide7.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide8.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide9.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide10.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide11.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide12.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/susy/slide13.webp",
+            ],
+                mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.420427546934!2d-73.26383858255618!3d6.468306099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c322e8a067d3%3A0xe98d4e22c441158b!2sCosm%C3%A9ticos%20susy!5e0!3m2!1ses-419!2sco!4v1750292158406!5m2!1ses-419!2sco',
+                facebookIframeHtml: `<iframe 
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>`
+            },
+            {
+                id: 'yeye',
+                name: 'Centro de Belleza Yeye',
+                category: 'Belleza',
+                featured: false,
+                logoUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/yeye.webp',
+                bgImageUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide1.webp',
+                description: 'Nuestro Centro de Belleza está pensado para mujeres que buscan verse y sentirse bien. Nos especializamos en el embellecimiento de uñas, el diseño de peinados para eventos o el día a día, y el maquillaje profesional para destacar tus rasgos con elegancia.',
+                address: 'Cra. 14 #8 - 12',
+                hours: 'Lunes a Domingo: 8:00am - 2:00pm',
+                services: 'Manicure y pedicure profesional (tradicional, semipermanente o acrílico)., Diseño y decoración de uñas (con piedras, arte y técnicas personalizadas)., Peinados para eventos, trenzas, recogidos y alisados, Maquillaje profesional (social, de novia o para fotografía)',
+                phone: '+573105382110',
+                whatsapp: 'https://wa.me/573105382110',
+                delivery: "https://wa.me/573105382110?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+                storeLink: null,
+                images: [
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide1.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide2.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide3.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide4.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide5.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide6.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide7.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide8.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide9.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide10.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide11.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide12.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/belleza/yeye/slide13.webp",
+            ],
+                mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.443791505669!2d-73.2624793!3d6.465327099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81d7b44a815%3A0x6169ab6e750dd83c!2sCra.%2014%20%238-12%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750345301653!5m2!1ses-419!2sco',
+                facebookIframeHtml: `<iframe 
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>`
+            },
+
+        // Categoría Bebidas
+
+            {
+                id: 'alcala',
+                name: 'Café Bar Alcalá',
+                category: 'Bebidas',
+                featured: true,
+                logoUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/alcala/alcala.webp',
+                bgImageUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/alcala/slide1.webp',
+                description: 'Bar Alcalá se ha convertido en uno de los bares preferidos por quienes buscan un lugar para relajarse, compartir y vivir la noche al máximo. Contamos con un ambiente acogedor y dinámico, ideal para disfrutar entre amigos o celebrar momentos especiales. Ofrecemos una carta de bebidas variadas, desde cervezas bien frías hasta cocteles preparados con estilo.',
+                address: 'Cra. 15 #3 - 12',
+                hours: 'Lunes a Miercoles 9:00am - 11:00pm / Jueves 7:00am - 11:00pm / Viernes a Sábado 7:00am - 2:00am / Domingo 2:00pm - 11:00pm',
+                services: 'Venta de cervezas, licores y cocteles., Promociones en bebidas por días o temporadas., Ambientación con música crossover y noches temáticas, Atención para grupos y celebraciones',
+                phone: '+',
+                whatsapp: 'https://wa.me/',
+                delivery: "https://wa.me/?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+                storeLink: null,
+                images: [
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/alcala/slide1.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/alcala/slide2.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/alcala/slide3.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/alcala/slide4.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/alcala/slide5.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/alcala/slide6.webp",
+            ],
+                mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.462493768035!2d-73.2635409!3d6.4629415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81cdc5df1df%3A0x5d222a417a4656a4!2sCra.%2015%20%23%203-12%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750353950399!5m2!1ses-419!2sco',
+                facebookIframeHtml: `<iframe 
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>`
+            },
+            {
+                id: 'blas',
+                name: 'San Blas Café Bar',
+                category: 'Bebidas',
+                featured: false,
+                logoUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/blas/blas.webp',
+                bgImageUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/blas/slide1.webp',
+                description: 'Tenemos un espacio pensado para quienes buscan pasarla bien en un ambiente relajado, divertido y con buena energía. Ofrecemos una variedad de bebidas, desde cervezas nacionales e importadas hasta cocteles y tragos preparados con calidad y estilo. Nuestro ambiente es ideal para compartir con amigos, celebrar ocasiones especiales o simplemente desconectarte del día con buena música y excelente atención.',
+                address: 'Cra. 15 #9 - 36',
+                hours: 'Jueves - Domingo 5:30pm - 3:00am',
+                services: 'Venta de cervezas nacionales e importadas, Coctelería variada y tragos preparados, Promociones y combos en bebidas seleccionadas, Música ambiental o en vivo (según programación), Reservas para grupos y celebraciones especiales',
+                phone: '+573123069273',
+                whatsapp: 'https://wa.me/573123069273',
+                delivery: "https://wa.me/573123069273?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+                storeLink: null,
+                images: [
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/blas/slide1.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/blas/slide2.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/blas/slide3.webp",
+            ],
+                mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.437144965956!2d-73.2627308!3d6.466174700000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a78f179b6b%3A0xf56e34312312718e!2sCra.%2015%20%239-36%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750351348289!5m2!1ses-419!2sco',
+                facebookIframeHtml: `<iframe 
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>`
+            },
+            {
+                id: 'coco',
+                name: 'Coco´s Café Bar',
+                category: 'Bebidas',
+                featured: false,
+                logoUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/coco.webp',
+                bgImageUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/slide1.webp',
+                description: 'Fusionamos lo mejor de dos mundos: la calidez de un café y la energía de un bar. Durante el día, es un lugar perfecto para relajarte, reunirte con amigos o disfrutar de una bebida con buena música de fondo. Y cuando cae la noche, el ambiente se transforma con cocteles, luces suaves y un espacio propicio para compartir, reír y celebrar.',
+                address: 'Cra. 13 #14 - 32',
+                hours: 'Jueves - Domingo 5:30pm - 3:00am',
+                services: 'Café especial, aromáticas y bebidas frías no alcohólicas, Cocteles, cervezas y licores nacionales e importados, Platos ligeros, snacks y picadas para compartir, Atención personalizada para grupos, citas o reuniones sociales',
+                phone: '+573243970683',
+                whatsapp: 'https://wa.me/573243970683',
+                delivery: "https://wa.me/573243970683?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+                storeLink: null,
+                images: [
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/slide1.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/slide2.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/slide3.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/slide4.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/slide5.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/slide6.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/slide7.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/slide8.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/slide9.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/slide10.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/bebidas/coco/slide11.webp",
+            ],
+                mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.413431176436!2d-73.261701!3d6.469197899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6f7c077c7%3A0xe94345ea62999b71!2sCl.%2013%20%23%2014-32%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1750356278096!5m2!1ses-419!2sco',
+                facebookIframeHtml: `<iframe 
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTechSolutions&tabs=timeline&width=500&height=550&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                    width="500" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>`
+            },
+
+        // Categoría Veterinaria
+
+            {
+                id: 'rancho',
+                name: 'El Rancho',
+                category: 'Veterinaria',
+                featured: true,
+                logoUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/rancho.webp',
+                bgImageUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide5.webp',
+                description: 'Cuidamos la salud de tus animales y el rendimiento de tu producción...',
+                address: 'Cra. 16 #12 - 26',
+                hours: 'Lunes a Viernes 7:00am a 12:30pm - 2:00pm a 6:00pm / Sábados y Domingos 7:00pm a 1:00pm',
+                services: 'Medicamentos veterinarios certificados., Alimentos concentrados, Vacunas y desparasitantes, Accesorios para mascotas, Insumos agropecuarios,Fertilizantes y abonos,Vitaminas y suplementos,Asesoría técnica,Atención a campesinos',
+                phone: '+573212223258',
+                whatsapp: 'https://wa.me/573212223258',
+                delivery: "https://wa.me/573212223258?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+                storeLink: null,
+                images: [
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide1.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide2.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide3.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide4.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide5.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide6.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide7.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide8.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide9.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide10.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide11.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide12.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide13.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide14.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide15.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide16.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide17.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/veterinaria/rancho/slide18.webp",
+            ],
+                mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4173358627077!2d-73.263043!3d6.468700199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683fd71c83ffff%3A0xe9f234cffaaba0df!2sVeterinar%C3%ADa%20El%20Rancho!5e0!3m2!1ses-419!2sco!4v1753489908051!5m2!1ses-419!2sco',
+                facebookIframeHtml: 'https://www.facebook.com/veterinariaelranchosocorro/?ref=embed_page'
+            },
+
+        // Categoría Profesionales
+
+            {
+                id: 'fabio',
+                name: 'Abogado Fabio Garrido',
+                category: 'Servicios Profesionales',
+                featured: false,
+                logoUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/fabio/fabio.webp',
+                bgImageUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/fabio/slide5.webp',
+                description: 'Con experiencia en diferentes áreas del derecho, el Abogado Fabio de Jesús Garrido ofrece soluciones legales personalizadas, claras y eficaces. Acompaña a personas y empresas en la toma de decisiones importantes, garantizando respaldo jurídico, gestión oportuna de conflictos y un servicio basado en la confianza y la ética profesional.',
+                address: 'Carrera 12 # 14 – 14',
+                hours: 'Lunes a Viernes 8:00am a 12:00pm - 2:00pm - 5:00pm',
+                services: 'Asesoría Jurídica Preventiva., Derecho Penal y Defensa Judicial, Derecho Civil y Comercial, Atención para grupos y celebraciones, Cobro de Cartera y Procesos Ejecutivos,Derecho Laboral y Asuntos Empresariales',
+                phone: '+57158397089',
+                whatsapp: 'https://wa.me/57158397089',
+                delivery: "https://wa.me/57158397089?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+                storeLink: null,
+                images: [
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/fabio/slide1.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/fabio/slide2.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/fabio/slide3.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/fabio/slide4.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/fabio/slide5.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/fabio/slide6.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/fabio/slide7.webp",
+            ],
+                mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.411615634734!2d-73.25995039999995!3d6.469429300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6c14b8fab%3A0x381f7a77f9cc05f8!2sCra.%2012%20%23%2014-14%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1752810045111!5m2!1ses-419!2sco',
+                facebookIframeHtml: 'https://www.facebook.com/WorldLegalCorpo/'
+            },
+            {
+                id: 'liliana',
+                name: 'Abogada Liliana Becerra',
+                category: 'Servicios Profesionales',
+                featured: true,
+                logoUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/liliana/liliana.webp',
+                bgImageUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/liliana/slide5.webp',
+                description: '⚖️ Con una sólida formación académica y amplia experiencia, la Dra. Liliana Becerra asesora y representa a personas y empresas, ofreciendo a,tención personalizada y estrategias legales efectivas. Su objetivo es proteger los derechos de sus clientes, resolver conflictos y prevenir futuros inconvenientes, siempre con transparencia y profesionalismo.',
+                address: 'Carrera 12 # 14 – 18',
+                hours: 'Lunes a Viernes 8:00am a 12:00pm - 2:00pm - 5:00pm',
+                services: 'Asesoría Jurídica Integral., Derecho Civil y de Familia, Elaboración y Revisión de Contratos, Representación Judicial y Extrajudicial, Cobro de Cartera y Procesos Ejecutivos,Sucesiones y Testamentos',
+                phone: '+573208276995',
+                whatsapp: 'https://wa.me/573208276995',
+                delivery: "https://wa.me/573208276995?text=Hola%20%F0%9F%99%8C%2C%20vi%20en%20el%20Directorio%20%F0%9F%94%8E%20que%20",
+                storeLink: null,
+                images: [
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/liliana/slide1.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/liliana/slide2.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/liliana/slide3.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/liliana/slide4.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/liliana/slide5.webp",
+                "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/profesionales/liliana/slide6.webp",
+            ],
+                mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.411627403766!2d-73.25990390000005!3d6.4694278000000125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69c2a6c6b0a77b%3A0x13517bdf56e4af32!2sCra.%2012%20%2314-18%2C%20Socorro%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1752800142676!5m2!1ses-419!2sco',
+                facebookIframeHtml: 'https://www.facebook.com/WorldLegalCorpo/'
             }
         ];

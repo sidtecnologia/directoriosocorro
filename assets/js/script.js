@@ -563,15 +563,17 @@
                 </section>
 
                 <!-- Facebook Page Iframe -->
-                <section class="mb-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Página de Facebook</h3>
-                    <div class="bg-white p-4 rounded-xl card-shadow">
-                         <!-- Placeholder para el widget de FB del negocio -->
-                        <div class="text-center p-8 bg-gray-100 rounded-lg">
-                            <i data-lucide="facebook" class="w-10 h-10 mx-auto mb-2 text-blue-600"></i>
-                            <p class="text-gray-600">Placeholder para el Iframe de la página de Facebook del negocio.</p>
-                            <p class="text-sm text-gray-400 mt-1">URL: ${business.facebookIframeUrl}</p>
-                        </div>
+                <section class="fb-iframe-container mb-6">
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=${encodeURIComponent(business.facebookIframeHtml)}&tabs=timeline&width=300&height=550&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                        width="300px"
+                        height="550px"
+                        style="border-radius:14px;border:none;overflow:hidden"
+                        scrolling="no"
+                        frameborder="0"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                    </iframe>
                     </div>
                 </section>
             `;
