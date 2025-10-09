@@ -223,29 +223,47 @@
 
         const carousels = {};
 
-        function initCarousel(id, speed = 4000) {
-            const container = document.getElementById(id);
-            if (!container) return;
+function initCarousel(id, speed = 4000) {
+    const container = document.getElementById(id);
+    if (!container) return;
 
-            let currentIndex = 0;
-            const items = container.querySelectorAll('.carousel-item');
-            const totalItems = items.length;
+    
+    const items = container.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+    if (totalItems < 2) return; 
 
-            if (carousels[id]) {
-                clearInterval(carousels[id]);
-            }
+    const itemWidth = items[0].offsetWidth;
+    let currentIndex = 0;
 
-            const moveCarousel = () => {
-                currentIndex = (currentIndex + 1) % totalItems;
+    if (carousels[id]) {
+        clearInterval(carousels[id]);
+    }
+
+    const moveCarousel = () => {
+        
+        currentIndex++;
+        
+        container.scrollTo({
+            left: currentIndex * itemWidth,
+            behavior: 'smooth'
+        });
+
+        
+        if (currentIndex === totalItems) {
+            setTimeout(() => {
                 container.scrollTo({
-                    left: currentIndex * container.offsetWidth,
-                    behavior: 'smooth'
+                    left: 0,
+                    behavior: 'auto' 
                 });
-            };
-
-            // Inicia la transición automática
-            carousels[id] = setInterval(moveCarousel, speed);
+                currentIndex = 0;
+            }, 500); 
         }
+    };
+
+    
+    carousels[id] = setInterval(moveCarousel, speed);
+}
+
 
         // ====================================================================
         // RENDERIZADO DE VISTAS

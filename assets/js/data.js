@@ -279,7 +279,7 @@
                 name: 'ADN Couture',
                 category: 'Vestuario',
                 featured: false,
-                logoUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/comida/saloon/saloon.webp',
+                logoUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/vestuario/adn/adn.webp',
                 bgImageUrl: 'https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/vestuario/adn/slide1.webp',
                 description: '👒✨ Acá encuentras ropa femenina diferente y con mucha actitud 💃. Tenemos blusas, vestidos, gorras 🧢, cinturones 🧷 y accesorios para elevar tu estilo al máximo 🌟. Renueva tu outfit y marca tu ADN con nosotros 💖',
                 address: 'Cll. 9 #15-25',
@@ -307,7 +307,7 @@
                 "https://ndqzyplsiqigsynweihk.supabase.co/storage/v1/object/public/negocios_img/categories/vestuario/adn/slide15.webp",
             ],
                 mapIframeUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4388952951103!2d-73.26325389999998!3d6.465951500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e69e81d601cfae5%3A0x3491d50d38001f03!2sCl.%209%20%23%2015-25%2C%20Socorro%2C%20Santander!5e0!3m2!1ses!2sco!4v1745852169814!5m2!1ses!2sco',
-                facebookIframeHtml: `https://www.instagram.com/adncouture2025/`
+                facebookIframeVideo: `https://www.facebook.com/share/p/1LKTyqbwxP/`
             },
             {
                 id: 'angels',
